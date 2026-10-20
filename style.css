@@ -1,0 +1,168 @@
+:root {
+  --tosca: #40E0D0;
+  --bg: #f2fcfb;
+  --card: #ffffff;
+  --teks: #16302e;
+  --garis: #d3ece9;
+}
+
+* {
+  box-sizing: border-box
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--teks);
+  font-family: system-ui, sans-serif;
+  line-height: 1.5
+}
+
+.wrap {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 10px
+}
+
+.logo {
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+  border-radius: 10px
+}
+
+.badge {
+  margin-left: auto;
+  font-size: .75rem;
+  padding: 4px 10px;
+  border-radius: 99px;
+  background: var(--card);
+  border: 1px solid var(--garis)
+}
+
+nav {
+  display: flex;
+  gap: 6px;
+  background: var(--card);
+  border: 1px solid var(--garis);
+  padding: 5px;
+  border-radius: 14px
+}
+
+nav button {
+  flex: 1;
+  border: 0;
+  background: none;
+  padding: 10px 4px;
+  border-radius: 10px;
+  font: inherit;
+  cursor: pointer
+}
+
+nav button.on {
+  background: var(--tosca);
+  font-weight: 600
+}
+
+section {
+  display: none
+}
+
+section.on {
+  display: block
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--garis);
+  border-radius: 16px;
+  padding: 16px
+}
+
+.chat {
+  height: 55vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 10px
+}
+
+.msg {
+  max-width: 84%;
+  padding: 10px 14px;
+  border-radius: 16px;
+  white-space: pre-wrap
+}
+
+.ai {
+  background: #eefbf9;
+  border: 1px solid var(--garis);
+  align-self: flex-start
+}
+
+.me {
+  background: var(--tosca);
+  align-self: flex-end
+}
+
+.row {
+  display: flex;
+  gap: 8px
+}
+
+input[type=text] {
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--garis);
+  font: inherit
+}
+
+.btn {
+  border: 0;
+  background: var(--tosca);
+  font: inherit;
+  font-weight: 600;
+  padding: 12px 18px;
+  border-radius: 12px;
+  cursor: pointer
+}
+
+.alert {
+  border-color: #e53935;
+  background: #fdecea
+}
+
+.moods {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px
+}
+
+.moods button {
+  background: var(--card);
+  border: 1px solid var(--garis);
+  border-radius: 14px;
+  padding: 14px 4px;
+  font: inherit;
+  cursor: pointer
+}
+
+.moods button span {
+  display: block;
+  font-size: 1.8rem
+}
+
+.moods button.on {
+  border-color: var(--tosca)
+}

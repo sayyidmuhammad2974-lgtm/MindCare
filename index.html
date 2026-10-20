@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MindCare</title>
+  <link rel="icon" type="image/png" href="assets/mindcare-logo.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <img class="logo" src="assets/mindcare-logo.png" alt="Logo MindCare">
+      <h1>MindCare</h1>
+    </header>
+
+    <nav>
+      <button class="on" data-tab="dengar"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+          fill="currentColor" class="bi bi-chat-heart" viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M2.965 12.695a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6-3.004 6-7 6a8 8 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a11 11 0 0 0 .398-2m-.8 3.108.02-.004c1.83-.363 2.948-.842 3.468-1.105A9 9 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.4 10.4 0 0 1-.524 2.318l-.003.011a11 11 0 0 1-.244.637c-.079.186.074.394.273.362a22 22 0 0 0 .693-.125M8 5.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
+        </svg> Dengar</button>
+      <button data-tab="kenali"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+          class="bi bi-emoji-grin-fill" viewBox="0 0 16 16">
+          <path
+            d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16M6.488 7c-.23-.598-.661-1-1.155-1-.493 0-.924.402-1.155 1A2.8 2.8 0 0 1 4 6c0-1.105.597-2 1.333-2 .737 0 1.334.895 1.334 2 0 .364-.065.706-.179 1m5.334 0c-.23-.598-.662-1-1.155-1-.494 0-.925.402-1.155 1a2.8 2.8 0 0 1-.179-1c0-1.105.597-2 1.334-2C11.403 4 12 4.895 12 6c0 .364-.065.706-.178 1M2.696 8.756a.48.48 0 0 1 .382-.118C4.348 8.786 6.448 9 8 9c1.553 0 3.653-.214 4.922-.362a.48.48 0 0 1 .383.118.3.3 0 0 1 .096.29c-.09.47-.242.921-.445 1.342-.263.035-.576.075-.929.115A37 37 0 0 1 8 10.75c-1.475 0-2.934-.123-4.027-.247-.353-.04-.666-.08-.93-.115A5.5 5.5 0 0 1 2.6 9.045a.3.3 0 0 1 .097-.29ZM8 13.5a5.49 5.49 0 0 1-4.256-2.017l.116.014c1.115.126 2.615.253 4.14.253s3.025-.127 4.14-.253l.117-.014A5.49 5.49 0 0 1 8 13.5" />
+        </svg> Kenali</button>
+      <button data-tab="bantuan"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+          class="bi bi-people-fill" viewBox="0 0 16 16">
+          <path
+            d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
+        </svg> Bantuan</button>
+    </nav>
+
+    <section id="dengar" class="on"></section>
+    <section id="kenali"></section>
+    <section id="bantuan"></section>
+  </div>
+
+  <section id="dengar" class="on">
+    <div class="card chat" id="chat"></div>
+    <div class="row">
+      <input type="text" id="input" placeholder="Ceritakan apa yang kamu rasakan…">
+      <button class="btn" id="send">Kirim</button>
+    </div>
+  </section>
+
+  <section id="bantuan">
+    <div class="card alert" id="kotakKrisis" hidden>
+      <b>Kami peduli padamu.</b> Yuk, segera temui Guru BK atau orang dewasa yang kamu percaya hari ini.
+    </div>
+    <div class="card">
+      <h2>Bicara dengan Guru BK</h2>
+      <ol>
+        <li>Pilih waktu yang nyaman (jam istirahat atau pulang sekolah).</li>
+        <li>Datang ke ruang BK, atau titip pesan lewat wali kelas.</li>
+        <li>Mulai dengan: “Bu/Pak, saya ingin cerita.”</li>
+      </ol>
+      <p>Butuh bantuan segera? Layanan Kemenkes: <b>119 ext. 8</b>.</p>
+    </div>
+  </section>
+  <section id="bantuan">
+    <div class="card alert" id="kotakKrisis" hidden>
+      <b>Kami peduli padamu.</b> Yuk, segera temui Guru BK atau orang dewasa yang kamu percaya hari ini.
+    </div>
+    <div class="card">
+      <h2>Bicara dengan Guru BK</h2>
+      <ol>
+        <li>Pilih waktu yang nyaman (jam istirahat atau pulang sekolah).</li>
+        <li>Datang ke ruang BK, atau titip pesan lewat wali kelas.</li>
+        <li>Mulai dengan: “Bu/Pak, saya ingin cerita.”</li>
+      </ol>
+      <p>Butuh bantuan segera? Layanan Kemenkes: <b>119 ext. 8</b>.</p>
+    </div>
+  </section>
+
+  <section id="kenali">
+    <div class="card">
+      <h2>Hari ini kamu merasa apa?</h2>
+      <div class="moods" id="moods"></div>
+    </div>
+    <div class="card" id="hasilMood" hidden>
+      <p id="teksMood"></p>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
