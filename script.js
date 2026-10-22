@@ -1,28 +1,30 @@
-function pindahTab(id) {
-  document
-    .querySelectorAll("section")
-    .forEach((s) => s.classList.toggle("on", s.id === id));
-  document
-    .querySelectorAll("nav button")
-    .forEach((b) => b.classList.toggle("on", b.dataset.tab === id));
+function switchView(viewName) {
+    document.querySelectorAll('.view-section').forEach(el => {
+        el.classList.remove('active');
+    });
+
+    document.querySelectorAll('.nav-link').forEach(el => {
+        el.classList.remove('active');
+    });
+
+    const targetView = document.getElementById(`view-${viewName}`);
+    if(targetView) {
+        targetView.classList.add('active');
+    }
+
+    const targetNav = document.getElementById(`nav-${viewName}`);
+    if(targetNav) {
+        targetNav.classList.add('active');
+    }
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-document.querySelectorAll("nav button").forEach((b) => {
-  b.onclick = () => pindahTab(b.dataset.tab);
+function toggleMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    switchView('landing');
 });
-const chat = document.getElementById("chat");
-const input = document.getElementById("input");
-
-function tambahPesan(teks, kelas) {
-  const d = document.createElement("div");
-  d.className = "msg " + kelas; // "ai" = kiri, "me" = kanan
-  d.textContent = teks;
-  chat.appendChild(d);
-  chat.scrollTop = chat.scrollHeight; // otomatis scroll ke bawah
-  return d; // dikembalikan supaya isinya bisa diubah nanti
-}
-
-tambahPesan(
-  "Halo, aku MindCare 💚\nDi sini kamu bebas bercerita, tanpa nama dan tanpa daftar. Apa yang sedang kamu rasakan hari ini?",
-  "ai",
-);
