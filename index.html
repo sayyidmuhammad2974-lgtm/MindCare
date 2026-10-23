@@ -232,103 +232,271 @@
             </section>
         </div>
 
-        <!-- VIEW 2: CONSULTATION CHAT AI -->
-        <div id="view-chat" class="view-section">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- VIEW 2: CONSULTATION CHAT AI (MOBILE RESPONSIVE DESIGN) -->
+<div id="view-chat" class="view-section">
+    <div class="max-w-6xl mx-auto px-2 sm:px-6 lg:px-8 py-3 sm:py-6">
+        
+        <!-- Container Utama Chat: Menggunakan flex-col di HP & flex-row di Desktop -->
+        <div class="bg-white border border-slate-200/90 rounded-2xl sm:rounded-3xl shadow-lg overflow-hidden flex flex-col md:flex-row h-[calc(100vh-130px)] sm:h-[80vh] min-h-[500px] max-h-[800px]">
+            
+            <!-- LEFT SIDEBAR: Tersembunyi di Layar HP (hidden md:flex) -->
+            <aside class="hidden md:flex w-72 bg-slate-50/80 border-r border-slate-200 p-4 flex-col justify-between gap-4">
+                <div class="space-y-4">
+                    <!-- Brand Header -->
+                    <div class="flex items-center gap-2.5 px-2">
+                        <div class="w-8 h-8 rounded-xl brand-blue-bg text-white flex items-center justify-center font-bold text-sm shadow-sm">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-extrabold text-slate-900 text-sm leading-tight">MindCare AI</h3>
+                            <p class="text-[10px] font-semibold brand-blue-text">Ruang Aman Digital</p>
+                        </div>
+                    </div>
+
+                    <!-- New Chat Button -->
+                    <button onclick="resetChat()" class="w-full py-2.5 px-4 bg-sky-50 hover:bg-sky-100/80 brand-blue-text font-bold text-xs rounded-xl border border-sky-200/70 transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-plus"></i>
+                        <span>Sesi Percakapan Baru</span>
+                    </button>
+
+                    <!-- History / Active Session -->
+                    <div class="space-y-1 pt-2">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 px-2">Sesi Aktif</span>
+                        <div class="w-full p-2.5 rounded-xl bg-sky-100/60 border border-sky-200/70 text-xs font-semibold text-slate-800 flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full brand-blue-bg"></span>
+                            <span class="truncate">Dukungan Emosional</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Screening Links -->
+                <div class="space-y-2 pt-4 border-t border-slate-200/80">
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 px-2">Skrining Cepat</span>
+                    <button onclick="switchView('skrining')" class="w-full text-left p-2.5 rounded-xl hover:bg-white text-slate-700 text-xs font-semibold flex items-center gap-2 transition border border-transparent hover:border-slate-200">
+                        <i class="fa-solid fa-fire-flame-curved brand-red-text"></i>
+                        <span>Skrining Kelelahan Belajar</span>
+                    </button>
+                    <button onclick="switchView('skrining')" class="w-full text-left p-2.5 rounded-xl hover:bg-white text-slate-700 text-xs font-semibold flex items-center gap-2 transition border border-transparent hover:border-slate-200">
+                        <i class="fa-solid fa-notes-medical brand-blue-text"></i>
+                        <span>Evaluasi Kecemasan</span>
+                    </button>
+                </div>
+            </aside>
+
+            <!-- MAIN CHAT AREA (Mengisi Seluruh Layar HP) -->
+            <main class="flex-1 bg-slate-50/40 flex flex-col justify-between relative h-full min-w-0">
                 
-                <div class="bg-white rounded-3xl border border-slate-200/80 shadow-xl overflow-hidden flex flex-col h-[75vh] max-h-[700px]">
+                <!-- TOP UTILITY BAR (Ringkas di HP) -->
+                <div class="p-3 sm:p-4 bg-white border-b border-slate-200 flex items-center justify-between gap-2 shadow-2xs">
+                    <div class="flex items-center gap-2.5 min-w-0">
+                        <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg brand-blue-bg text-white flex items-center justify-center font-bold text-xs flex-shrink-0 shadow-xs">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                        <div class="truncate">
+                            <h2 class="font-bold text-xs sm:text-sm text-slate-900 truncate">MindCare AI Pendengar</h2>
+                            <p class="text-[10px] text-slate-500 font-medium truncate">100% Anonim & Rahasia</p>
+                        </div>
+                    </div>
                     
-                    <div class="bg-slate-900 text-white p-4 flex items-center justify-between border-b border-slate-800">
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-xl brand-blue-bg text-white flex items-center justify-center font-bold text-lg shadow-sm">
-                                <i class="fa-solid fa-robot"></i>
-                            </div>
-                            <div>
-                                <h2 class="font-bold text-sm flex items-center gap-2">
-                                    MindCare AI Pendengar
-                                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                                </h2>
-                                <p class="text-[11px] text-slate-400">100% Anonim • Teman Curhat Pelajar</p>
-                            </div>
+                    <div class="flex items-center gap-1.5 flex-shrink-0">
+                        <button onclick="resetChat()" class="px-2.5 py-1.5 text-xs text-slate-600 hover:text-slate-900 rounded-lg bg-slate-100 hover:bg-slate-200 transition flex items-center gap-1.5 font-medium">
+                            <i class="fa-solid fa-rotate-right text-[11px]"></i>
+                            <span class="hidden sm:inline">Reset</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CHAT MESSAGES CONTAINER -->
+                <div id="chat-box" class="flex-1 p-3 sm:p-6 overflow-y-auto space-y-3.5 sm:space-y-4">
+                    
+                    <!-- Safety Card Initial View (Responsif Layar Kecil) -->
+                    <div class="my-auto py-4 max-w-md w-full bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 border border-slate-200/90 shadow-sm text-center space-y-4 mx-auto">
+                        <div class="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl brand-red-bg text-white flex items-center justify-center text-xl sm:text-2xl mx-auto shadow-md">
+                            <i class="fa-solid fa-shield-heart"></i>
                         </div>
 
-                        <button onclick="resetChat()" class="text-xs text-slate-300 hover:text-white px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800 transition flex items-center gap-1">
-                            <i class="fa-solid fa-rotate-right"></i> Reset Chat
-                        </button>
-                    </div>
-
-                    <div id="chat-box" class="flex-1 p-4 sm:p-6 overflow-y-auto space-y-4 bg-slate-50/50">
-                        <div class="flex items-start gap-3">
-                            <div class="w-8 h-8 rounded-full brand-blue-bg text-white font-bold flex items-center justify-center text-xs flex-shrink-0">
-                                AI
-                            </div>
-                            <div class="bg-white border border-slate-200 text-slate-800 p-4 rounded-2xl rounded-tl-none max-w-[85%] text-xs sm:text-sm leading-relaxed shadow-sm">
-                                Halo! Aku di sini sebagai teman yang aman untuk mendengarkan ceritamu. Kamu bisa luapkan kecemasan, masalah sekolah, atau pertemanan tanpa rasa canggung. Apa yang membuatmu kurang nyaman hari ini?
-                            </div>
+                        <div class="space-y-1.5">
+                            <h2 class="text-lg sm:text-xl font-extrabold text-slate-900">Pemeriksaan Keselamatan</h2>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Halo! Sebelum kita mengobrol, MindCare ingin memastikan kamu dalam kondisi aman.
+                            </p>
                         </div>
-                    </div>
 
-                    <div class="px-4 py-2.5 bg-white border-t border-slate-100 flex gap-2 overflow-x-auto text-xs">
-                        <span class="text-[11px] font-bold text-slate-400 self-center mr-1">Topik:</span>
-                        <button onclick="sendQuickPrompt('Aku merasa stres banget sama ujian dan tugas sekolah.')" class="bg-slate-100 hover:bg-sky-50 hover:text-sky-700 text-slate-600 px-3 py-1.5 rounded-full whitespace-nowrap transition border border-slate-200">
-                            📚 Stres Belajar
-                        </button>
-                        <button onclick="sendQuickPrompt('Aku merasa dijauhi teman-teman di kelas dan bingung harus gimana.')" class="bg-slate-100 hover:bg-sky-50 hover:text-sky-700 text-slate-600 px-3 py-1.5 rounded-full whitespace-nowrap transition border border-slate-200">
-                            👥 Konflik Pertemanan
-                        </button>
-                        <button onclick="sendQuickPrompt('Ada orang di sekolah yang bikin aku ngga nyaman dan melalukan perundungan.')" class="bg-slate-100 hover:bg-sky-50 hover:text-sky-700 text-slate-600 px-3 py-1.5 rounded-full whitespace-nowrap transition border border-slate-200">
-                            🛑 Perundungan / Bullying
-                        </button>
-                    </div>
+                        <p class="text-xs font-bold text-slate-800 pt-1">
+                            Apakah saat ini kamu memerlukan bantuan darurat?
+                        </p>
 
-                    <div class="p-3 bg-white border-t border-slate-200 flex gap-2">
-                        <input type="text" id="chat-input" placeholder="Tuliskan ceritamu secara bebas dan anonim di sini..." class="flex-1 bg-slate-50 text-slate-800 text-xs sm:text-sm px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-sky-400 focus:bg-white transition" onkeypress="if(event.key==='Enter') handleSendChat()">
-                        <button onclick="handleSendChat()" class="btn-brand text-white px-5 rounded-xl font-bold transition flex items-center justify-center">
-                            <i class="fa-solid fa-paper-plane text-sm"></i>
-                        </button>
+                        <div class="space-y-2 pt-1">
+                            <button onclick="switchView('rujukan')" class="w-full py-3 px-3.5 brand-red-bg hover:opacity-90 text-white font-bold text-xs rounded-xl sm:rounded-2xl shadow-sm transition flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-phone-volume"></i>
+                                <span>Hubungi Bantuan / Guru BK</span>
+                            </button>
+                            <button onclick="startChatSession()" class="w-full py-3 px-3.5 bg-white hover:bg-slate-50 text-slate-700 font-bold text-xs rounded-xl sm:rounded-2xl border border-slate-200 shadow-2xs transition flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-seedling text-emerald-500"></i>
+                                <span>Tidak, Saya Aman & Ingin Curhat</span>
+                            </button>
+                        </div>
                     </div>
 
                 </div>
-            </div>
+
+                <!-- QUICK PROMPT CHIPS (Scroll Horizontal Mulus di HP) -->
+                <div class="px-3 py-2 bg-white border-t border-slate-100 flex gap-2 overflow-x-auto no-scrollbar text-xs">
+                    <button onclick="sendQuickPrompt('Aku merasa stres banget sama ujian dan tugas sekolah.')" class="bg-slate-100 hover:bg-sky-50 hover:text-sky-700 text-slate-600 text-[11px] sm:text-xs px-3 py-1.5 rounded-full whitespace-nowrap transition border border-slate-200 flex-shrink-0">
+                        📚 Stres Belajar
+                    </button>
+                    <button onclick="sendQuickPrompt('Aku merasa dijauhi teman-teman di kelas.')" class="bg-slate-100 hover:bg-sky-50 hover:text-sky-700 text-slate-600 text-[11px] sm:text-xs px-3 py-1.5 rounded-full whitespace-nowrap transition border border-slate-200 flex-shrink-0">
+                        👥 Konflik Pertemanan
+                    </button>
+                    <button onclick="sendQuickPrompt('Ada orang di sekolah yang bikin aku ngga nyaman.')" class="bg-slate-100 hover:bg-sky-50 hover:text-sky-700 text-slate-600 text-[11px] sm:text-xs px-3 py-1.5 rounded-full whitespace-nowrap transition border border-slate-200 flex-shrink-0">
+                        🛑 Bullying
+                    </button>
+                </div>
+
+                <!-- INPUT BOX (Fixed & Easy Touch di Ponsel) -->
+                <div class="p-2.5 sm:p-3 bg-white border-t border-slate-200">
+                    <div class="flex items-center gap-2 bg-slate-100/80 rounded-xl sm:rounded-2xl p-1.5 border border-slate-200 focus-within:border-sky-400 focus-within:bg-white transition">
+                        <input type="text" id="chat-input" placeholder="Tulis ceritamu di sini..." class="flex-1 bg-transparent px-3 sm:px-4 py-2 text-xs sm:text-sm text-slate-800 focus:outline-none" onkeypress="if(event.key==='Enter') handleSendChat()">
+                        <button onclick="handleSendChat()" class="btn-brand text-white w-9 h-9 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl font-bold flex items-center justify-center flex-shrink-0 shadow-xs active:scale-95 transition-transform">
+                            <i class="fa-solid fa-paper-plane text-xs sm:text-sm"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </main>
+
         </div>
 
-        <!-- VIEW 3: SKRINING KESEHATAN MENTAL -->
-        <div id="view-skrining" class="view-section">
-            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-                <div class="text-center mb-8 space-y-2">
-                    <span class="text-xs font-bold uppercase tracking-widest brand-blue-text bg-sky-50 px-3 py-1 rounded-full">Evaluasi Mandiri</span>
-                    <h2 class="text-3xl font-extrabold text-slate-900">Skrining Kesehatan Mental Pelajar</h2>
-                    <p class="text-slate-500 text-xs sm:text-sm max-w-md mx-auto">Jawab 5 pertanyaan untuk mengenali beban emosionalmu secara 100% anonim.</p>
+    </div>
+</div>
+        <!-- VIEW 3: SKRINING KESEHATAN MENTAL (INTERAKTIF & BERTAHAP) -->
+<div id="view-skrining" class="view-section">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div class="text-center mb-8 space-y-2">
+            <span class="text-xs font-bold uppercase tracking-widest brand-blue-text bg-sky-50 px-3 py-1 rounded-full">Evaluasi Mandiri</span>
+            <h2 class="text-3xl font-extrabold text-slate-900">Skrining Kesehatan Mental Pelajar</h2>
+            <p class="text-slate-500 text-xs sm:text-sm max-w-md mx-auto">Jawab 5 pertanyaan singkat untuk mengenali beban emosionalmu secara 100% anonim.</p>
+        </div>
+
+        <div class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xl">
+            <!-- Progress Bar -->
+            <div id="quiz-progress-container" class="w-full bg-slate-100 h-2 rounded-full mb-8 overflow-hidden">
+                <div id="quiz-progress-bar" class="brand-blue-bg h-full w-[20%] transition-all duration-300"></div>
+            </div>
+
+            <!-- Container Pertanyaan Interaktif -->
+            <div id="quiz-container">
+                <!-- Pertanyaan 1 -->
+                <div class="quiz-step" data-step="1">
+                    <span class="text-xs font-bold brand-blue-text uppercase tracking-wider">Pertanyaan 1 dari 5</span>
+                    <h3 class="text-lg sm:text-xl font-bold text-slate-900 mt-1 mb-6">Seberapa sering kamu merasa cemas atau tertekan karena urusan sekolah/tugas?</h3>
+                    <div class="space-y-3">
+                        <button onclick="answerQuestion(0)" class="w-full text-left p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50 transition text-xs sm:text-sm font-medium text-slate-700">
+                            Hampir tidak pernah sama sekali
+                        </button>
+                        <button onclick="answerQuestion(1)" class="w-full text-left p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50 transition text-xs sm:text-sm font-medium text-slate-700">
+                            Kadang-kadang dalam seminggu
+                        </button>
+                        <button onclick="answerQuestion(2)" class="w-full text-left p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50 transition text-xs sm:text-sm font-medium text-slate-700">
+                            Sangat sering / Hampir setiap hari
+                        </button>
+                    </div>
                 </div>
 
-                <div class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xl">
-                    <div class="w-full bg-slate-100 h-2 rounded-full mb-8 overflow-hidden">
-                        <div id="quiz-progress-bar" class="brand-blue-bg h-full w-[20%] transition-all duration-300"></div>
+                <!-- Pertanyaan 2 -->
+                <div class="quiz-step hidden" data-step="2">
+                    <span class="text-xs font-bold brand-blue-text uppercase tracking-wider">Pertanyaan 2 dari 5</span>
+                    <h3 class="text-lg sm:text-xl font-bold text-slate-900 mt-1 mb-6">Apakah kamu sering mengalami kesulitan tidur atau tidak nyenyak karena pikiran yang menumpuk?</h3>
+                    <div class="space-y-3">
+                        <button onclick="answerQuestion(0)" class="w-full text-left p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50 transition text-xs sm:text-sm font-medium text-slate-700">
+                            Tidak, tidur saya teratur
+                        </button>
+                        <button onclick="answerQuestion(1)" class="w-full text-left p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50 transition text-xs sm:text-sm font-medium text-slate-700">
+                            Kadang sulit tidur di malam hari
+                        </button>
+                        <button onclick="answerQuestion(2)" class="w-full text-left p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50 transition text-xs sm:text-sm font-medium text-slate-700">
+                            Sangat sering tidak bisa tidur
+                        </button>
                     </div>
+                </div>
 
-                    <form id="quiz-form">
-                        <div class="quiz-q" data-q="1">
-                            <span class="text-xs font-bold brand-blue-text uppercase tracking-wider">Pertanyaan 1 dari 5</span>
-                            <h3 class="text-lg sm:text-xl font-bold text-slate-900 mt-1 mb-6">Seberapa sering kamu merasa cemas atau tertekan karena urusan sekolah?</h3>
-                            <div class="space-y-3">
-                                <label class="flex items-center p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50/50 cursor-pointer transition text-xs sm:text-sm">
-                                    <input type="radio" name="q1" value="0" class="text-sky-500">
-                                    <span class="ml-3 font-medium text-slate-700">Hampir tidak pernah sama sekali</span>
-                                </label>
-                                <label class="flex items-center p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50/50 cursor-pointer transition text-xs sm:text-sm">
-                                    <input type="radio" name="q1" value="1" class="text-sky-500">
-                                    <span class="ml-3 font-medium text-slate-700">Kadang-kadang dalam seminggu</span>
-                                </label>
-                                <label class="flex items-center p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50/50 cursor-pointer transition text-xs sm:text-sm">
-                                    <input type="radio" name="q1" value="2" class="text-sky-500">
-                                    <span class="ml-3 font-medium text-slate-700">Sangat sering / Hampir setiap hari</span>
-                                </label>
-                            </div>
-                        </div>
-                    </form>
+                <!-- Pertanyaan 3 -->
+                <div class="quiz-step hidden" data-step="3">
+                    <span class="text-xs font-bold brand-blue-text uppercase tracking-wider">Pertanyaan 3 dari 5</span>
+                    <h3 class="text-lg sm:text-xl font-bold text-slate-900 mt-1 mb-6">Bagaimana perasaanmu terhadap interaksi atau lingkungan pertemanan di sekolah saat ini?</h3>
+                    <div class="space-y-3">
+                        <button onclick="answerQuestion(0)" class="w-full text-left p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50 transition text-xs sm:text-sm font-medium text-slate-700">
+                            Merasa aman dan didukung oleh teman
+                        </button>
+                        <button onclick="answerQuestion(1)" class="w-full text-left p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50 transition text-xs sm:text-sm font-medium text-slate-700">
+                            Kadang merasa canggung atau tidak terhubung
+                        </button>
+                        <button onclick="answerQuestion(2)" class="w-full text-left p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50 transition text-xs sm:text-sm font-medium text-slate-700">
+                            Sering merasa terisolasi, diabaikan, atau tidak nyaman
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Pertanyaan 4 -->
+                <div class="quiz-step hidden" data-step="4">
+                    <span class="text-xs font-bold brand-blue-text uppercase tracking-wider">Pertanyaan 4 dari 5</span>
+                    <h3 class="text-lg sm:text-xl font-bold text-slate-900 mt-1 mb-6">Apakah kamu merasa kehilangan minat atau energi untuk melakukan hobi yang biasanya kamu sukai?</h3>
+                    <div class="space-y-3">
+                        <button onclick="answerQuestion(0)" class="w-full text-left p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50 transition text-xs sm:text-sm font-medium text-slate-700">
+                            Tidak, saya masih semangat berkegiatan
+                        </button>
+                        <button onclick="answerQuestion(1)" class="w-full text-left p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50 transition text-xs sm:text-sm font-medium text-slate-700">
+                            Kadang merasa cepat lelah dan malas
+                        </button>
+                        <button onclick="answerQuestion(2)" class="w-full text-left p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50 transition text-xs sm:text-sm font-medium text-slate-700">
+                            Ya, hampir tidak ada energi sama sekali
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Pertanyaan 5 -->
+                <div class="quiz-step hidden" data-step="5">
+                    <span class="text-xs font-bold brand-blue-text uppercase tracking-wider">Pertanyaan 5 dari 5</span>
+                    <h3 class="text-lg sm:text-xl font-bold text-slate-900 mt-1 mb-6">Seberapa mudah kamu merasa emosional, sensitif, atau mudah marah akhir-akhir ini?</h3>
+                    <div class="space-y-3">
+                        <button onclick="answerQuestion(0)" class="w-full text-left p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50 transition text-xs sm:text-sm font-medium text-slate-700">
+                            Stabil seperti biasa
+                        </button>
+                        <button onclick="answerQuestion(1)" class="w-full text-left p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50 transition text-xs sm:text-sm font-medium text-slate-700">
+                            Agak lebih sensitif dari biasanya
+                        </button>
+                        <button onclick="answerQuestion(2)" class="w-full text-left p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50 transition text-xs sm:text-sm font-medium text-slate-700">
+                            Sangat mudah tersulut emosi / kewalahan
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Hasil Akhir Skrining -->
+                <div id="quiz-result" class="hidden text-center space-y-6">
+                    <div class="w-16 h-16 rounded-full brand-blue-bg text-white flex items-center justify-center text-2xl mx-auto shadow-md">
+                        <i class="fa-solid fa-square-poll-vertical"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Hasil Evaluasi Emosional</span>
+                        <h3 id="result-title" class="text-2xl font-extrabold text-slate-900 mt-1">Kondisi Emosional Stabil</h3>
+                        <p id="result-desc" class="text-xs sm:text-sm text-slate-600 max-w-md mx-auto mt-2 leading-relaxed">
+                            Beban emosionalmu saat ini tergolong aman. Tetap jaga pola istirahat dan ceritakan hal-hal menarik pada teman atau keluarga.
+                        </p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-3 justify-center pt-2">
+                        <button onclick="switchView('chat')" class="btn-brand text-white font-bold px-6 py-3 rounded-xl text-xs shadow-md">
+                            <i class="fa-solid fa-comments mr-1.5"></i> Curhat ke AI Pendengar
+                        </button>
+                        <button onclick="resetQuiz()" class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold px-6 py-3 rounded-xl text-xs transition">
+                            <i class="fa-solid fa-rotate-right mr-1.5"></i> Ulang Skrining
+                        </button>
+                    </div>
                 </div>
             </div>
+
         </div>
+    </div>
+</div>
 
         <!-- VIEW 4: MOOD & NAPAS -->
         <div id="view-emotions" class="view-section">
