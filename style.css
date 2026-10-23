@@ -11,6 +11,14 @@ body {
     color: #4FBAEA !important;
 }
 
+.brand-red-bg {
+    background-color: #EC2027 !important;
+}
+
+.brand-red-text {
+    color: #EC2027 !important;
+}
+
 .btn-brand {
     background-color: #4FBAEA !important;
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
@@ -22,23 +30,70 @@ body {
     transform: translateY(-1px);
 }
 
-/* Running Text (Marquee Animation) */
-.marquee {
+.top-announcement-bar {
+    background-color: #4FBAEA !important;
+    border-bottom: none !important;
+    padding-top: 1.25rem !important;    /* Menambah jarak ke atas */
+    padding-bottom: 1.25rem !important; /* Menambah jarak ke bawah */
+}
+
+/* Gradient Fade Halus di Kiri & Kanan */
+.marquee-track-container::before,
+.marquee-track-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 25px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.marquee-track-container::before {
+    left: 0;
+    background: linear-gradient(to right, #4FBAEA, transparent);
+}
+
+.marquee-track-container::after {
+    right: 0;
+    background: linear-gradient(to left, #4FBAEA, transparent);
+}
+
+/* Animasi Single Text Running dari Luar Layar Kanan ke Luar Layar Kiri */
+.marquee-track {
     display: inline-block;
-    padding-left: 100%;
-    animation: marquee 28s linear infinite;
+    width: 100%;
+    animation: marquee-single-scroll 35s linear infinite; /* Ganti 18s jadi 35s agar lebih pelan */
+}
+.marquee-track:hover {
+    animation-play-state: paused;
 }
 
-@keyframes marquee {
-    0% { transform: translate(0, 0); }
-    100% { transform: translate(-100%, 0); }
+@keyframes marquee-single-scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
-/* Active Nav Link */
+/* Header & Navbar Scroll Effect (Berwarna & Mengambang) */
+header.scrolled #navbar-box {
+    background-color: rgba(255, 255, 255, 0.98) !important;
+    border-color: rgba(79, 186, 234, 0.4) !important;
+    box-shadow: 0 12px 30px -5px rgba(79, 186, 234, 0.25), 0 4px 12px -2px rgba(15, 23, 42, 0.08) !important;
+}
+
+/* Active Navigation Tab Styling */
 .nav-link.active {
     background-color: #4FBAEA !important;
     color: #FFFFFF !important;
-    box-shadow: 0 4px 12px rgba(79, 186, 234, 0.3);
+    box-shadow: 0 4px 14px rgba(79, 186, 234, 0.35);
+}
+
+.nav-link.active i {
+    color: #FFFFFF !important;
 }
 
 .nav-link:not(.active) {
@@ -50,6 +105,7 @@ body {
     background-color: #FFFFFF;
 }
 
+/* SPA Sections */
 .view-section {
     display: none;
     opacity: 0;

@@ -15,89 +15,88 @@
 </head>
 <body class="bg-white text-slate-800 flex flex-col min-h-screen selection:bg-sky-100 selection:text-sky-800">
 
-    <!-- TOP RUNNING TEXT (INFORMASI BERJALAN LEBIH LEBAR) -->
-    <div class="brand-blue-bg text-white text-xs sm:text-sm font-semibold py-2.5 overflow-hidden border-b border-sky-300/40 shadow-inner">
-        <div class="marquee flex items-center gap-12 whitespace-nowrap">
-            <span>📢 Selamat Datang di MindCare • Platform Pertolongan Pertama Kesehatan Mental Pelajar 100% Anonim Tanpa Pendaftaran Akun.</span>
-            <span>🤝 Terhubung Langsung dengan Layanan Bimbingan Konseling (BK) SMKN 1 Ciamis & Sekolah Mitra.</span>
-            <span>💡 Luapkan Beban Pikiranmu Kapan Saja 24/7 Bersama AI Assistant yang Empatis.</span>
-            <span>🌟 Strawberry Coding Club — Karya Inovasi Pelajar SMKN 1 Ciamis.</span>
+  <!-- TOP RUNNING TEXT (CLEAN BLUE BACKGROUND & WHITE TEXT) -->
+<!-- Ganti py-3 menjadi py-5 atau py-6 untuk memperbesar latar belakang biru ke bawah -->
+<div class="top-announcement-bar py-6 px-4 text-white text-xs sm:text-sm font-semibold overflow-hidden relative">
+    <div class="max-w-7xl mx-auto flex items-center">
+        <div class="marquee-track-container flex-1 overflow-hidden relative">
+            <div class="marquee-track whitespace-nowrap">
+                <span class="inline-block text-white font-medium drop-shadow-sm">
+                    📢 <strong class="font-bold text-white">Selamat Datang di MindCare:</strong> Ruang Bercerita Digital untuk Dukungan Awal Kesehatan Mental Pelajar 100% Anonim.
+                </span>
+            </div>
         </div>
     </div>
+</div>
 
     <!-- MAIN COMPACT NAVBAR HEADER WITH OFFICIAL LOGO -->
-    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-18 flex items-center justify-between">
-            
-            <!-- Brand Logo Offical SVG -->
-            <button onclick="switchView('landing')" class="flex items-center gap-3 group focus:outline-none">
-                <div class="w-10 h-10 transition-transform duration-300 group-hover:scale-105">
-                    <svg viewBox="0 0 100 100" class="w-full h-full drop-shadow-sm">
-                        <path d="M 50,20 C 35,5 10,25 10,50 C 10,75 40,90 50,95 C 45,80 35,65 35,50 C 35,35 45,25 50,20 Z" fill="#4FBAEA"/>
-                        <circle cx="35" cy="20" r="7" fill="#4FBAEA"/>
-                        <path d="M 50,20 C 65,5 90,25 90,50 C 90,75 60,90 50,95 C 55,80 65,65 65,50 C 65,35 55,25 50,20 Z" fill="#EC2027"/>
-                        <rect x="46" y="38" width="8" height="24" rx="2" fill="#FFFFFF"/>
-                        <rect x="38" y="46" width="24" height="8" rx="2" fill="#FFFFFF"/>
-                    </svg>
+    <header id="main-header" class="sticky top-0 z-40 transition-all duration-300 py-2 sm:py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div id="navbar-box" class="bg-white/80 backdrop-blur-md border border-slate-200/80 rounded-2xl sm:rounded-full px-4 sm:px-6 h-16 sm:h-18 flex items-center justify-between transition-all duration-300">
+                
+                <!-- Brand Logo Image -->
+                <button onclick="switchView('landing')" class="flex items-center gap-2.5 group focus:outline-none">
+                    <img src="Logo MindCare.png" alt="Logo MindCare" class="w-9 h-9 object-contain group-hover:scale-105 transition-transform">
+                    <div class="flex flex-col text-left">
+                        <span class="text-lg sm:text-xl font-extrabold tracking-tight text-slate-900 group-hover:brand-blue-text transition-colors">
+                            Mind<span class="brand-blue-text">Care</span>
+                        </span>
+                    </div>
+                </button>
+
+                <!-- Desktop Navigation Tabs -->
+                <nav class="hidden lg:flex items-center gap-1 bg-slate-100/80 p-1.5 rounded-full border border-slate-200/80 text-xs font-bold text-slate-600">
+                    <button onclick="switchView('landing')" id="nav-landing" class="nav-link active px-4 py-2 rounded-full transition-all duration-200 flex items-center gap-1.5">
+                        <i class="fa-solid fa-house"></i> Beranda
+                    </button>
+                    <button onclick="switchView('chat')" id="nav-chat" class="nav-link px-4 py-2 rounded-full transition-all duration-200 flex items-center gap-1.5">
+                        <i class="fa-solid fa-comments"></i> AI Care Chat
+                    </button>
+                    <button onclick="switchView('skrining')" id="nav-skrining" class="nav-link px-4 py-2 rounded-full transition-all duration-200 flex items-center gap-1.5">
+                        <i class="fa-solid fa-clipboard-check"></i> Skrining Mental
+                    </button>
+                    <button onclick="switchView('emotions')" id="nav-emotions" class="nav-link px-4 py-2 rounded-full transition-all duration-200 flex items-center gap-1.5">
+                        <i class="fa-solid fa-face-smile"></i> Mood & Napas
+                    </button>
+                    <button onclick="switchView('rujukan')" id="nav-rujukan" class="nav-link px-4 py-2 rounded-full transition-all duration-200 flex items-center gap-1.5">
+                        <i class="fa-solid fa-school"></i> Rujukan BK
+                    </button>
+                </nav>
+
+                <!-- Quick Action Button -->
+                <div class="flex items-center gap-3">
+                    <button onclick="switchView('chat')" class="hidden sm:flex btn-brand text-white px-5 py-2.5 rounded-full font-bold text-xs shadow-md shadow-sky-400/30 flex items-center gap-2 hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>Mulai Curhat AI</span>
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-xl bg-slate-100 text-slate-700 hover:brand-blue-text transition border border-slate-200">
+                        <i class="fa-solid fa-bars text-base"></i>
+                    </button>
                 </div>
-                <div class="flex flex-col text-left">
-                    <span class="text-xl sm:text-2xl font-extrabold tracking-tight text-slate-900 group-hover:brand-blue-text transition-colors">
-                        Mind<span class="brand-blue-text">Care</span>
-                    </span>
-                    <span class="text-[9px] uppercase font-bold tracking-widest text-slate-400 -mt-1">STRAWBERRY CODING CLUB</span>
-                </div>
-            </button>
-
-            <!-- Desktop Navigation Tabs -->
-            <nav class="hidden lg:flex items-center gap-1 bg-slate-50 p-1.5 rounded-full border border-slate-200/80 text-xs font-bold text-slate-600">
-                <button onclick="switchView('landing')" id="nav-landing" class="nav-link active px-4 py-1.5 rounded-full transition flex items-center gap-1.5">
-                    <i class="fa-solid fa-house"></i> Beranda
-                </button>
-                <button onclick="switchView('chat')" id="nav-chat" class="nav-link px-4 py-1.5 rounded-full transition flex items-center gap-1.5">
-                    <i class="fa-solid fa-comments brand-blue-text"></i> AI Care Chat
-                </button>
-                <button onclick="switchView('skrining')" id="nav-skrining" class="nav-link px-4 py-1.5 rounded-full transition flex items-center gap-1.5">
-                    <i class="fa-solid fa-clipboard-check brand-blue-text"></i> Skrining Mental
-                </button>
-                <button onclick="switchView('emotions')" id="nav-emotions" class="nav-link px-4 py-1.5 rounded-full transition flex items-center gap-1.5">
-                    <i class="fa-solid fa-face-smile brand-blue-text"></i> Mood & Napas
-                </button>
-                <button onclick="switchView('rujukan')" id="nav-rujukan" class="nav-link px-4 py-1.5 rounded-full transition flex items-center gap-1.5">
-                    <i class="fa-solid fa-school brand-blue-text"></i> Rujukan BK
-                </button>
-            </nav>
-
-            <!-- Quick Action Button -->
-            <div class="flex items-center gap-3">
-                <button onclick="switchView('chat')" class="hidden sm:flex btn-brand text-white px-5 py-2.5 rounded-xl font-bold text-xs shadow-md flex items-center gap-2">
-                    <i class="fa-solid fa-paper-plane"></i>
-                    <span>Mulai Curhat AI</span>
-                </button>
-
-                <!-- Mobile Menu Button -->
-                <button onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-xl bg-slate-100 text-slate-700 hover:brand-blue-text transition border border-slate-200">
-                    <i class="fa-solid fa-bars text-base"></i>
-                </button>
             </div>
         </div>
 
         <!-- Mobile Navigation Drawer -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-4 space-y-1 text-xs font-semibold">
-            <button onclick="switchView('landing'); toggleMobileMenu()" class="w-full text-left px-3 py-2 rounded-xl text-slate-700 hover:bg-sky-50 hover:brand-blue-text flex items-center gap-2.5">
-                <i class="fa-solid fa-house brand-blue-text w-4"></i> Beranda
-            </button>
-            <button onclick="switchView('chat'); toggleMobileMenu()" class="w-full text-left px-3 py-2 rounded-xl text-slate-700 hover:bg-sky-50 hover:brand-blue-text flex items-center gap-2.5">
-                <i class="fa-solid fa-comments brand-blue-text w-4"></i> AI Care Chat (Fase Dengar)
-            </button>
-            <button onclick="switchView('skrining'); toggleMobileMenu()" class="w-full text-left px-3 py-2 rounded-xl text-slate-700 hover:bg-sky-50 hover:brand-blue-text flex items-center gap-2.5">
-                <i class="fa-solid fa-clipboard-check brand-blue-text w-4"></i> Skrining Kesehatan Mental
-            </button>
-            <button onclick="switchView('emotions'); toggleMobileMenu()" class="w-full text-left px-3 py-2 rounded-xl text-slate-700 hover:bg-sky-50 hover:brand-blue-text flex items-center gap-2.5">
-                <i class="fa-solid fa-face-smile brand-blue-text w-4"></i> Mood Tracker & Pernapasan
-            </button>
-            <button onclick="switchView('rujukan'); toggleMobileMenu()" class="w-full text-left px-3 py-2 rounded-xl text-slate-700 hover:bg-sky-50 hover:brand-blue-text flex items-center gap-2.5">
-                <i class="fa-solid fa-school brand-blue-text w-4"></i> Rujukan & Konseling BK Sekolah
-            </button>
+        <div id="mobile-menu" class="hidden lg:hidden max-w-7xl mx-auto px-4 sm:px-6 pt-2 pb-4">
+            <div class="bg-white/95 backdrop-blur-md rounded-2xl p-3 border border-slate-200/80 shadow-xl space-y-1 text-xs font-semibold">
+                <button onclick="switchView('landing'); toggleMobileMenu()" class="w-full text-left px-3 py-2 rounded-xl text-slate-700 hover:bg-sky-50 hover:brand-blue-text flex items-center gap-2.5">
+                    <i class="fa-solid fa-house brand-blue-text w-4"></i> Beranda
+                </button>
+                <button onclick="switchView('chat'); toggleMobileMenu()" class="w-full text-left px-3 py-2 rounded-xl text-slate-700 hover:bg-sky-50 hover:brand-blue-text flex items-center gap-2.5">
+                    <i class="fa-solid fa-comments brand-blue-text w-4"></i> AI Care Chat (Fase Dengar)
+                </button>
+                <button onclick="switchView('skrining'); toggleMobileMenu()" class="w-full text-left px-3 py-2 rounded-xl text-slate-700 hover:bg-sky-50 hover:brand-blue-text flex items-center gap-2.5">
+                    <i class="fa-solid fa-clipboard-check brand-blue-text w-4"></i> Skrining Kesehatan Mental
+                </button>
+                <button onclick="switchView('emotions'); toggleMobileMenu()" class="w-full text-left px-3 py-2 rounded-xl text-slate-700 hover:bg-sky-50 hover:brand-blue-text flex items-center gap-2.5">
+                    <i class="fa-solid fa-face-smile brand-blue-text w-4"></i> Mood Tracker & Pernapasan
+                </button>
+                <button onclick="switchView('rujukan'); toggleMobileMenu()" class="w-full text-left px-3 py-2 rounded-xl text-slate-700 hover:bg-sky-50 hover:brand-blue-text flex items-center gap-2.5">
+                    <i class="fa-solid fa-school brand-blue-text w-4"></i> Rujukan & Konseling BK Sekolah
+                </button>
+            </div>
         </div>
     </header>
 
@@ -114,7 +113,7 @@
                     <!-- Pill Badge -->
                     <div class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-sky-200 shadow-sm text-xs font-bold brand-blue-text">
                         <span class="w-2.5 h-2.5 rounded-full brand-blue-bg animate-ping"></span>
-                        <span>Platform Pertolongan Pertama Psikologis Pelajar (PFA)</span>
+                        <span>Platform Pertolongan Pertama Psikologis Pelajar</span>
                     </div>
 
                     <!-- Main Title -->
@@ -309,4 +308,57 @@
 
                     <form id="quiz-form">
                         <div class="quiz-q" data-q="1">
-                            <span class="text-xs
+                            <span class="text-xs font-bold brand-blue-text uppercase tracking-wider">Pertanyaan 1 dari 5</span>
+                            <h3 class="text-lg sm:text-xl font-bold text-slate-900 mt-1 mb-6">Seberapa sering kamu merasa cemas atau tertekan karena urusan sekolah?</h3>
+                            <div class="space-y-3">
+                                <label class="flex items-center p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50/50 cursor-pointer transition text-xs sm:text-sm">
+                                    <input type="radio" name="q1" value="0" class="text-sky-500">
+                                    <span class="ml-3 font-medium text-slate-700">Hampir tidak pernah sama sekali</span>
+                                </label>
+                                <label class="flex items-center p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50/50 cursor-pointer transition text-xs sm:text-sm">
+                                    <input type="radio" name="q1" value="1" class="text-sky-500">
+                                    <span class="ml-3 font-medium text-slate-700">Kadang-kadang dalam seminggu</span>
+                                </label>
+                                <label class="flex items-center p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50/50 cursor-pointer transition text-xs sm:text-sm">
+                                    <input type="radio" name="q1" value="2" class="text-sky-500">
+                                    <span class="ml-3 font-medium text-slate-700">Sangat sering / Hampir setiap hari</span>
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- VIEW 4: MOOD & NAPAS -->
+        <div id="view-emotions" class="view-section">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 py-12 text-center space-y-6">
+                <span class="brand-blue-text font-bold text-xs uppercase tracking-wider bg-sky-50 px-3 py-1 rounded-full">Refleksi & Relaksasi</span>
+                <h2 class="text-3xl font-extrabold text-slate-900">Refleksi Mood & Latihan Pernapasan 4-7-8</h2>
+                <p class="text-slate-600 text-sm max-w-md mx-auto">Tenangkan pikiranmu dan catat emosi harianmu secara mandiri.</p>
+            </div>
+        </div>
+
+        <!-- VIEW 5: RUJUKAN BK -->
+        <div id="view-rujukan" class="view-section">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 py-12 text-center space-y-6">
+                <span class="brand-red-text font-bold text-xs uppercase tracking-wider bg-red-50 px-3 py-1 rounded-full">Konseling Sekolah</span>
+                <h2 class="text-3xl font-extrabold text-slate-900">Rujukan Konseling BK Sekolah</h2>
+                <p class="text-slate-600 text-sm max-w-md mx-auto">Terhubung secara tertutup dan aman dengan Guru Bimbingan Konseling (BK) di sekolahmu.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-slate-200 py-8 text-slate-500 text-xs mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-2">
+            <p>&copy; 2026 MindCare • Strawberry Coding Club SMKN 1 Ciamis.</p>
+            <p class="text-[11px] text-slate-400">100% Anonim • Tanpa Penyimpanan Data Pribadi</p>
+        </div>
+    </footer>
+
+    <!-- Custom Script JS -->
+    <script src="script.js"></script>
+</body>
+</html>

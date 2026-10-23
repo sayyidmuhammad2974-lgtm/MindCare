@@ -8,12 +8,12 @@ function switchView(viewName) {
     });
 
     const targetView = document.getElementById(`view-${viewName}`);
-    if(targetView) {
+    if (targetView) {
         targetView.classList.add('active');
     }
 
     const targetNav = document.getElementById(`nav-${viewName}`);
-    if(targetNav) {
+    if (targetNav) {
         targetNav.classList.add('active');
     }
 
@@ -22,8 +22,20 @@ function switchView(viewName) {
 
 function toggleMobileMenu() {
     const menu = document.getElementById('mobile-menu');
-    menu.classList.toggle('hidden');
+    if (menu) {
+        menu.classList.toggle('hidden');
+    }
 }
+
+// Event Listener saat Halaman di-Scroll ke Bawah
+window.addEventListener('scroll', () => {
+    const header = document.getElementById('main-header');
+    if (window.scrollY > 20) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
 
 document.addEventListener('DOMContentLoaded', () => {
     switchView('landing');
