@@ -49,7 +49,7 @@
                     <button onclick="switchView('landing')" id="nav-landing" class="nav-link active px-4 py-2 rounded-full transition-all duration-200 flex items-center gap-1.5">
                         <i class="fa-solid fa-house"></i> Beranda
                     </button>
-                    <button onclick="switchView('chat')" id="nav-chat" class="nav-link px-4 py-2 rounded-full transition-all duration-200 flex items-center gap-1.5">
+                    <button onclick="window.location.href='chat.html'" id="nav-chat" class="nav-link px-4 py-2 rounded-full transition-all duration-200 flex items-center gap-1.5">
                         <i class="fa-solid fa-comments"></i> AI Care Chat
                     </button>
                     <button onclick="switchView('skrining')" id="nav-skrining" class="nav-link px-4 py-2 rounded-full transition-all duration-200 flex items-center gap-1.5">
@@ -65,9 +65,14 @@
 
                 <!-- Quick Action Button -->
                 <div class="flex items-center gap-3">
-                    <button onclick="switchView('chat')" class="hidden sm:flex btn-brand text-white px-5 py-2.5 rounded-full font-bold text-xs shadow-md shadow-sky-400/30 flex items-center gap-2 hover:scale-105 transition-transform">
+                    <button onclick="window.location.href='chat.html'" class="hidden sm:flex btn-brand text-white px-5 py-2.5 rounded-full font-bold text-xs shadow-md shadow-sky-400/30 flex items-center gap-2 hover:scale-105 transition-transform">
                         <i class="fa-solid fa-paper-plane"></i>
                         <span>Mulai Curhat AI</span>
+                    </button>
+
+                    <button id="theme-toggle" type="button" class="theme-toggle" aria-label="Mode tampilan: Perangkat. Klik untuk mengganti." title="Mode tampilan: Perangkat">
+                        <i id="theme-icon" class="fa-solid fa-desktop" aria-hidden="true"></i>
+                        <span id="theme-label">Perangkat</span>
                     </button>
 
                     <!-- Mobile Menu Button -->
@@ -84,7 +89,7 @@
                 <button onclick="switchView('landing'); toggleMobileMenu()" class="w-full text-left px-3 py-2 rounded-xl text-slate-700 hover:bg-sky-50 hover:brand-blue-text flex items-center gap-2.5">
                     <i class="fa-solid fa-house brand-blue-text w-4"></i> Beranda
                 </button>
-                <button onclick="switchView('chat'); toggleMobileMenu()" class="w-full text-left px-3 py-2 rounded-xl text-slate-700 hover:bg-sky-50 hover:brand-blue-text flex items-center gap-2.5">
+                <button onclick="window.location.href='chat.html'" class="w-full text-left px-3 py-2 rounded-xl text-slate-700 hover:bg-sky-50 hover:brand-blue-text flex items-center gap-2.5">
                     <i class="fa-solid fa-comments brand-blue-text w-4"></i> AI Care Chat (Fase Dengar)
                 </button>
                 <button onclick="switchView('skrining'); toggleMobileMenu()" class="w-full text-left px-3 py-2 rounded-xl text-slate-700 hover:bg-sky-50 hover:brand-blue-text flex items-center gap-2.5">
@@ -129,7 +134,7 @@
 
                     <!-- CTA Buttons -->
                     <div class="flex flex-col sm:flex-row gap-4 justify-center items-center pt-2">
-                        <button onclick="switchView('chat')" class="w-full sm:w-auto btn-brand text-white font-bold px-8 py-4 rounded-full shadow-lg shadow-sky-400/25 flex items-center justify-center gap-2.5 text-sm">
+                        <button onclick="window.location.href='chat.html'" class="w-full sm:w-auto btn-brand text-white font-bold px-8 py-4 rounded-full shadow-lg shadow-sky-400/25 flex items-center justify-center gap-2.5 text-sm">
                             <i class="fa-solid fa-comments"></i>
                             <span>Mulai Curhat Sekarang</span>
                         </button>
@@ -178,7 +183,7 @@
                             <p class="text-xs text-slate-600 leading-relaxed mb-6">
                                 Berinteraksi dengan AI spesialis pendengar yang ramah, merespons cerita dengan empati dan bahasa Indonesia sehari-hari.
                             </p>
-                            <button onclick="switchView('chat')" class="text-xs font-bold brand-blue-text hover:underline flex items-center gap-1">
+                            <button onclick="window.location.href='chat.html'" class="text-xs font-bold brand-blue-text hover:underline flex items-center gap-1">
                                 Coba AI Chat <i class="fa-solid fa-arrow-right text-[10px]"></i>
                             </button>
                         </div>

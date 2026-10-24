@@ -28,6 +28,51 @@ function toggleMobileMenu() {
     }
 }
 
+// Pilihan tema: mengikuti perangkat, terang, atau gelap.
+function initThemePicker() {
+    const button = document.getElementById('theme-toggle');
+    const label = document.getElementById('theme-label');
+    const icon = document.getElementById('theme-icon');
+    if (!button) return;
+
+    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+    const modes = {
+        system: { label: 'Perangkat', icon: 'fa-desktop' },
+        light: { label: 'Terang', icon: 'fa-sun' },
+        dark: { label: 'Gelap', icon: 'fa-moon' }
+    };
+    const nextMode = { system: 'light', light: 'dark', dark: 'system' };
+    let preference = localStorage.getItem('mindcare-theme') || 'system';
+
+    function applyTheme() {
+        const theme = preference === 'system' ? (systemTheme.matches ? 'dark' : 'light') : preference;
+        const mode = modes[preference] || modes.system;
+        document.documentElement.dataset.theme = theme;
+        if (label) label.textContent = mode.label;
+        if (icon) icon.className = `fa-solid ${mode.icon}`;
+        button.setAttribute('aria-label', `Mode tampilan: ${mode.label}. Klik untuk mengganti.`);
+        button.title = `Mode tampilan: ${mode.label}`;
+    }
+
+    applyTheme();
+    button.addEventListener('click', () => {
+        preference = nextMode[preference] || 'system';
+        localStorage.setItem('mindcare-theme', preference);
+        applyTheme();
+    });
+    systemTheme.addEventListener?.('change', () => {
+        if (preference === 'system') applyTheme();
+    });
+}
+
+function initInfiniteMarquee() {
+    document.querySelectorAll('.marquee-track').forEach((track) => {
+        if (track.querySelector('.marquee-group')) return;
+        const original = track.innerHTML;
+        track.innerHTML = `<div class="marquee-group">${original}</div><div class="marquee-group" aria-hidden="true">${original}</div>`;
+    });
+}
+
 // 2. Event Listener Scroll Header Navigasi
 window.addEventListener('scroll', () => {
     const header = document.getElementById('main-header');
@@ -221,5 +266,7 @@ function resetQuiz() {
 
 // Inisialisasi awal saat dokumen selesai dimuat
 document.addEventListener('DOMContentLoaded', () => {
+    initThemePicker();
+    initInfiniteMarquee();
     switchView('landing');
 });

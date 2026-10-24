@@ -37,45 +37,27 @@ body {
     padding-bottom: 1.25rem !important; /* Menambah jarak ke bawah */
 }
 
-/* Gradient Fade Halus di Kiri & Kanan */
-.marquee-track-container::before,
-.marquee-track-container::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 25px;
-    z-index: 10;
-    pointer-events: none;
-}
-
-.marquee-track-container::before {
-    left: 0;
-    background: linear-gradient(to right, #4FBAEA, transparent);
-}
-
-.marquee-track-container::after {
-    right: 0;
-    background: linear-gradient(to left, #4FBAEA, transparent);
-}
-
-/* Animasi Single Text Running dari Luar Layar Kanan ke Luar Layar Kiri */
+/* Duplicated groups loop continuously without a visible reset. */
+.marquee { width: 100%; overflow: hidden; }
 .marquee-track {
-    display: inline-block;
-    width: 100%;
-    animation: marquee-single-scroll 35s linear infinite; /* Ganti 18s jadi 35s agar lebih pelan */
+    display: flex;
+    width: max-content;
+    animation: marquee-infinite 36s linear infinite;
+    will-change: transform;
 }
-.marquee-track:hover {
-    animation-play-state: paused;
+.marquee-group {
+    display: flex;
+    flex: none;
+    align-items: center;
+    gap: 3rem;
+    padding-right: 3rem;
 }
-
-@keyframes marquee-single-scroll {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
+.marquee-group span { flex: none; }
+.marquee:hover .marquee-track,
+.marquee-track-container:hover .marquee-track { animation-play-state: paused; }
+@keyframes marquee-infinite { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) {
+    .marquee-track { animation-duration: 120s; }
 }
 
 /* Header & Navbar Scroll Effect (Berwarna & Mengambang) */
@@ -116,3 +98,48 @@ header.scrolled #navbar-box {
     display: block;
     opacity: 1;
 }
+
+/* Theme picker and dark palette shared by the SPA and standalone pages. */
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .55rem .8rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 9999px;
+    background: #fff;
+    color: #334155;
+    font-size: .75rem;
+    font-weight: 700;
+    transition: background-color .2s, color .2s, border-color .2s;
+}
+.theme-toggle:hover { background: #f1f5f9; }
+.theme-toggle:focus-visible { outline: 2px solid #4FBAEA; outline-offset: 2px; }
+html[data-theme="dark"] body { background: #0f172a !important; color: #e2e8f0 !important; }
+html[data-theme="dark"] .bg-white,
+html[data-theme="dark"] .bg-white\/80,
+html[data-theme="dark"] .bg-white\/95 { background-color: #1e293b !important; }
+html[data-theme="dark"] .bg-slate-50,
+html[data-theme="dark"] .bg-slate-50\/50,
+html[data-theme="dark"] .bg-slate-50\/70 { background-color: #111c2e !important; }
+html[data-theme="dark"] .bg-slate-100 { background-color: #334155 !important; }
+html[data-theme="dark"] .bg-sky-50,
+html[data-theme="dark"] .bg-sky-50\/50,
+html[data-theme="dark"] .bg-sky-100 { background-color: #123047 !important; }
+html[data-theme="dark"] .bg-gradient-to-b { background-image: linear-gradient(to bottom, #111c2e, #0f172a, #0f172a) !important; }
+html[data-theme="dark"] .text-slate-900,
+html[data-theme="dark"] .text-slate-800,
+html[data-theme="dark"] .text-slate-700,
+html[data-theme="dark"] .text-slate-600 { color: #e2e8f0 !important; }
+html[data-theme="dark"] .text-slate-500,
+html[data-theme="dark"] .text-slate-400 { color: #a9b8ca !important; }
+html[data-theme="dark"] .border-slate-100,
+html[data-theme="dark"] .border-slate-200,
+html[data-theme="dark"] .border-slate-200\/80 { border-color: #334155 !important; }
+html[data-theme="dark"] .theme-toggle,
+html[data-theme="dark"] input[type="text"],
+html[data-theme="dark"] textarea { border-color: #475569; background-color: #1e293b; color: #f1f5f9; }
+html[data-theme="dark"] #main-header.scrolled #navbar-box { background-color: rgba(30, 41, 59, .98) !important; }
+html[data-theme="dark"] #mobile-menu { background-color: #1e293b !important; border-color: #334155 !important; }
+html[data-theme="dark"] .chat-bubble { border-color: #334155; background-color: #1e293b; color: #e2e8f0; }
+html[data-theme="dark"] .chat-bubble-user { background-color: #123047; }
