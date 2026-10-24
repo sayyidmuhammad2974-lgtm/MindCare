@@ -30,6 +30,6 @@ Backend membatasi request ke 8 per menit per alamat IP untuk proses server tungg
 
 Chat dibatasi untuk refleksi emosi dan dukungan pelajar. Server menolak beberapa pola permintaan coding atau upaya mengubah/membocorkan instruksi, serta menahan jawaban yang tampak seperti kode. Prompt dan filter mengurangi risiko, tetapi tidak menjamin kebal jailbreak.
 
-Jika AI menilai dukungan guru BK/orang dewasa tepercaya diperlukan, backend mengirim `show_referral: true` dan chat menampilkan tombol ke `rujukan.html`. Beberapa frasa bahaya langsung juga dapat memunculkan tombol. Ini bukan pengganti pendampingan langsung atau layanan darurat.
+Chatbot diarahkan untuk mendengarkan dan memahami perasaan pengguna terlebih dahulu, tanpa mengakhiri setiap balasan dengan saran menghubungi BK. Tombol rujukan hanya muncul saat pengguna menunjukkan kesiapan/meminta bantuan untuk menghubungi orang tepercaya, atau saat ada petunjuk risiko keselamatan. Untuk indikasi berniat menyakiti diri sendiri atau orang lain, chatbot diminta merespons langsung dan mengutamakan keselamatan. Deteksi pola di server hanyalah lapisan tambahan dan tidak dapat memastikan keadaan seseorang; ini bukan pengganti pendampingan langsung atau layanan darurat.
 
 Template environment hanya ada satu, di root: `.env.example`. Salin template itu ke `backend/.env`; file `.env` lokal diabaikan oleh Git.
