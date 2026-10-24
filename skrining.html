@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/Logo%20MindCare.png">
+    <title>MindCare - Refleksi Perasaan</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white text-slate-800 flex flex-col min-h-screen selection:bg-sky-100 selection:text-sky-800">
+
+    <!-- TOP RUNNING TEXT (INFORMASI BERJALAN LEBIH LEBAR) -->
+    <div class="brand-blue-bg text-white text-xs sm:text-sm font-semibold py-2.5 overflow-hidden border-b border-sky-300/40 shadow-inner">
+        <div class="marquee" aria-label="Informasi MindCare">
+    <div class="marquee-track">
+        <div class="marquee-group">
+            <span>📢 Selamat datang di MindCare · Ruang refleksi pelajar tanpa pendaftaran akun.</span>
+            <span>🤝 Temukan dukungan dari guru BK, wali kelas, dan orang dewasa tepercaya.</span>
+            <span>💡 Luapkan beban pikiranmu dan lakukan refleksi kapan saja.</span>
+            <span>🌟 Strawberry Coding Club — Karya Inovasi Pelajar SMKN 1 Ciamis.</span>
+        </div>
+        <div class="marquee-group" aria-hidden="true">
+            <span>📢 Selamat datang di MindCare · Ruang refleksi pelajar tanpa pendaftaran akun.</span>
+            <span>🤝 Temukan dukungan dari guru BK, wali kelas, dan orang dewasa tepercaya.</span>
+            <span>💡 Luapkan beban pikiranmu dan lakukan refleksi kapan saja.</span>
+            <span>🌟 Strawberry Coding Club — Karya Inovasi Pelajar SMKN 1 Ciamis.</span>
+        </div>
+    </div>
+</div>
+    </div>
+
+    <!-- MAIN COMPACT NAVBAR HEADER WITH OFFICIAL LOGO -->
+    <header class="site-header sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-18 flex items-center justify-between">
+
+            <!-- Brand logo image -->
+            <a href="index.html" class="flex items-center gap-3 group focus:outline-none">
+                <div class="w-10 h-10 transition-transform duration-300 group-hover:scale-105">
+                    <img src="assets/Logo MindCare.png" alt="" class="w-full h-full object-contain drop-shadow-sm">
+                </div>
+                <div class="flex flex-col text-left">
+                    <span class="brand-name text-xl sm:text-2xl font-extrabold tracking-tight text-slate-900 group-hover:brand-blue-text transition-colors">
+                        Mind<span class="brand-blue-text">Care</span>
+                    </span>
+                    <span class="brand-caption text-[9px] uppercase font-bold tracking-widest text-slate-400 -mt-1">STRAWBERRY CODING CLUB</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Tabs -->
+            <nav class="hidden lg:flex items-center gap-1 bg-slate-50 p-1.5 rounded-full border border-slate-200/80 text-xs font-bold text-slate-600">
+                <a href="index.html" data-nav="landing" class="nav-link active px-4 py-1.5 rounded-full transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </a>
+                <a href="chat.html" data-nav="chat" class="nav-link px-4 py-1.5 rounded-full transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-comments brand-blue-text"></i> Chat Pendamping
+                </a>
+                <a href="skrining.html" data-nav="skrining" class="nav-link px-4 py-1.5 rounded-full transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-clipboard-check brand-blue-text"></i> Skrining Mental
+                </a>
+                <a href="rujukan.html" data-nav="rujukan" class="nav-link px-4 py-1.5 rounded-full transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-school brand-blue-text"></i> Rujukan BK
+                </a>
+            </nav>
+
+            <!-- Display Theme -->
+            <button id="theme-toggle" type="button" class="theme-toggle" aria-label="Mode tampilan: Perangkat. Klik untuk mengganti." title="Mode tampilan: Perangkat">
+                <i id="theme-icon" class="fa-solid fa-desktop" aria-hidden="true"></i>
+                <span id="theme-label">Perangkat</span>
+            </button>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-toggle" aria-label="Buka menu" aria-expanded="false" aria-controls="mobile-menu" onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-xl bg-slate-100 text-slate-700 hover:brand-blue-text transition border border-slate-200">
+                    <i class="fa-solid fa-bars text-base"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-4 space-y-1 text-xs font-semibold">
+            <a href="index.html" data-nav="landing" class="w-full text-left px-3 py-2 rounded-xl text-slate-700 hover:bg-sky-50 hover:brand-blue-text flex items-center gap-2.5">
+                <i class="fa-solid fa-house brand-blue-text w-4"></i> Beranda
+            </a>
+            <a href="chat.html" data-nav="chat" class="w-full text-left px-3 py-2 rounded-xl text-slate-700 hover:bg-sky-50 hover:brand-blue-text flex items-center gap-2.5">
+                <i class="fa-solid fa-comments brand-blue-text w-4"></i> Chat Pendamping
+            </a>
+            <a href="skrining.html" data-nav="skrining" class="w-full text-left px-3 py-2 rounded-xl text-slate-700 hover:bg-sky-50 hover:brand-blue-text flex items-center gap-2.5">
+                <i class="fa-solid fa-clipboard-check brand-blue-text w-4"></i> Skrining Kesehatan Mental
+            </a>
+            <a href="rujukan.html" data-nav="rujukan" class="w-full text-left px-3 py-2 rounded-xl text-slate-700 hover:bg-sky-50 hover:brand-blue-text flex items-center gap-2.5">
+                <i class="fa-solid fa-school brand-blue-text w-4"></i> Rujukan & Konseling BK Sekolah
+            </a>
+        </div>
+    </header>
+
+
+    <main class="flex-grow" data-page="skrining">
+
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+                <div class="text-center mb-8 space-y-2">
+                    <span class="text-xs font-bold uppercase tracking-widest brand-blue-text bg-sky-50 px-3 py-1 rounded-full">Evaluasi Mandiri</span>
+                    <h2 class="text-3xl font-extrabold text-slate-900">Refleksi Perasaan Pelajar</h2>
+                    <p class="text-slate-500 text-xs sm:text-sm max-w-md mx-auto">Jawab 5 pertanyaan untuk mengenali apa yang sedang kamu rasakan.</p>
+                </div>
+
+                <div class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xl">
+                    <div class="w-full bg-slate-100 h-2 rounded-full mb-8 overflow-hidden">
+                        <div id="quiz-progress-bar" class="brand-blue-bg h-full w-[20%] transition-all duration-300" role="progressbar" aria-label="Kemajuan kuis" aria-valuemin="1" aria-valuemax="5" aria-valuenow="1"></div>
+                    </div>
+
+                    <form id="quiz-form" class="space-y-6">
+                        <fieldset class="quiz-q space-y-4" data-q="1">
+                            <legend class="font-bold text-slate-800">Dalam dua minggu terakhir, seberapa sering kamu merasa cemas atau gelisah?</legend>
+                            <label class="block"><input type="radio" name="q1" value="0" required> Tidak pernah</label>
+                            <label class="block"><input type="radio" name="q1" value="1"> Beberapa hari</label>
+                            <label class="block"><input type="radio" name="q1" value="2"> Lebih dari separuh waktu</label>
+                            <label class="block"><input type="radio" name="q1" value="3"> Hampir setiap hari</label>
+                        </fieldset>
+                        <fieldset class="quiz-q hidden space-y-4" data-q="2">
+                            <legend class="font-bold text-slate-800">Dalam dua minggu terakhir, seberapa sering kamu merasa sulit tidur atau beristirahat?</legend>
+                            <label class="block"><input type="radio" name="q2" value="0" required> Tidak pernah</label>
+                            <label class="block"><input type="radio" name="q2" value="1"> Beberapa hari</label>
+                            <label class="block"><input type="radio" name="q2" value="2"> Lebih dari separuh waktu</label>
+                            <label class="block"><input type="radio" name="q2" value="3"> Hampir setiap hari</label>
+                        </fieldset>
+                        <fieldset class="quiz-q hidden space-y-4" data-q="3">
+                            <legend class="font-bold text-slate-800">Dalam dua minggu terakhir, seberapa sering kamu kehilangan minat pada hal-hal yang biasanya kamu sukai?</legend>
+                            <label class="block"><input type="radio" name="q3" value="0" required> Tidak pernah</label>
+                            <label class="block"><input type="radio" name="q3" value="1"> Beberapa hari</label>
+                            <label class="block"><input type="radio" name="q3" value="2"> Lebih dari separuh waktu</label>
+                            <label class="block"><input type="radio" name="q3" value="3"> Hampir setiap hari</label>
+                        </fieldset>
+                        <fieldset class="quiz-q hidden space-y-4" data-q="4">
+                            <legend class="font-bold text-slate-800">Dalam dua minggu terakhir, seberapa sering tekanan sekolah atau pertemanan terasa sulit dihadapi?</legend>
+                            <label class="block"><input type="radio" name="q4" value="0" required> Tidak pernah</label>
+                            <label class="block"><input type="radio" name="q4" value="1"> Beberapa hari</label>
+                            <label class="block"><input type="radio" name="q4" value="2"> Lebih dari separuh waktu</label>
+                            <label class="block"><input type="radio" name="q4" value="3"> Hampir setiap hari</label>
+                        </fieldset>
+                        <fieldset class="quiz-q hidden space-y-4" data-q="5">
+                            <legend class="font-bold text-slate-800">Dalam dua minggu terakhir, seberapa sering kamu merasa tidak punya orang yang bisa diajak bicara?</legend>
+                            <label class="block"><input type="radio" name="q5" value="0" required> Tidak pernah</label>
+                            <label class="block"><input type="radio" name="q5" value="1"> Beberapa hari</label>
+                            <label class="block"><input type="radio" name="q5" value="2"> Lebih dari separuh waktu</label>
+                            <label class="block"><input type="radio" name="q5" value="3"> Hampir setiap hari</label>
+                        </fieldset>
+                        <p id="quiz-error" class="hidden text-sm text-red-700" role="alert">Pilih satu jawaban untuk melanjutkan.</p>
+                        <div class="flex justify-between gap-3">
+                            <button id="quiz-prev" type="button" class="hidden px-5 py-3 rounded-xl border">Sebelumnya</button>
+                            <button id="quiz-next" type="button" class="btn-brand text-white px-5 py-3 rounded-xl font-bold">Lanjut</button>
+                            <button id="quiz-submit" type="submit" class="hidden btn-brand text-white px-5 py-3 rounded-xl font-bold">Lihat refleksi</button>
+                        </div>
+                    </form>
+                    <div id="quiz-result" class="hidden mt-6 rounded-2xl bg-sky-50 p-5" aria-live="polite"></div>
+                    <p class="mt-6 text-xs text-slate-500">Ini refleksi mandiri, bukan diagnosis atau pengganti bantuan profesional. Jawaban tidak disimpan.</p>
+                </div>
+            </div>
+        
+    </main>
+    <footer class="brand-blue-bg text-white py-6 text-center text-xs">MindCare · Ruang refleksi dan dukungan pelajar</footer>
+    <script src="javascript/script.js" defer></script>
+</body>
+</html>

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/Logo%20MindCare.png">
     <title>MindCare - Platform Kesehatan Mental Digital Pelajar</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -11,7 +12,7 @@
     <!-- Google Fonts: Plus Jakarta Sans -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Custom Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="bg-white text-slate-800 flex flex-col min-h-screen selection:bg-sky-100 selection:text-sky-800">
 
@@ -32,11 +33,11 @@
     <!-- MAIN COMPACT NAVBAR HEADER WITH OFFICIAL LOGO -->
     <header id="main-header" class="sticky top-0 z-40 transition-all duration-300 py-2 sm:py-3">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div id="navbar-box" class="bg-white/80 backdrop-blur-md border border-slate-200/80 rounded-2xl sm:rounded-full px-4 sm:px-6 h-16 sm:h-18 flex items-center justify-between transition-all duration-300">
-                
+            <div id="navbar-box" class="bg-white/80 backdrop-blur-md border border-slate-200/80 rounded-2xl sm:rounded-full px-4 sm:px-6 h-16 sm:h-18 grid grid-cols-[1fr_auto_1fr] items-center transition-all duration-300">
+
                 <!-- Brand Logo Image -->
-                <button onclick="switchView('landing')" class="flex items-center gap-2.5 group focus:outline-none">
-                    <img src="Logo MindCare.png" alt="Logo MindCare" class="w-9 h-9 object-contain group-hover:scale-105 transition-transform">
+                <button onclick="switchView('landing')" class="col-start-1 justify-self-start flex items-center gap-2.5 group focus:outline-none">
+                    <img src="assets/Logo MindCare.png" alt="Logo MindCare" class="w-9 h-9 object-contain group-hover:scale-105 transition-transform">
                     <div class="flex flex-col text-left">
                         <span class="text-lg sm:text-xl font-extrabold tracking-tight text-slate-900 group-hover:brand-blue-text transition-colors">
                             Mind<span class="brand-blue-text">Care</span>
@@ -45,38 +46,30 @@
                 </button>
 
                 <!-- Desktop Navigation Tabs -->
-                <nav class="hidden lg:flex items-center gap-1 bg-slate-100/80 p-1.5 rounded-full border border-slate-200/80 text-xs font-bold text-slate-600">
-                    <button onclick="switchView('landing')" id="nav-landing" class="nav-link active px-4 py-2 rounded-full transition-all duration-200 flex items-center gap-1.5">
+                <nav class="hidden lg:flex col-start-2 w-fit max-w-full justify-self-center items-center gap-1 bg-slate-100/80 p-1.5 rounded-full border border-slate-200/80 text-xs font-bold text-slate-600">
+                    <button onclick="switchView('landing')" data-view="landing" id="nav-landing" class="nav-link active px-4 py-2 rounded-full transition-all duration-200 flex items-center gap-1.5">
                         <i class="fa-solid fa-house"></i> Beranda
                     </button>
-                    <button onclick="window.location.href='chat.html'" id="nav-chat" class="nav-link px-4 py-2 rounded-full transition-all duration-200 flex items-center gap-1.5">
+                    <button onclick="window.location.href='chat.html'" data-view="chat" id="nav-chat" class="nav-link px-4 py-2 rounded-full transition-all duration-200 flex items-center gap-1.5">
                         <i class="fa-solid fa-comments"></i> AI Care Chat
                     </button>
-                    <button onclick="switchView('skrining')" id="nav-skrining" class="nav-link px-4 py-2 rounded-full transition-all duration-200 flex items-center gap-1.5">
+                    <button onclick="window.location.href='skrining.html'" data-view="skrining" id="nav-skrining" class="nav-link px-4 py-2 rounded-full transition-all duration-200 flex items-center gap-1.5">
                         <i class="fa-solid fa-clipboard-check"></i> Skrining Mental
                     </button>
-                    <button onclick="switchView('emotions')" id="nav-emotions" class="nav-link px-4 py-2 rounded-full transition-all duration-200 flex items-center gap-1.5">
-                        <i class="fa-solid fa-face-smile"></i> Mood & Napas
-                    </button>
-                    <button onclick="switchView('rujukan')" id="nav-rujukan" class="nav-link px-4 py-2 rounded-full transition-all duration-200 flex items-center gap-1.5">
+                    <button onclick="window.location.href='rujukan.html'" data-view="rujukan" id="nav-rujukan" class="nav-link px-4 py-2 rounded-full transition-all duration-200 flex items-center gap-1.5">
                         <i class="fa-solid fa-school"></i> Rujukan BK
                     </button>
                 </nav>
 
                 <!-- Quick Action Button -->
-                <div class="flex items-center gap-3">
-                    <button onclick="window.location.href='chat.html'" class="hidden sm:flex btn-brand text-white px-5 py-2.5 rounded-full font-bold text-xs shadow-md shadow-sky-400/30 flex items-center gap-2 hover:scale-105 transition-transform">
-                        <i class="fa-solid fa-paper-plane"></i>
-                        <span>Mulai Curhat AI</span>
-                    </button>
-
+                <div class="col-start-3 justify-self-end flex items-center gap-3">
                     <button id="theme-toggle" type="button" class="theme-toggle" aria-label="Mode tampilan: Perangkat. Klik untuk mengganti." title="Mode tampilan: Perangkat">
                         <i id="theme-icon" class="fa-solid fa-desktop" aria-hidden="true"></i>
                         <span id="theme-label">Perangkat</span>
                     </button>
 
                     <!-- Mobile Menu Button -->
-                    <button onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-xl bg-slate-100 text-slate-700 hover:brand-blue-text transition border border-slate-200">
+                    <button id="mobile-menu-toggle" aria-label="Buka menu" aria-expanded="false" aria-controls="mobile-menu" onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-xl bg-slate-100 text-slate-700 hover:brand-blue-text transition border border-slate-200">
                         <i class="fa-solid fa-bars text-base"></i>
                     </button>
                 </div>
@@ -86,19 +79,16 @@
         <!-- Mobile Navigation Drawer -->
         <div id="mobile-menu" class="hidden lg:hidden max-w-7xl mx-auto px-4 sm:px-6 pt-2 pb-4">
             <div class="bg-white/95 backdrop-blur-md rounded-2xl p-3 border border-slate-200/80 shadow-xl space-y-1 text-xs font-semibold">
-                <button onclick="switchView('landing'); toggleMobileMenu()" class="w-full text-left px-3 py-2 rounded-xl text-slate-700 hover:bg-sky-50 hover:brand-blue-text flex items-center gap-2.5">
+                <button onclick="switchView('landing'); toggleMobileMenu()" data-view="landing" class="w-full text-left px-3 py-2 rounded-xl text-slate-700 hover:bg-sky-50 hover:brand-blue-text flex items-center gap-2.5">
                     <i class="fa-solid fa-house brand-blue-text w-4"></i> Beranda
                 </button>
                 <button onclick="window.location.href='chat.html'" class="w-full text-left px-3 py-2 rounded-xl text-slate-700 hover:bg-sky-50 hover:brand-blue-text flex items-center gap-2.5">
                     <i class="fa-solid fa-comments brand-blue-text w-4"></i> AI Care Chat (Fase Dengar)
                 </button>
-                <button onclick="switchView('skrining'); toggleMobileMenu()" class="w-full text-left px-3 py-2 rounded-xl text-slate-700 hover:bg-sky-50 hover:brand-blue-text flex items-center gap-2.5">
+                <button onclick="window.location.href='skrining.html'" data-view="skrining" class="w-full text-left px-3 py-2 rounded-xl text-slate-700 hover:bg-sky-50 hover:brand-blue-text flex items-center gap-2.5">
                     <i class="fa-solid fa-clipboard-check brand-blue-text w-4"></i> Skrining Kesehatan Mental
                 </button>
-                <button onclick="switchView('emotions'); toggleMobileMenu()" class="w-full text-left px-3 py-2 rounded-xl text-slate-700 hover:bg-sky-50 hover:brand-blue-text flex items-center gap-2.5">
-                    <i class="fa-solid fa-face-smile brand-blue-text w-4"></i> Mood Tracker & Pernapasan
-                </button>
-                <button onclick="switchView('rujukan'); toggleMobileMenu()" class="w-full text-left px-3 py-2 rounded-xl text-slate-700 hover:bg-sky-50 hover:brand-blue-text flex items-center gap-2.5">
+                <button onclick="window.location.href='rujukan.html'" data-view="rujukan" class="w-full text-left px-3 py-2 rounded-xl text-slate-700 hover:bg-sky-50 hover:brand-blue-text flex items-center gap-2.5">
                     <i class="fa-solid fa-school brand-blue-text w-4"></i> Rujukan & Konseling BK Sekolah
                 </button>
             </div>
@@ -110,11 +100,11 @@
 
         <!-- VIEW 1: LANDING PAGE -->
         <div id="view-landing" class="view-section active">
-            
+
             <!-- Hero Section -->
             <section class="relative bg-gradient-to-b from-sky-50/70 via-white to-white py-16 sm:py-24 border-b border-slate-100 overflow-hidden">
                 <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-8 relative z-10">
-                    
+
                     <!-- Pill Badge -->
                     <div class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-sky-200 shadow-sm text-xs font-bold brand-blue-text">
                         <span class="w-2.5 h-2.5 rounded-full brand-blue-bg animate-ping"></span>
@@ -138,7 +128,7 @@
                             <i class="fa-solid fa-comments"></i>
                             <span>Mulai Curhat Sekarang</span>
                         </button>
-                        <button onclick="switchView('skrining')" class="w-full sm:w-auto bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 font-bold px-8 py-4 rounded-full shadow-sm flex items-center justify-center gap-2.5 text-sm transition-all hover:border-sky-300">
+                        <button onclick="window.location.href='skrining.html'" class="w-full sm:w-auto bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 font-bold px-8 py-4 rounded-full shadow-sm flex items-center justify-center gap-2.5 text-sm transition-all hover:border-sky-300">
                             <i class="fa-solid fa-stethoscope brand-blue-text"></i>
                             <span>Tes Skrining Mental</span>
                         </button>
@@ -172,7 +162,7 @@
                         <p class="text-slate-500 text-sm">Dirancang dengan alur logis Dengar – Kenali – Temukan Bantuan untuk mendukung kesehatan emosional pelajar.</p>
                     </div>
 
-                    <div class="grid md:grid-cols-3 gap-8">
+                    <div class="grid md:grid-cols-2 gap-8">
                         <!-- Fase 1 -->
                         <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200/80 hover:border-sky-300 transition-all shadow-sm group">
                             <div class="w-12 h-12 rounded-2xl brand-blue-bg text-white flex items-center justify-center font-extrabold text-xl mb-6 group-hover:scale-110 transition-transform shadow-md">
@@ -188,21 +178,6 @@
                             </button>
                         </div>
 
-                        <!-- Fase 2 -->
-                        <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200/80 hover:border-sky-300 transition-all shadow-sm group">
-                            <div class="w-12 h-12 rounded-2xl bg-slate-800 text-white flex items-center justify-center font-extrabold text-xl mb-6 group-hover:scale-110 transition-transform shadow-md">
-                                2
-                            </div>
-                            <span class="text-[11px] font-bold text-slate-700 uppercase tracking-wider">Fase 2</span>
-                            <h3 class="text-xl font-bold text-slate-900 mb-2">Kenali (Mood & Relaksasi)</h3>
-                            <p class="text-xs text-slate-600 leading-relaxed mb-6">
-                                Siswa diajak mengenali emosi melalui pemantauan mood harian dan teknik latihan pernapasan terpandu 4-7-8 tanpa tekanan.
-                            </p>
-                            <button onclick="switchView('emotions')" class="text-xs font-bold brand-blue-text hover:underline flex items-center gap-1">
-                                Refleksi & Napas <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                            </button>
-                        </div>
-
                         <!-- Fase 3 -->
                         <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200/80 hover:border-sky-300 transition-all shadow-sm group">
                             <div class="w-12 h-12 rounded-2xl brand-red-bg text-white flex items-center justify-center font-extrabold text-xl mb-6 group-hover:scale-110 transition-transform shadow-md">
@@ -213,7 +188,7 @@
                             <p class="text-xs text-slate-600 leading-relaxed mb-6">
                                 Menghubungkan siswa dengan unit Bimbingan Konseling (BK) di sekolah secara rahasia apabila membutuhkan penanganan lebih lanjut.
                             </p>
-                            <button onclick="switchView('rujukan')" class="text-xs font-bold brand-red-text hover:underline flex items-center gap-1">
+                            <button onclick="window.location.href='rujukan.html'" class="text-xs font-bold brand-red-text hover:underline flex items-center gap-1">
                                 Akses Layanan BK <i class="fa-solid fa-arrow-right text-[10px]"></i>
                             </button>
                         </div>
@@ -221,28 +196,14 @@
                 </div>
             </section>
 
-            <!-- Banner Skrining Quick Check -->
-            <section class="py-12 brand-blue-bg text-white">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-                        <div class="space-y-2 text-center md:text-left">
-                            <h3 class="text-2xl font-bold">Ingin Mengukur Tingkat Kecemasanmu Saat Ini?</h3>
-                            <p class="text-sky-100 text-xs sm:text-sm max-w-xl">Ikuti tes skrining mental anonim singkat berbasis indikator kesehatan emosional pelajar.</p>
-                        </div>
-                        <button onclick="switchView('skrining')" class="bg-white hover:bg-sky-50 text-sky-800 font-bold px-6 py-3.5 rounded-xl shadow-md transition text-xs whitespace-nowrap">
-                            <i class="fa-solid fa-stethoscope mr-1.5 brand-blue-text"></i> Mulai Skrining Mandiri
-                        </button>
-                    </div>
-                </div>
-            </section>
         </div>
 
         <!-- VIEW 2: CONSULTATION CHAT AI (CLEAN SAFETY CHECK DESIGN) -->
 <div id="view-chat" class="view-section">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        
+
         <div class="bg-slate-50/70 border border-slate-200 rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row min-h-[650px] h-[80vh]">
-            
+
             <!-- LEFT SIDEBAR: QUICK NAVIGATION & TOOLS -->
             <aside class="w-full md:w-72 bg-white border-b md:border-b-0 md:border-r border-slate-200 p-4 flex flex-col justify-between gap-4">
                 <div class="space-y-4">
@@ -276,11 +237,11 @@
                 <!-- Quick Screening Links -->
                 <div class="space-y-2 pt-4 border-t border-slate-100">
                     <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 px-2">Skrining Cepat</span>
-                    <button onclick="switchView('skrining')" class="w-full text-left p-2.5 rounded-xl hover:bg-slate-100 text-slate-700 text-xs font-semibold flex items-center gap-2 transition">
+                    <button onclick="window.location.href='skrining.html'" class="w-full text-left p-2.5 rounded-xl hover:bg-slate-100 text-slate-700 text-xs font-semibold flex items-center gap-2 transition">
                         <i class="fa-solid fa-fire-flame-curved brand-red-text"></i>
                         <span>Skrining</span>
                     </button>
-                    <button onclick="switchView('skrining')" class="w-full text-left p-2.5 rounded-xl hover:bg-slate-100 text-slate-700 text-xs font-semibold flex items-center gap-2 transition">
+                    <button onclick="window.location.href='skrining.html'" class="w-full text-left p-2.5 rounded-xl hover:bg-slate-100 text-slate-700 text-xs font-semibold flex items-center gap-2 transition">
                         <i class="fa-solid fa-notes-medical brand-blue-text"></i>
                         <span>Evaluasi Kecemasan</span>
                     </button>
@@ -289,7 +250,7 @@
 
             <!-- RIGHT MAIN CHAT AREA -->
             <main class="flex-1 bg-slate-50/30 flex flex-col justify-between relative">
-                
+
                 <!-- TOP UTILITY BAR -->
                 <div class="p-4 bg-white/80 backdrop-blur-md border-b border-slate-200 flex items-center justify-between gap-2">
                     <div class="flex items-center gap-2">
@@ -306,10 +267,10 @@
 
                 <!-- CHAT MESSAGES CONTAINER / SAFETY CHECK SCREEN -->
                 <div id="chat-box" class="flex-1 p-6 overflow-y-auto space-y-6 flex flex-col justify-center items-center">
-                    
+
                     <!-- Safety Card Initial View -->
                     <div class="max-w-md w-full bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm text-center space-y-5">
-                        
+
                         <!-- Icon Alert Badge -->
                         <div class="w-16 h-16 rounded-2xl brand-red-bg text-white flex items-center justify-center text-2xl mx-auto shadow-md">
                             <i class="fa-solid fa-shield-heart"></i>
@@ -328,7 +289,7 @@
 
                         <!-- Action Buttons -->
                         <div class="space-y-2.5 pt-2">
-                            <button onclick="switchView('rujukan')" class="w-full py-3.5 px-4 brand-red-bg hover:bg-red-600 text-white font-bold text-xs rounded-2xl shadow-md transition flex items-center justify-center gap-2">
+                            <button onclick="window.location.href='rujukan.html'" class="w-full py-3.5 px-4 brand-red-bg hover:bg-red-600 text-white font-bold text-xs rounded-2xl shadow-md transition flex items-center justify-center gap-2">
                                 <i class="fa-solid fa-phone-volume"></i>
                                 <span>Ya, Hubungi Bantuan Darurat / Guru BK</span>
                             </button>
@@ -396,16 +357,7 @@
             </div>
         </div>
 
-        <!-- VIEW 4: MOOD & NAPAS -->
-        <div id="view-emotions" class="view-section">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 py-12 text-center space-y-6">
-                <span class="brand-blue-text font-bold text-xs uppercase tracking-wider bg-sky-50 px-3 py-1 rounded-full">Refleksi & Relaksasi</span>
-                <h2 class="text-3xl font-extrabold text-slate-900">Refleksi Mood & Latihan Pernapasan 4-7-8</h2>
-                <p class="text-slate-600 text-sm max-w-md mx-auto">Tenangkan pikiranmu dan catat emosi harianmu secara mandiri.</p>
-            </div>
-        </div>
-
-        <!-- VIEW 5: RUJUKAN BK -->
+        <!-- VIEW 4: RUJUKAN BK -->
         <div id="view-rujukan" class="view-section">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 py-12 text-center space-y-6">
                 <span class="brand-red-text font-bold text-xs uppercase tracking-wider bg-red-50 px-3 py-1 rounded-full">Konseling Sekolah</span>
@@ -417,14 +369,27 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="bg-white border-t border-slate-200 py-8 text-slate-500 text-xs mt-auto">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-2">
+    <footer class="brand-blue-bg border-t border-sky-300/40 text-white text-xs mt-auto">
+        <section class="py-10 brand-blue-bg text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="space-y-2 text-center md:text-left">
+                        <h3 class="text-2xl font-bold">Ingin Mengukur Tingkat Kecemasanmu Saat Ini?</h3>
+                        <p class="text-sky-100 text-xs sm:text-sm max-w-xl">Ikuti tes skrining mandiri singkat untuk mengenali beban emosionalmu.</p>
+                    </div>
+                    <button onclick="window.location.href='skrining.html'" class="bg-white hover:bg-sky-50 text-sky-800 font-bold px-6 py-3.5 rounded-xl shadow-md transition text-xs whitespace-nowrap">
+                        <i class="fa-solid fa-stethoscope mr-1.5 brand-blue-text"></i> Mulai Skrining Mandiri
+                    </button>
+                </div>
+            </div>
+        </section>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-7 text-center space-y-2 border-t border-white/20">
             <p>&copy; 2026 MindCare • Strawberry Coding Club SMKN 1 Ciamis.</p>
             <p class="text-[11px] text-slate-400">100% Anonim • Tanpa Penyimpanan Data Pribadi</p>
         </div>
     </footer>
 
     <!-- Custom Script JS -->
-    <script src="script.js"></script>
+    <script src="javascript/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,189 @@
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+/* Color Tokens */
+.brand-blue-bg {
+    background-color: #4FBAEA !important;
+}
+
+.brand-blue-text {
+    color: #4FBAEA !important;
+}
+
+.brand-red-bg {
+    background-color: #EC2027 !important;
+}
+
+.brand-red-text {
+    color: #EC2027 !important;
+}
+
+.btn-brand {
+    background-color: #4FBAEA !important;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-brand:hover {
+    background-color: #3ba8d8 !important;
+    box-shadow: 0 10px 25px -5px rgba(79, 186, 234, 0.4);
+    transform: translateY(-1px);
+}
+
+.top-announcement-bar {
+    background-color: #4FBAEA !important;
+    border-bottom: none !important;
+    padding-top: 1.25rem !important;    /* Menambah jarak ke atas */
+    padding-bottom: 1.25rem !important; /* Menambah jarak ke bawah */
+}
+.top-announcement-bar > .max-w-7xl {
+    width: 100%;
+    max-width: none;
+}
+
+/* Duplicated groups loop continuously without a visible reset. */
+.marquee { width: 100%; overflow: hidden; }
+.marquee-track {
+    display: flex;
+    width: max-content;
+    /* Same message and duration on every page keeps the ticker calm and consistent. */
+    animation: marquee-infinite 72s linear infinite;
+    will-change: transform;
+}
+.marquee-group {
+    display: flex;
+    flex: none;
+    align-items: center;
+    gap: 3rem;
+    padding-right: 3rem;
+}
+.marquee-group span { flex: none; }
+@keyframes marquee-infinite { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) {
+    .marquee-track { animation-duration: 120s; }
+}
+
+/* Header & Navbar Scroll Effect (Berwarna & Mengambang) */
+header.scrolled #navbar-box {
+    background-color: rgba(255, 255, 255, 0.98) !important;
+    border-color: rgba(79, 186, 234, 0.4) !important;
+    box-shadow: 0 12px 30px -5px rgba(79, 186, 234, 0.25), 0 4px 12px -2px rgba(15, 23, 42, 0.08) !important;
+}
+
+/* Active Navigation Tab Styling */
+.nav-link.active {
+    background-color: #4FBAEA !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 4px 14px rgba(79, 186, 234, 0.35);
+}
+
+.nav-link.active i {
+    color: #FFFFFF !important;
+}
+
+.nav-link:not(.active) {
+    color: #475569;
+}
+
+.nav-link:not(.active):hover {
+    color: #0F172A;
+    background-color: #FFFFFF;
+}
+#mobile-menu [data-nav][aria-current="page"],
+#mobile-menu [data-view].active {
+    background-color: #e0f2fe;
+    color: #0369a1;
+}
+
+/* SPA Sections */
+.view-section {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out;
+}
+
+.view-section.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Theme picker and dark palette shared by the SPA and standalone pages. */
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .55rem .8rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 9999px;
+    background: #fff;
+    color: #334155;
+    font-size: .75rem;
+    font-weight: 700;
+    transition: background-color .2s, color .2s, border-color .2s;
+}
+.theme-toggle:hover { background: #f1f5f9; }
+.theme-toggle:focus-visible { outline: 2px solid #4FBAEA; outline-offset: 2px; }
+html[data-theme="dark"] body { background: #0f172a !important; color: #e2e8f0 !important; }
+html[data-theme="dark"] .bg-white,
+html[data-theme="dark"] .bg-white\/80,
+html[data-theme="dark"] .bg-white\/95 { background-color: #1e293b !important; }
+html[data-theme="dark"] .bg-slate-50,
+html[data-theme="dark"] .bg-slate-50\/50,
+html[data-theme="dark"] .bg-slate-50\/70 { background-color: #111c2e !important; }
+html[data-theme="dark"] .bg-slate-100 { background-color: #334155 !important; }
+html[data-theme="dark"] .bg-sky-50,
+html[data-theme="dark"] .bg-sky-50\/50,
+html[data-theme="dark"] .bg-sky-100 { background-color: #123047 !important; }
+html[data-theme="dark"] .bg-gradient-to-b { background-image: linear-gradient(to bottom, #111c2e, #0f172a, #0f172a) !important; }
+html[data-theme="dark"] .text-slate-900,
+html[data-theme="dark"] .text-slate-800,
+html[data-theme="dark"] .text-slate-700,
+html[data-theme="dark"] .text-slate-600 { color: #e2e8f0 !important; }
+html[data-theme="dark"] .text-slate-500,
+html[data-theme="dark"] .text-slate-400 { color: #a9b8ca !important; }
+html[data-theme="dark"] .border-slate-100,
+html[data-theme="dark"] .border-slate-200,
+html[data-theme="dark"] .border-slate-200\/80 { border-color: #334155 !important; }
+html[data-theme="dark"] .theme-toggle,
+html[data-theme="dark"] input[type="text"],
+html[data-theme="dark"] textarea { border-color: #475569; background-color: #1e293b; color: #f1f5f9; }
+html[data-theme="dark"] #main-header.scrolled #navbar-box { background-color: rgba(30, 41, 59, .98) !important; }
+html[data-theme="dark"] #mobile-menu { background-color: #1e293b !important; border-color: #334155 !important; }
+html[data-theme="dark"] #mobile-menu [data-nav][aria-current="page"],
+html[data-theme="dark"] #mobile-menu [data-view].active { background-color: #123047 !important; color: #7dd3fc !important; }
+html[data-theme="dark"] .chat-bubble { border-color: #334155; background-color: #1e293b; color: #e2e8f0; }
+html[data-theme="dark"] .chat-bubble-user { background-color: #123047; }
+.chat-typing-dots { display: inline-flex; align-items: center; gap: 3px; min-width: 24px; }
+.chat-typing-dot { width: 5px; height: 5px; border-radius: 9999px; background: currentColor; opacity: .35; animation: chat-typing-pulse 1s infinite ease-in-out; }
+.chat-typing-dot:nth-child(2) { animation-delay: .15s; }
+.chat-typing-dot:nth-child(3) { animation-delay: .3s; }
+@keyframes chat-typing-pulse {
+    0%, 60%, 100% { opacity: .3; transform: translateY(0); }
+    30% { opacity: 1; transform: translateY(-3px); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .chat-typing-dot { animation: none; opacity: .8; }
+}
+footer .text-slate-400 { color: #e0f2fe !important; }
+
+/* Reveal text as sections enter the viewport. */
+.text-reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 650ms ease, transform 650ms cubic-bezier(.2, .7, .2, 1);
+}
+.text-reveal.is-revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .text-reveal,
+    .text-reveal.is-revealed {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}

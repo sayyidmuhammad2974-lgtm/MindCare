@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/Logo%20MindCare.png">
+    <title>MindCare - Dukungan</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white text-slate-800 flex flex-col min-h-screen selection:bg-sky-100 selection:text-sky-800">
+
+    <!-- TOP RUNNING TEXT (INFORMASI BERJALAN LEBIH LEBAR) -->
+    <div class="brand-blue-bg text-white text-xs sm:text-sm font-semibold py-2.5 overflow-hidden border-b border-sky-300/40 shadow-inner">
+        <div class="marquee" aria-label="Informasi MindCare">
+    <div class="marquee-track">
+        <div class="marquee-group">
+            <span>📢 Selamat datang di MindCare · Ruang refleksi pelajar tanpa pendaftaran akun.</span>
+            <span>🤝 Temukan dukungan dari guru BK, wali kelas, dan orang dewasa tepercaya.</span>
+            <span>💡 Luapkan beban pikiranmu dan lakukan refleksi kapan saja.</span>
+            <span>🌟 Strawberry Coding Club — Karya Inovasi Pelajar SMKN 1 Ciamis.</span>
+        </div>
+        <div class="marquee-group" aria-hidden="true">
+            <span>📢 Selamat datang di MindCare · Ruang refleksi pelajar tanpa pendaftaran akun.</span>
+            <span>🤝 Temukan dukungan dari guru BK, wali kelas, dan orang dewasa tepercaya.</span>
+            <span>💡 Luapkan beban pikiranmu dan lakukan refleksi kapan saja.</span>
+            <span>🌟 Strawberry Coding Club — Karya Inovasi Pelajar SMKN 1 Ciamis.</span>
+        </div>
+    </div>
+</div>
+    </div>
+
+    <!-- MAIN COMPACT NAVBAR HEADER WITH OFFICIAL LOGO -->
+    <header class="site-header sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-18 flex items-center justify-between">
+
+            <!-- Brand logo image -->
+            <a href="index.html" class="flex items-center gap-3 group focus:outline-none">
+                <div class="w-10 h-10 transition-transform duration-300 group-hover:scale-105">
+                    <img src="assets/Logo MindCare.png" alt="" class="w-full h-full object-contain drop-shadow-sm">
+                </div>
+                <div class="flex flex-col text-left">
+                    <span class="brand-name text-xl sm:text-2xl font-extrabold tracking-tight text-slate-900 group-hover:brand-blue-text transition-colors">
+                        Mind<span class="brand-blue-text">Care</span>
+                    </span>
+                    <span class="brand-caption text-[9px] uppercase font-bold tracking-widest text-slate-400 -mt-1">STRAWBERRY CODING CLUB</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Tabs -->
+            <nav class="hidden lg:flex items-center gap-1 bg-slate-50 p-1.5 rounded-full border border-slate-200/80 text-xs font-bold text-slate-600">
+                <a href="index.html" data-nav="landing" class="nav-link active px-4 py-1.5 rounded-full transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </a>
+                <a href="chat.html" data-nav="chat" class="nav-link px-4 py-1.5 rounded-full transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-comments brand-blue-text"></i> Chat Pendamping
+                </a>
+                <a href="skrining.html" data-nav="skrining" class="nav-link px-4 py-1.5 rounded-full transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-clipboard-check brand-blue-text"></i> Skrining Mental
+                </a>
+                <a href="rujukan.html" data-nav="rujukan" class="nav-link px-4 py-1.5 rounded-full transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-school brand-blue-text"></i> Rujukan BK
+                </a>
+            </nav>
+
+            <!-- Display Theme -->
+            <button id="theme-toggle" type="button" class="theme-toggle" aria-label="Mode tampilan: Perangkat. Klik untuk mengganti." title="Mode tampilan: Perangkat">
+                <i id="theme-icon" class="fa-solid fa-desktop" aria-hidden="true"></i>
+                <span id="theme-label">Perangkat</span>
+            </button>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-toggle" aria-label="Buka menu" aria-expanded="false" aria-controls="mobile-menu" onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-xl bg-slate-100 text-slate-700 hover:brand-blue-text transition border border-slate-200">
+                    <i class="fa-solid fa-bars text-base"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-4 space-y-1 text-xs font-semibold">
+            <a href="index.html" data-nav="landing" class="w-full text-left px-3 py-2 rounded-xl text-slate-700 hover:bg-sky-50 hover:brand-blue-text flex items-center gap-2.5">
+                <i class="fa-solid fa-house brand-blue-text w-4"></i> Beranda
+            </a>
+            <a href="chat.html" data-nav="chat" class="w-full text-left px-3 py-2 rounded-xl text-slate-700 hover:bg-sky-50 hover:brand-blue-text flex items-center gap-2.5">
+                <i class="fa-solid fa-comments brand-blue-text w-4"></i> Chat Pendamping
+            </a>
+            <a href="skrining.html" data-nav="skrining" class="w-full text-left px-3 py-2 rounded-xl text-slate-700 hover:bg-sky-50 hover:brand-blue-text flex items-center gap-2.5">
+                <i class="fa-solid fa-clipboard-check brand-blue-text w-4"></i> Skrining Kesehatan Mental
+            </a>
+            <a href="rujukan.html" data-nav="rujukan" class="w-full text-left px-3 py-2 rounded-xl text-slate-700 hover:bg-sky-50 hover:brand-blue-text flex items-center gap-2.5">
+                <i class="fa-solid fa-school brand-blue-text w-4"></i> Rujukan & Konseling BK Sekolah
+            </a>
+        </div>
+    </header>
+
+
+    <main class="flex-grow" data-page="rujukan">
+
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+                <section class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-lg">
+                    <span class="text-xs font-bold uppercase tracking-widest brand-blue-text">Temukan Bantuan</span>
+                    <h2 class="text-3xl font-extrabold mt-2 mb-4">Kamu tidak harus menghadapi ini sendirian</h2>
+                    <p class="text-slate-600 leading-relaxed">Coba hubungi guru BK, wali kelas, orang tua, atau orang dewasa yang kamu percaya. Ceritakan apa yang kamu butuhkan dan pilih tempat bicara yang terasa aman.</p>
+                    <div class="mt-6 rounded-2xl bg-sky-50 p-5">
+                        <h3 class="font-bold mb-2">Jika kamu merasa tidak aman sekarang</h3>
+                        <p class="text-sm text-slate-700">Segera dekati orang dewasa tepercaya yang ada di dekatmu dan minta bantuan langsung. Jika ada bahaya segera, hubungi layanan darurat setempat.</p>
+                    </div>
+                    <p class="mt-6 text-xs text-slate-500">Kontak BK khusus sekolah belum tersedia di halaman ini. Tanyakan kepada sekolahmu untuk jalur konseling yang tepat.</p>
+                </section>
+            </div>
+        
+    </main>
+    <footer class="brand-blue-bg text-white py-6 text-center text-xs">MindCare · Ruang refleksi dan dukungan pelajar</footer>
+    <script src="javascript/script.js" defer></script>
+</body>
+</html>
