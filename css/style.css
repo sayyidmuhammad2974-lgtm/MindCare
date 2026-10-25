@@ -801,7 +801,7 @@ main[data-page] .quiz-card,
 }
 
 .chat-panel-header {
-    background: linear-gradient(125deg, #0b3550 0%, #11699a 55%, #4fbaea 100%);
+    background: #4FBAEA !important;
 }
 
 #chat-box {
@@ -1688,4 +1688,23 @@ html[data-theme="dark"] #article-modal .article-source {
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+/* PAKSA WARNA HEADER & CHAT MOCKUP MENJADI SKY BLUE */
+.hero-mock-card .chat-panel-header,
+.chat-panel-header.brand-blue-bg {
+    background: #4FBAEA !important;
+    background-color: #4FBAEA !important;
+}
+
+.hero-mock-card .chat-bubble-user,
+.chat-bubble-user.brand-blue-bg {
+    background: #4FBAEA !important;
+    background-color: #4FBAEA !important;
+    color: #ffffff !important;
+}
+
+.hero-mock-card .chat-bubble-ai {
+    background-color: #F0F9FF !important;
+    border-color: #BAE6FD !important;
+    color: #334155 !important;
 }

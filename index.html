@@ -182,47 +182,57 @@
                         </div>
                     </div>
 
-                    <!-- Right: Chat Mockup Visual -->
+                    <!-- Right: Chat Mockup Visual (Layout Gambar 1 + Warna Sky Blue Gambar 2) -->
                     <div
                         class="hero-preview reveal reveal-right reveal-d3 relative max-w-sm mx-auto w-full pt-4 lg:pt-0">
                         <div
                             class="absolute -inset-8 bg-gradient-to-br from-sky-200/50 via-transparent to-red-200/30 rounded-[3rem] blur-2xl -z-10">
                         </div>
 
-                        <div class="hero-mock-card rounded-3xl overflow-hidden">
-                            <div class="chat-panel-header flex items-center gap-3 p-4 text-white">
+                        <div class="hero-mock-card rounded-3xl overflow-hidden bg-white shadow-xl border border-slate-100">
+                            <!-- HEADER BALOK BIRU SKY BLUE (#4FBAEA) -->
+                            <div class="chat-panel-header brand-blue-bg flex items-center gap-3 p-4 text-white">
                                 <div
-                                    class="w-10 h-10 rounded-xl bg-white/15 flex items-center justify-center text-base flex-shrink-0">
-                                    <i class="fa-solid fa-robot" aria-hidden="true"></i>
+                                    class="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center text-base flex-shrink-0">
+                                    <i class="fa-solid fa-robot text-white" aria-hidden="true"></i>
                                 </div>
                                 <div>
-                                    <p class="text-sm font-bold">MindCare AI</p>
-                                    <p class="text-[11px] text-sky-100 flex items-center gap-1.5">
+                                    <p class="text-sm font-bold text-white">MindCare AI</p>
+                                    <p class="text-[11px] text-white/90 flex items-center gap-1.5 mt-0.5">
                                         <span class="w-1.5 h-1.5 rounded-full bg-emerald-300 inline-block"></span> Teman
                                         refleksi yang siap mendengarkan
                                     </p>
                                 </div>
                             </div>
-                            <div class="hero-chat-body p-4 sm:p-5 space-y-4">
+
+                            <!-- BODY CHAT -->
+                            <div class="hero-chat-body p-4 sm:p-5 space-y-4 bg-white">
+                                <!-- BUBBLE AI (BIRU MUDA PASTEL LEMBUT) -->
                                 <div class="flex w-full justify-start">
                                     <div
-                                        class="chat-bubble chat-bubble-ai max-w-[88%] sm:max-w-[75%] rounded-2xl rounded-bl-md border border-slate-200 bg-white px-4 py-3 text-sm leading-relaxed text-slate-800 shadow-sm whitespace-normal break-words">
+                                        class="chat-bubble chat-bubble-ai max-w-[88%] sm:max-w-[75%] rounded-2xl rounded-bl-md border border-sky-100/80 bg-sky-50/70 px-4 py-3 text-sm leading-relaxed text-slate-700 shadow-2xs whitespace-normal break-words">
                                         <p class="chat-preview-message">Halo, aku di sini buat dengerin ceritamu. Ada yang lagi bikin pikiranmu penuh?</p>
                                     </div>
                                 </div>
+
+                                <!-- BUBBLE USER (SKY BLUE #4FBAEA) -->
                                 <div class="flex w-full justify-end">
                                     <div
-                                        class="chat-bubble chat-bubble-user max-w-[88%] sm:max-w-[75%] rounded-2xl rounded-br-md border border-sky-700 bg-sky-700 px-4 py-3 text-sm leading-relaxed text-white shadow-sm whitespace-normal break-words">
+                                        class="chat-bubble chat-bubble-user brand-blue-bg max-w-[88%] sm:max-w-[75%] rounded-2xl rounded-br-md border-transparent px-4 py-3 text-sm leading-relaxed text-white shadow-2xs whitespace-normal break-words">
                                         <p class="chat-preview-message">Aku capek banget mikirin tugas yang numpuk, takut nggak kekejar.</p></div>
                                 </div>
+
+                                <!-- BUBBLE AI (BIRU MUDA PASTEL LEMBUT) -->
                                 <div class="flex w-full justify-start">
                                     <div
-                                        class="chat-bubble chat-bubble-ai max-w-[88%] sm:max-w-[75%] rounded-2xl rounded-bl-md border border-slate-200 bg-white px-4 py-3 text-sm leading-relaxed text-slate-800 shadow-sm whitespace-normal break-words">
+                                        class="chat-bubble chat-bubble-ai max-w-[88%] sm:max-w-[75%] rounded-2xl rounded-bl-md border border-sky-100/80 bg-sky-50/70 px-4 py-3 text-sm leading-relaxed text-slate-700 shadow-2xs whitespace-normal break-words">
                                         <p class="chat-preview-message">Wajar banget ngerasa gitu. Cerita pelan-pelan ya, aku dengerin tanpa menghakimi.</p>
                                     </div>
                                 </div>
+
+                                <!-- TYPING DOTS -->
                                 <div class="flex w-full justify-start">
-                                    <div class="chat-bubble chat-bubble-ai w-fit rounded-2xl rounded-bl-md border border-slate-200 bg-white px-3 py-2 shadow-sm inline-flex items-center gap-1.5"
+                                    <div class="chat-bubble chat-bubble-ai w-fit rounded-2xl rounded-bl-md border border-slate-100 bg-slate-100/80 px-3 py-2 shadow-2xs inline-flex items-center gap-1.5"
                                         role="status" aria-label="MindCare AI sedang mengetik">
                                         <span class="typing-dot"></span><span class="typing-dot"></span><span
                                             class="typing-dot"></span>
