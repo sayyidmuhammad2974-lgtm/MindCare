@@ -301,441 +301,431 @@
                 </div>
             </section>
 
-            <!-- Alur 3 Fase Psychological First Aid -->
-            <section class="py-16 sm:py-20 section-bg-soft border-b border-slate-100">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="text-center max-w-3xl mx-auto mb-12 space-y-2">
-                        <span
-                            class="reveal inline-block text-xs font-bold uppercase tracking-widest brand-blue-text bg-white px-3 py-1 rounded-full border border-sky-100">Alur
-                            Utama Aplikasi</span>
-                        <h2 class="reveal-wave text-3xl font-extrabold text-slate-900">Metode Pertolongan Pertama (PFA)
-                        </h2>
-                        <p class="reveal text-slate-500 text-sm">Dirancang dengan alur logis Dengar – Kenali – Temukan
-                            Bantuan untuk mendukung kesehatan emosional pelajar.</p>
+            <!-- SEKSI ALUR UTAMA APLIKASI (METODE PFA) -->
+<section class="py-12 bg-sky-50/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header Seksi -->
+        <div class="text-center space-y-2 mb-10">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-100/70 text-sky-600 text-xs font-bold tracking-wider uppercase">
+                ALUR UTAMA APLIKASI
+            </span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                Metode Pertolongan Pertama (PFA)
+            </h2>
+        </div>
+
+        <!-- Grid 3 Kartu Alur PFA -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+
+            <!-- FASE 1 -->
+            <div class="reveal bg-white rounded-3xl p-6 sm:p-8 border border-slate-100 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between">
+                <div class="space-y-4">
+                    <!-- Badge Nomor Lingkaran (Seragam Biru MindCare) -->
+                    <div class="w-10 h-10 rounded-2xl brand-blue-bg text-white font-black text-lg flex items-center justify-center shadow-md shadow-sky-200">
+                        1
+                    </div>
+                    
+                    <div class="space-y-1">
+                        <span class="brand-blue-text text-[11px] font-extrabold uppercase tracking-wider block">
+                            FASE 1
+                        </span>
+                        <h3 class="text-base sm:text-lg font-bold text-slate-900">
+                            Dengar (Empathetic Chat)
+                        </h3>
                     </div>
 
-                    <div class="grid md:grid-cols-[1fr_auto_1fr_auto_1fr] gap-5 md:gap-3 items-stretch">
-                        <!-- Fase 1 -->
-                        <div
-                            class="reveal bg-white p-8 rounded-3xl border border-slate-200/80 hover:border-sky-300 transition-all shadow-sm group">
-                            <div
-                                class="w-12 h-12 rounded-2xl brand-blue-bg text-white flex items-center justify-center font-extrabold text-xl mb-6 group-hover:scale-110 transition-transform shadow-md">
-                                1
-                            </div>
-                            <span class="text-[11px] font-bold brand-blue-text uppercase tracking-wider">Fase 1</span>
-                            <h3 class="text-xl font-bold text-slate-900 mb-2">Dengar (Empathetic Chat)</h3>
-                            <p class="text-xs text-slate-600 leading-relaxed mb-6">
-                                Berinteraksi dengan AI spesialis pendengar yang ramah, merespons cerita dengan empati
-                                dan bahasa Indonesia sehari-hari.
-                            </p>
-                            <button onclick="window.location.href='chat.html'"
-                                class="text-xs font-bold brand-blue-text hover:underline flex items-center gap-1">
-                                Coba AI Chat <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                            </button>
-                        </div>
-
-                        <div class="hidden md:flex items-center justify-center text-slate-300">
-                            <i class="fa-solid fa-chevron-right text-xl"></i>
-                        </div>
-
-                        <!-- Fase 2 -->
-                        <div
-                            class="reveal reveal-d1 bg-white p-8 rounded-3xl border border-slate-200/80 hover:border-teal-300 transition-all shadow-sm group">
-                            <div
-                                class="w-12 h-12 rounded-2xl brand-teal-bg text-white flex items-center justify-center font-extrabold text-xl mb-6 group-hover:scale-110 transition-transform shadow-md">
-                                2
-                            </div>
-                            <span class="text-[11px] font-bold brand-teal-text uppercase tracking-wider">Fase 2</span>
-                            <h3 class="text-xl font-bold text-slate-900 mb-2">Kenali (Mood & Relaksasi)</h3>
-                            <p class="text-xs text-slate-600 leading-relaxed">
-                                Siswa diajak mengenali emosi melalui pemantauan mood harian dan teknik latihan
-                                pernapasan terpandu 4-7-8 tanpa tekanan.
-                            </p>
-                        </div>
-
-                        <div class="hidden md:flex items-center justify-center text-slate-300">
-                            <i class="fa-solid fa-chevron-right text-xl"></i>
-                        </div>
-
-                        <!-- Fase 3 -->
-                        <div
-                            class="reveal reveal-d2 bg-white p-8 rounded-3xl border border-slate-200/80 hover:border-red-300 transition-all shadow-sm group">
-                            <div
-                                class="w-12 h-12 rounded-2xl brand-red-bg text-white flex items-center justify-center font-extrabold text-xl mb-6 group-hover:scale-110 transition-transform shadow-md">
-                                3
-                            </div>
-                            <span class="text-[11px] font-bold brand-red-text uppercase tracking-wider">Fase 3</span>
-                            <h3 class="text-xl font-bold text-slate-900 mb-2">Temukan Bantuan (BK Routing)</h3>
-                            <p class="text-xs text-slate-600 leading-relaxed mb-6">
-                                Menghubungkan siswa dengan unit Bimbingan Konseling (BK) di sekolah secara rahasia
-                                apabila membutuhkan penanganan lebih lanjut.
-                            </p>
-                            <button onclick="window.location.href='rujukan.html'"
-                                class="text-xs font-bold brand-red-text hover:underline flex items-center gap-1">
-                                Akses Layanan BK <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                            </button>
-                        </div>
-                    </div>
+                    <p class="text-xs text-slate-500 leading-relaxed">
+                        Berinteraksi dengan AI spesialis pendengar yang ramah, merespons cerita dengan empati dan bahasa Indonesia sehari-hari.
+                    </p>
                 </div>
-            </section>
 
-            <!-- Artikel Edukasi -->
-            <section class="py-16 sm:py-20 bg-white border-b border-slate-100">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="text-center max-w-2xl mx-auto mb-12 space-y-2">
-                        <span
-                            class="reveal inline-block text-xs font-bold uppercase tracking-widest brand-blue-text bg-sky-50 px-3 py-1 rounded-full">Bacaan
-                            Pilihan</span>
-                        <h2 class="reveal-wave text-3xl font-extrabold text-slate-900">Artikel & Edukasi Kesehatan
-                            Mental</h2>
-                        <p class="reveal text-slate-500 text-sm">Bacaan singkat seputar kesehatan mental pelajar, biar
-                            makin paham cara menjaga diri sendiri.</p>
-                    </div>
-
-                    <div class="reveal-group grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-                        <div
-                            class="reveal feature-card bg-white rounded-3xl border border-slate-200/70 overflow-hidden flex flex-col">
-                            <div class="h-28 overflow-hidden bg-sky-50">
-                                <img src="assets/stress.png" alt="Ilustrasi manajemen stres"
-                                    class="w-full h-full object-cover">
-                            </div>
-                            <div class="p-5 flex flex-col flex-1">
-                                <span
-                                    class="text-[10px] font-bold uppercase tracking-wider brand-blue-text bg-sky-50 px-2.5 py-1 rounded-full w-fit mb-3">Manajemen
-                                    Stres</span>
-                                <h3 class="font-bold text-slate-900 text-sm mb-2 leading-snug">5 Cara Sederhana
-                                    Mengelola Stres Sebelum Ujian</h3>
-                                <p class="text-xs text-slate-500 leading-relaxed mb-4 flex-1">Teknik bernapas, menata
-                                    waktu belajar, dan tips kecil yang bisa langsung kamu praktikkan malam sebelum
-                                    ujian.</p>
-                                <button type="button"
-                                    class="article-open text-xs font-bold brand-blue-text flex items-center gap-1"
-                                    data-article="stres">
-                                    Baca Selengkapnya <i class="fa-solid fa-arrow-right text-[10px]"
-                                        aria-hidden="true"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div
-                            class="reveal feature-card bg-white rounded-3xl border border-slate-200/70 overflow-hidden flex flex-col">
-                            <div class="h-28 overflow-hidden bg-teal-50">
-                                <img src="assets/relasi_sosial.png" alt="Ilustrasi relasi sosial"
-                                    class="w-full h-full object-cover">
-                            </div>
-                            <div class="p-5 flex flex-col flex-1">
-                                <span
-                                    class="text-[10px] font-bold uppercase tracking-wider brand-teal-text bg-teal-50 px-2.5 py-1 rounded-full w-fit mb-3">Relasi
-                                    Sosial</span>
-                                <h3 class="font-bold text-slate-900 text-sm mb-2 leading-snug">Menghadapi Konflik
-                                    Pertemanan Tanpa Kehilangan Diri Sendiri</h3>
-                                <p class="text-xs text-slate-500 leading-relaxed mb-4 flex-1">Belajar mengenali batasan
-                                    sehat dalam pertemanan dan cara menyampaikan perasaan tanpa takut dijauhi.</p>
-                                <button type="button"
-                                    class="article-open text-xs font-bold brand-teal-text flex items-center gap-1"
-                                    data-article="pertemanan">
-                                    Baca Selengkapnya <i class="fa-solid fa-arrow-right text-[10px]"
-                                        aria-hidden="true"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div
-                            class="reveal feature-card bg-white rounded-3xl border border-slate-200/70 overflow-hidden flex flex-col">
-                            <div class="h-28 overflow-hidden bg-rose-50">
-                                <img src="assets/brain_out.png" alt="Ilustrasi kesadaran diri"
-                                    class="w-full h-full object-cover">
-                            </div>
-                            <div class="p-5 flex flex-col flex-1">
-                                <span
-                                    class="text-[10px] font-bold uppercase tracking-wider brand-red-text bg-red-50 px-2.5 py-1 rounded-full w-fit mb-3">Kesadaran
-                                    Diri</span>
-                                <h3 class="font-bold text-slate-900 text-sm mb-2 leading-snug">Mengenali Tanda-Tanda
-                                    Burnout saat Belajar</h3>
-                                <p class="text-xs text-slate-500 leading-relaxed mb-4 flex-1">Lelah terus-menerus bukan
-                                    cuma soal fisik — kenali sinyal burnout akademik sejak dini.</p>
-                                <button type="button"
-                                    class="article-open text-xs font-bold brand-red-text flex items-center gap-1"
-                                    data-article="burnout">
-                                    Baca Selengkapnya <i class="fa-solid fa-arrow-right text-[10px]"
-                                        aria-hidden="true"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div
-                            class="reveal feature-card bg-white rounded-3xl border border-slate-200/70 overflow-hidden flex flex-col">
-                            <div class="h-28 overflow-hidden bg-slate-50">
-                                <img src="assets/tidur.png" alt="Ilustrasi pola tidur sehat"
-                                    class="w-full h-full object-cover">
-                            </div>
-                            <div class="p-5 flex flex-col flex-1">
-                                <span
-                                    class="text-[10px] font-bold uppercase tracking-wider text-slate-600 bg-slate-100 px-2.5 py-1 rounded-full w-fit mb-3">Pola
-                                    Tidur</span>
-                                <h3 class="font-bold text-slate-900 text-sm mb-2 leading-snug">Kenapa Tidur Cukup
-                                    Memengaruhi Mood dan Fokus Belajar</h3>
-                                <p class="text-xs text-slate-500 leading-relaxed mb-4 flex-1">Hubungan antara jam tidur,
-                                    suasana hati, dan kemampuan konsentrasi di kelas.</p>
-                                <button type="button"
-                                    class="article-open text-xs font-bold text-slate-600 flex items-center gap-1"
-                                    data-article="tidur">
-                                    Baca Selengkapnya <i class="fa-solid fa-arrow-right text-[10px]"
-                                        aria-hidden="true"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Satu modal untuk menampilkan detail semua artikel. -->
-            <div id="article-modal" class="article-modal" role="dialog" aria-modal="true"
-                aria-labelledby="article-modal-title" aria-hidden="true" hidden>
-                <div class="article-modal-card">
-                    <button type="button" class="article-close" aria-label="Tutup artikel">&times;</button>
-                    <div id="article-modal-content"></div>
+                <div class="pt-6">
+                    <a href="chat.html" class="brand-blue-text font-bold text-xs inline-flex items-center gap-1.5 hover:gap-2 transition-all">
+                        <span>Coba AI Chat</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </a>
                 </div>
             </div>
 
-            <!-- Template stres. Ganti nama foto sesuai file di folder assets. -->
-            <template id="article-stres">
-                <article>
-                    <img class="article-detail-image" data-src="assets/artikel-stres.jpg"
-                        alt="Ilustrasi mengelola stres saat belajar" hidden>
-                    <p class="article-detail-category">Manajemen Stres</p>
-                    <h2 id="article-modal-title">5 Cara Sederhana Mengelola Stres Sebelum Ujian</h2>
-                    <p class="article-detail-intro">Masa ujian bisa terasa menegangkan. Beberapa kebiasaan sederhana
-                        berikut dapat membantu kamu menjaga energi dan fokus saat belajar.</p>
-                    <ol class="article-steps">
-                        <li>
-                            <h3>Jaga waktu istirahat</h3>
-                            <p>Buat jadwal belajar yang realistis dan sisihkan waktu untuk tidur serta jeda. Istirahat
-                                adalah bagian dari persiapan, bukan waktu yang terbuang.</p>
-                        </li>
-                        <li>
-                            <h3>Gerakkan tubuh</h3>
-                            <p>Berjalan sebentar atau melakukan peregangan dapat menjadi selingan dari kegiatan belajar
-                                dan membantu tubuh terasa lebih segar.</p>
-                        </li>
-                        <li>
-                            <h3>Ambil jeda dari layar</h3>
-                            <p>Jauhkan perangkat sejenak atau matikan notifikasi ketika sedang fokus agar perhatian
-                                tidak terus teralihkan.</p>
-                        </li>
-                        <li>
-                            <h3>Atur napas perlahan</h3>
-                            <p>Tarik napas dengan nyaman, lalu hembuskan lebih perlahan beberapa kali. Hentikan jika
-                                terasa tidak nyaman.</p>
-                        </li>
-                        <li>
-                            <h3>Fokus pada langkah berikutnya</h3>
-                            <p>Kerjakan satu bagian kecil terlebih dahulu daripada mencoba menyelesaikan semua hal
-                                sekaligus.</p>
-                        </li>
-                    </ol>
-                    <p>Jika stres terus mengganggu kegiatan sehari-hari, ceritakan kepada orang dewasa tepercaya atau
-                        Guru BK.</p>
-                    <p class="article-source">Sumber: <a
-                            href="https://www.sydney.edu.au/study/student-life/student-news/2023/05/31/5-ways-to-manage-stress-during-exams.html"
-                            target="_blank" rel="noopener noreferrer">University of Sydney - 5 Ways to Manage Stress
-                            During Exams</a></p>
-                </article>
-            </template>
-
-            <!-- Template pertemanan. -->
-            <template id="article-pertemanan">
-                <article>
-                    <img class="article-detail-image" data-src="assets/artikel-pertemanan.jpg"
-                        alt="Ilustrasi pertemanan" hidden>
-                    <p class="article-detail-category">Relasi Sosial</p>
-                    <h2 id="article-modal-title">Menghadapi Konflik Pertemanan Tanpa Kehilangan Diri Sendiri</h2>
-                    <p class="article-detail-intro">Konflik dengan teman bisa terasa menyakitkan, tetapi tidak selalu
-                        berarti pertemanan harus berakhir. Beri diri waktu untuk memahami perasaan sebelum merespons.
-                    </p>
-                    <ol class="article-steps">
-                        <li>
-                            <h3>Tenangkan diri lebih dulu</h3>
-                            <p>Beri jeda agar percakapan tidak berlangsung ketika emosi sedang memuncak. Kamu bisa
-                                menarik napas, berjalan sebentar, atau menulis perasaanmu.</p>
-                        </li>
-                        <li>
-                            <h3>Pahami apa yang mengganggu</h3>
-                            <p>Coba bedakan kejadian yang baru terjadi dengan kebutuhan atau batasan yang belum
-                                tersampaikan.</p>
-                        </li>
-                        <li>
-                            <h3>Bicarakan dengan jujur dan sopan</h3>
-                            <p>Jelaskan perasaanmu tanpa menyerang, misalnya, ?Aku merasa sedih ketika ...?. Pilih waktu
-                                ketika kalian berdua siap berbicara.</p>
-                        </li>
-                        <li>
-                            <h3>Dengarkan satu sama lain</h3>
-                            <p>Beri kesempatan kepada teman untuk menjelaskan dan akui bagian yang memang menjadi
-                                tanggung jawabmu.</p>
-                        </li>
-                        <li>
-                            <h3>Tentukan batasan yang sehat</h3>
-                            <p>Pertemanan seharusnya terasa aman dan saling menghormati. Kamu boleh meminta bantuan jika
-                                merasa tertekan atau tidak aman.</p>
-                        </li>
-                    </ol>
-                    <p>Jika konflik melibatkan perundungan atau membuatmu merasa tidak aman, cari bantuan orang dewasa
-                        tepercaya atau Guru BK.</p>
-                    <p class="article-source">Sumber: <a
-                            href="https://jenhatmaker.com/blog/how-to-handle-conflict-in-friendship/" target="_blank"
-                            rel="noopener noreferrer">Jen Hatmaker - How to Handle Conflict in Friendship</a></p>
-                </article>
-            </template>
-
-            <!-- Template kelelahan belajar. -->
-            <template id="article-burnout">
-                <article>
-                    <img class="article-detail-image" data-src="assets/artikel-burnout.jpg"
-                        alt="Ilustrasi kelelahan setelah belajar" hidden>
-                    <p class="article-detail-category">Kesadaran Diri</p>
-                    <h2 id="article-modal-title">Mengenali Tanda-Tanda Kelelahan saat Belajar</h2>
-                    <p class="article-detail-intro">Kelelahan yang berlangsung lama dapat memengaruhi kegiatan belajar
-                        dan keseharian. Mengenali perubahan pada diri sendiri bisa menjadi langkah awal untuk mencari
-                        dukungan.</p>
-                    <h3>Hal yang patut diperhatikan</h3>
-                    <ol class="article-steps">
-                        <li>
-                            <h3>Kelelahan berkepanjangan</h3>
-                            <p>Kamu tetap merasa sangat lelah atau sulit pulih meskipun sudah beristirahat.</p>
-                        </li>
-                        <li>
-                            <h3>Motivasi menurun</h3>
-                            <p>Belajar atau memulai tugas terasa jauh lebih berat daripada biasanya.</p>
-                        </li>
-                        <li>
-                            <h3>Sulit berkonsentrasi</h3>
-                            <p>Kamu kesulitan menjaga perhatian, memahami bacaan, atau menyelesaikan tugas.</p>
-                        </li>
-                        <li>
-                            <h3>Menarik diri atau mudah kesal</h3>
-                            <p>Interaksi sosial terasa melelahkan atau suasana hati lebih mudah berubah.</p>
-                        </li>
-                        <li>
-                            <h3>Perubahan kebiasaan dan kondisi fisik</h3>
-                            <p>Pola tidur, nafsu makan, atau kondisi tubuh berubah dan mulai mengganggu kegiatan.</p>
-                        </li>
-                    </ol>
-                    <h3>Langkah awal untuk menjaga diri</h3>
-                    <ul class="article-advice-list">
-                        <li>Pecah tugas besar menjadi bagian kecil dengan target yang realistis.</li>
-                        <li>Jadwalkan waktu istirahat dan kegiatan yang membantu kamu merasa lebih baik.</li>
-                        <li>Ceritakan keadaanmu kepada orang yang dipercaya, Guru BK, atau tenaga profesional.</li>
-                    </ul>
-                    <p>Daftar ini bukan alat diagnosis. Kelelahan belajar tidak otomatis berarti burnout. Jika keadaan
-                        terasa berat atau berlangsung lama, mintalah bantuan orang dewasa tepercaya atau tenaga
-                        kesehatan.</p>
-                    <p class="article-source">Sumber: <a
-                            href="https://www.umn.ac.id/tanda-tanda-burnout-mahasiswa-yang-sering-diabaikan/"
-                            target="_blank" rel="noopener noreferrer">Universitas Muhammadiyah Malang - Tanda-Tanda
-                            Burnout Mahasiswa</a></p>
-                </article>
-            </template>
-
-            <!-- Template tidur. -->
-            <template id="article-tidur">
-                <article>
-                    <img class="article-detail-image" data-src="assets/artikel-tidur.jpg"
-                        alt="Ilustrasi tidur yang cukup" hidden>
-                    <p class="article-detail-category">Pola Tidur</p>
-                    <h2 id="article-modal-title">Kenapa Tidur Cukup Memengaruhi Mood dan Fokus Belajar</h2>
-                    <p class="article-detail-intro">Tidur membantu tubuh dan pikiran beristirahat. Saat tidur terganggu
-                        atau kurang, kamu mungkin merasa lebih lelah dan lebih sulit menjaga perhatian ketika belajar.
-                    </p>
-                    <h3>Kebiasaan yang dapat membantu</h3>
-                    <ol class="article-steps">
-                        <li>
-                            <h3>Buat jadwal yang teratur</h3>
-                            <p>Usahakan waktu tidur dan bangun yang cukup konsisten, termasuk pada akhir pekan.</p>
-                        </li>
-                        <li>
-                            <h3>Kurangi layar menjelang tidur</h3>
-                            <p>Sisihkan waktu tanpa ponsel atau komputer sebelum tidur dan pilih kegiatan yang
-                                menenangkan.</p>
-                        </li>
-                        <li>
-                            <h3>Atur waktu belajar</h3>
-                            <p>Rencanakan tugas lebih awal agar belajar sampai larut malam tidak menjadi kebiasaan.</p>
-                        </li>
-                        <li>
-                            <h3>Perhatikan minuman berkafein</h3>
-                            <p>Jika kafein membuatmu sulit tidur, hindari kopi atau teh menjelang waktu tidur.</p>
-                        </li>
-                        <li>
-                            <h3>Buat kamar nyaman</h3>
-                            <p>Usahakan suasana kamar tenang, cukup gelap, dan nyaman untuk beristirahat.</p>
-                        </li>
-                    </ol>
-                    <p>Kebutuhan tidur berbeda menurut usia dan kondisi. Jika masalah tidur berlangsung terus atau
-                        mengganggu kegiatan, bicarakan dengan orang dewasa tepercaya atau tenaga kesehatan.</p>
-                    <p class="article-source">Sumber: <a
-                            href="https://www.kompasiana.com/rizahanis1904/68df6b07c925c4146a36cf05/hubungan-pola-tidur-dengan-konsentrasi-belajar-mahasiswa"
-                            target="_blank" rel="noopener noreferrer">Kompasiana - Hubungan Pola Tidur dengan
-                            Konsentrasi Belajar</a></p>
-                </article>
-            </template>
-            <!-- FAQ -->
-            <section class="py-16 sm:py-20 bg-white">
-                <div class="max-w-3xl mx-auto px-4 sm:px-6">
-                    <div class="text-center mb-10 space-y-2">
-                        <h2 class="reveal-wave text-3xl font-extrabold text-slate-900">Pertanyaan yang Sering Ditanyakan
-                        </h2>
-                        <p class="reveal text-slate-500 text-sm">Masih ragu? Ini beberapa hal yang paling sering
-                            ditanyakan pelajar.</p>
+            <!-- FASE 2 -->
+            <div class="reveal bg-white rounded-3xl p-6 sm:p-8 border border-slate-100 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between">
+                <div class="space-y-4">
+                    <div class="w-10 h-10 rounded-2xl brand-blue-bg text-white font-black text-lg flex items-center justify-center shadow-md shadow-sky-200">
+                        2
+                    </div>
+                    
+                    <div class="space-y-1">
+                        <span class="brand-blue-text text-[11px] font-extrabold uppercase tracking-wider block">
+                            FASE 2
+                        </span>
+                        <h3 class="text-base sm:text-lg font-bold text-slate-900">
+                            Kenali (Mood & Relaksasi)
+                        </h3>
                     </div>
 
-                    <div class="reveal-group space-y-3">
-                        <details class="reveal faq-item bg-slate-50 rounded-2xl border border-slate-200/70 px-5 py-4">
-                            <summary
-                                class="flex items-center justify-between gap-4 font-bold text-slate-800 text-sm transition-colors">
-                                <span>Apakah MindCare menyimpan data atau identitasku?</span>
-                                <i
-                                    class="fa-solid fa-chevron-down faq-chevron text-slate-400 text-xs flex-shrink-0"></i>
-                            </summary>
-                            <p class="text-xs sm:text-sm text-slate-500 leading-relaxed mt-3 pr-6">Tidak. MindCare
-                                dirancang tanpa pendaftaran dan tanpa basis data pengguna, jadi ceritamu tidak pernah
-                                ditautkan ke identitas pribadimu.</p>
-                        </details>
-                        <details class="reveal faq-item bg-slate-50 rounded-2xl border border-slate-200/70 px-5 py-4">
-                            <summary
-                                class="flex items-center justify-between gap-4 font-bold text-slate-800 text-sm transition-colors">
-                                <span>Apakah AI bisa menggantikan psikolog?</span>
-                                <i
-                                    class="fa-solid fa-chevron-down faq-chevron text-slate-400 text-xs flex-shrink-0"></i>
-                            </summary>
-                            <p class="text-xs sm:text-sm text-slate-500 leading-relaxed mt-3 pr-6">Belum. MindCare
-                                berperan sebagai pertolongan pertama psikologis — mendengar dan membantu mengenali emosi
-                                — lalu merujukmu ke Guru BK atau tenaga profesional bila kondisimu membutuhkan
-                                penanganan lebih lanjut.</p>
-                        </details>
-                        <details class="reveal faq-item bg-slate-50 rounded-2xl border border-slate-200/70 px-5 py-4">
-                            <summary
-                                class="flex items-center justify-between gap-4 font-bold text-slate-800 text-sm transition-colors">
-                                <span>Kapan percakapanku akan dirujuk ke Guru BK?</span>
-                                <i
-                                    class="fa-solid fa-chevron-down faq-chevron text-slate-400 text-xs flex-shrink-0"></i>
-                            </summary>
-                            <p class="text-xs sm:text-sm text-slate-500 leading-relaxed mt-3 pr-6">Hanya saat sistem
-                                mendeteksi indikator krisis yang serius, dan kamu tetap diberi pilihan sebelum rujukan
-                                itu dilakukan.</p>
-                        </details>
-                        <details class="reveal faq-item bg-slate-50 rounded-2xl border border-slate-200/70 px-5 py-4">
-                            <summary
-                                class="flex items-center justify-between gap-4 font-bold text-slate-800 text-sm transition-colors">
-                                <span>Apakah MindCare berbayar?</span>
-                                <i
-                                    class="fa-solid fa-chevron-down faq-chevron text-slate-400 text-xs flex-shrink-0"></i>
-                            </summary>
-                            <p class="text-xs sm:text-sm text-slate-500 leading-relaxed mt-3 pr-6">Tidak, MindCare
-                                disediakan gratis untuk seluruh pelajar SMP, SMA, dan SMK.</p>
-                        </details>
-                    </div>
+                    <p class="text-xs text-slate-500 leading-relaxed">
+                        Siswa diajak mengenali emosi melalui pemantauan mood harian dan teknik latihan pernapasan terpandu 4–7–8 tanpa tekanan.
+                    </p>
                 </div>
-            </section>
+
+                <div class="pt-6">
+                    <a href="skrining.html" class="brand-blue-text font-bold text-xs inline-flex items-center gap-1.5 hover:gap-2 transition-all">
+                        <span>Mulai Skrining</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- FASE 3 -->
+            <div class="reveal bg-white rounded-3xl p-6 sm:p-8 border border-slate-100 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between">
+                <div class="space-y-4">
+                    <div class="w-10 h-10 rounded-2xl brand-blue-bg text-white font-black text-lg flex items-center justify-center shadow-md shadow-sky-200">
+                        3
+                    </div>
+                    
+                    <div class="space-y-1">
+                        <span class="brand-blue-text text-[11px] font-extrabold uppercase tracking-wider block">
+                            FASE 3
+                        </span>
+                        <h3 class="text-base sm:text-lg font-bold text-slate-900">
+                            Temukan Bantuan (BK Routing)
+                        </h3>
+                    </div>
+
+                    <p class="text-xs text-slate-500 leading-relaxed">
+                        Menghubungkan siswa dengan unit Bimbingan Konseling (BK) di sekolah secara rahasia apabila membutuhkan penanganan lebih lanjut.
+                    </p>
+                </div>
+
+                <div class="pt-6">
+                    <a href="rujukan.html" class="brand-blue-text font-bold text-xs inline-flex items-center gap-1.5 hover:gap-2 transition-all">
+                        <span>Akses Layanan BK</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </a>
+                </div>
+            </div>
+
         </div>
 
+    </div>
+</section>
+
+            <!-- SEKSI ARTIKEL & EDUKASI KESEHATAN MENTAL -->
+<section class="py-12 bg-slate-50/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header Seksi -->
+        <div class="text-center space-y-2 mb-10">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-100/70 text-sky-600 text-xs font-bold tracking-wider uppercase">
+                BACAAN PILIHAN
+            </span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                Artikel & Edukasi Kesehatan Mental
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-500 max-w-xl mx-auto">
+                Bacaan singkat seputar kesehatan mental pelajar, biar makin paham cara menjaga diri sendiri.
+            </p>
+        </div>
+
+        <!-- Grid 4 Kartu Artikel -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            <!-- KARTU 1: MANAJEMEN STRES -->
+            <div class="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between group">
+                <div>
+                    <div class="h-44 overflow-hidden relative">
+                        <img src="assets/stress.png" alt="Ilustrasi mengelola stres saat belajar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-5 space-y-3">
+                        <span class="inline-block bg-sky-50 text-sky-600 border border-sky-100 text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
+                            Manajemen Stres
+                        </span>
+                        <h3 class="text-sm font-bold text-slate-800 leading-snug group-hover:brand-blue-text transition-colors">
+                            5 Cara Sederhana Mengelola Stres Sebelum Ujian
+                        </h3>
+                        <p class="text-xs text-slate-500 leading-relaxed line-clamp-3">
+                            Teknik bernapas, menata waktu belajar, dan tips kecil yang bisa langsung kamu praktikkan malam sebelum ujian.
+                        </p>
+                    </div>
+                </div>
+                <div class="px-5 pb-5 pt-1">
+                    <button onclick="openArticleModal('stres')" class="brand-blue-text font-bold text-xs flex items-center gap-1.5 hover:gap-2 transition-all cursor-pointer">
+                        <span>Baca Selengkapnya</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- KARTU 2: RELASI SOSIAL -->
+            <div class="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between group">
+                <div>
+                    <div class="h-44 overflow-hidden relative">
+                        <img src="assets/relasi_sosial.png" alt="Ilustrasi pertemanan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-5 space-y-3">
+                        <span class="inline-block bg-sky-50 text-sky-600 border border-sky-100 text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
+                            Relasi Sosial
+                        </span>
+                        <h3 class="text-sm font-bold text-slate-800 leading-snug group-hover:brand-blue-text transition-colors">
+                            Menghadapi Konflik Pertemanan Tanpa Kehilangan Diri Sendiri
+                        </h3>
+                        <p class="text-xs text-slate-500 leading-relaxed line-clamp-3">
+                            Belajar mengenali batasan sehat dalam pertemanan dan cara menyampaikan perasaan tanpa takut dijauhi.
+                        </p>
+                    </div>
+                </div>
+                <div class="px-5 pb-5 pt-1">
+                    <button onclick="openArticleModal('pertemanan')" class="brand-blue-text font-bold text-xs flex items-center gap-1.5 hover:gap-2 transition-all cursor-pointer">
+                        <span>Baca Selengkapnya</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- KARTU 3: KESADARAN DIRI -->
+            <div class="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between group">
+                <div>
+                    <div class="h-44 overflow-hidden relative">
+                        <img src="assets/brain_out.png" alt="Ilustrasi kelelahan setelah belajar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-5 space-y-3">
+                        <span class="inline-block bg-sky-50 text-sky-600 border border-sky-100 text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
+                            Kesadaran Diri
+                        </span>
+                        <h3 class="text-sm font-bold text-slate-800 leading-snug group-hover:brand-blue-text transition-colors">
+                            Mengenali Tanda-Tanda Burnout saat Belajar
+                        </h3>
+                        <p class="text-xs text-slate-500 leading-relaxed line-clamp-3">
+                            Lelah terus-menerus bukan cuma soal fisik — kenali sinyal burnout akademik sejak dini.
+                        </p>
+                    </div>
+                </div>
+                <div class="px-5 pb-5 pt-1">
+                    <button onclick="openArticleModal('burnout')" class="brand-blue-text font-bold text-xs flex items-center gap-1.5 hover:gap-2 transition-all cursor-pointer">
+                        <span>Baca Selengkapnya</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- KARTU 4: POLA TIDUR -->
+            <div class="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between group">
+                <div>
+                    <div class="h-44 overflow-hidden relative">
+                        <img src="assets/tidur.png" alt="Ilustrasi tidur yang cukup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-5 space-y-3">
+                        <span class="inline-block bg-sky-50 text-sky-600 border border-sky-100 text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
+                            Pola Tidur
+                        </span>
+                        <h3 class="text-sm font-bold text-slate-800 leading-snug group-hover:brand-blue-text transition-colors">
+                            Kenapa Tidur Cukup Memengaruhi Mood dan Fokus Belajar
+                        </h3>
+                        <p class="text-xs text-slate-500 leading-relaxed line-clamp-3">
+                            Hubungan antara jam tidur, suasana hati, dan kemampuan konsentrasi di kelas.
+                        </p>
+                    </div>
+                </div>
+                <div class="px-5 pb-5 pt-1">
+                    <button onclick="openArticleModal('tidur')" class="brand-blue-text font-bold text-xs flex items-center gap-1.5 hover:gap-2 transition-all cursor-pointer">
+                        <span>Baca Selengkapnya</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTAINER POP-UP MODAL ARTIKEL -->
+<div id="article-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs transition-all duration-300" hidden aria-hidden="true">
+    <div class="bg-white rounded-3xl max-w-lg w-full max-h-[85vh] overflow-y-auto p-6 relative shadow-2xl border border-slate-100">
+        
+        <!-- Tombol Silang (Close X) -->
+        <button type="button" onclick="closeArticleModal()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition active:scale-95 cursor-pointer">
+            <i class="fa-solid fa-xmark text-sm"></i>
+        </button>
+
+        <!-- Tempat Isi Artikel Dimuat -->
+        <div id="article-modal-content"></div>
+
+    </div>
+</div>
+
+<!-- TEMPLATES ARTIKEL -->
+<template id="article-stres">
+    <article>
+        <p class="article-detail-category">Manajemen Stres</p>
+        <h2 id="article-modal-title">5 Cara Sederhana Mengelola Stres Sebelum Ujian</h2>
+        <p class="article-detail-intro">Masa ujian bisa terasa menegangkan. Beberapa kebiasaan sederhana berikut dapat membantu kamu menjaga energi dan fokus saat belajar.</p>
+        <ol class="article-steps">
+            <li>
+                <h3>Jaga waktu istirahat</h3>
+                <p>Buat jadwal belajar yang realistis dan sisihkan waktu untuk tidur serta jeda. Istirahat adalah bagian dari persiapan, bukan waktu yang terbuang.</p>
+            </li>
+            <li>
+                <h3>Gerakkan tubuh</h3>
+                <p>Berjalan sebentar atau melakukan peregangan dapat menjadi selingan dari kegiatan belajar dan membantu tubuh terasa lebih segar.</p>
+            </li>
+            <li>
+                <h3>Ambil jeda dari layar</h3>
+                <p>Jauhkan perangkat sejenak atau matikan notifikasi ketika sedang fokus agar perhatian tidak terus teralihkan.</p>
+            </li>
+            <li>
+                <h3>Atur napas perlahan</h3>
+                <p>Tarik napas dengan nyaman, lalu hembuskan lebih perlahan beberapa kali. Hentikan jika terasa tidak nyaman.</p>
+            </li>
+            <li>
+                <h3>Fokus pada langkah berikutnya</h3>
+                <p>Kerjakan satu bagian kecil terlebih dahulu daripada mencoba menyelesaikan semua hal sekaligus.</p>
+            </li>
+        </ol>
+        <p>Jika stres terus mengganggu kegiatan sehari-hari, ceritakan kepada orang dewasa tepercaya atau Guru BK.</p>
+        <p class="article-source">Sumber: <a href="https://www.sydney.edu.au/study/student-life/student-news/2023/05/31/5-ways-to-manage-stress-during-exams.html" target="_blank" rel="noopener noreferrer">University of Sydney - 5 Ways to Manage Stress During Exams</a></p>
+    </article>
+</template>
+
+<template id="article-pertemanan">
+    <article>
+        <p class="article-detail-category">Relasi Sosial</p>
+        <h2 id="article-modal-title">Menghadapi Konflik Pertemanan Tanpa Kehilangan Diri Sendiri</h2>
+        <p class="article-detail-intro">Konflik dengan teman bisa terasa menyakitkan, tetapi tidak selalu berarti pertemanan harus berakhir. Beri diri waktu untuk memahami perasaan sebelum merespons.</p>
+        <ol class="article-steps">
+            <li>
+                <h3>Tenangkan diri lebih dulu</h3>
+                <p>Beri jeda agar percakapan tidak berlangsung ketika emosi sedang memuncak. Kamu bisa menarik napas, berjalan sebentar, atau menulis perasaanmu.</p>
+            </li>
+            <li>
+                <h3>Pahami apa yang mengganggu</h3>
+                <p>Coba bedakan kejadian yang baru terjadi dengan kebutuhan atau batasan yang belum tersampaikan.</p>
+            </li>
+            <li>
+                <h3>Bicarakan dengan jujur dan sopan</h3>
+                <p>Jelaskan perasaanmu tanpa menyerang, misalnya, "Aku merasa sedih ketika...". Pilih waktu ketika kalian berdua siap berbicara.</p>
+            </li>
+            <li>
+                <h3>Dengarkan satu sama lain</h3>
+                <p>Beri kesempatan kepada teman untuk menjelaskan dan akui bagian yang memang menjadi tanggung jawabmu.</p>
+            </li>
+            <li>
+                <h3>Tentukan batasan yang sehat</h3>
+                <p>Pertemanan seharusnya terasa aman dan saling menghormati. Kamu boleh meminta bantuan jika merasa tertekan atau tidak aman.</p>
+            </li>
+        </ol>
+        <p>Jika konflik melibatkan perundungan atau membuatmu merasa tidak aman, cari bantuan orang dewasa tepercaya atau Guru BK.</p>
+        <p class="article-source">Sumber: <a href="https://jenhatmaker.com/blog/how-to-handle-conflict-in-friendship/" target="_blank" rel="noopener noreferrer">Jen Hatmaker - How to Handle Conflict in Friendship</a></p>
+    </article>
+</template>
+
+<template id="article-burnout">
+    <article>
+        <p class="article-detail-category">Kesadaran Diri</p>
+        <h2 id="article-modal-title">Mengenali Tanda-Tanda Kelelahan saat Belajar</h2>
+        <p class="article-detail-intro">Kelelahan yang berlangsung lama dapat memengaruhi kegiatan belajar dan keseharian. Mengenali perubahan pada diri sendiri bisa menjadi langkah awal untuk mencari dukungan.</p>
+        <h3>Hal yang patut diperhatikan</h3>
+        <ol class="article-steps">
+            <li>
+                <h3>Kelelahan berkepanjangan</h3>
+                <p>Kamu tetap merasa sangat lelah atau sulit pulih meskipun sudah beristirahat.</p>
+            </li>
+            <li>
+                <h3>Motivasi menurun</h3>
+                <p>Belajar atau memulai tugas terasa jauh lebih berat daripada biasanya.</p>
+            </li>
+            <li>
+                <h3>Sulit berkonsentrasi</h3>
+                <p>Kamu kesulitan menjaga perhatian, memahami bacaan, atau menyelesaikan tugas.</p>
+            </li>
+            <li>
+                <h3>Menarik diri atau mudah kesal</h3>
+                <p>Interaksi sosial terasa melelahkan atau suasana hati lebih mudah berubah.</p>
+            </li>
+            <li>
+                <h3>Perubahan kebiasaan dan kondisi fisik</h3>
+                <p>Pola tidur, nafsu makan, atau kondisi tubuh berubah dan mulai mengganggu kegiatan.</p>
+            </li>
+        </ol>
+        <p>Daftar ini bukan alat diagnosis. Kelelahan belajar tidak otomatis berarti burnout. Jika keadaan terasa berat atau berlangsung lama, mintalah bantuan orang dewasa tepercaya atau tenaga kesehatan.</p>
+        <p class="article-source">Sumber: <a href="https://www.umn.ac.id/tanda-tanda-burnout-mahasiswa-yang-sering-diabaikan/" target="_blank" rel="noopener noreferrer">Universitas Muhammadiyah Malang - Tanda-Tanda Burnout Mahasiswa</a></p>
+    </article>
+</template>
+
+<template id="article-tidur">
+    <article>
+        <p class="article-detail-category">Pola Tidur</p>
+        <h2 id="article-modal-title">Kenapa Tidur Cukup Memengaruhi Mood dan Fokus Belajar</h2>
+        <p class="article-detail-intro">Tidur membantu tubuh dan pikiran beristirahat. Saat tidur terganggu atau kurang, kamu mungkin merasa lebih lelah dan lebih sulit menjaga perhatian ketika belajar.</p>
+        <h3>Kebiasaan yang dapat membantu</h3>
+        <ol class="article-steps">
+            <li>
+                <h3>Buat jadwal yang teratur</h3>
+                <p>Usahakan waktu tidur dan bangun yang cukup konsisten, termasuk pada akhir pekan.</p>
+            </li>
+            <li>
+                <h3>Kurangi layar menjelang tidur</h3>
+                <p>Sisihkan waktu tanpa ponsel atau komputer sebelum tidur dan pilih kegiatan yang menenangkan.</p>
+            </li>
+            <li>
+                <h3>Atur waktu belajar</h3>
+                <p>Rencanakan tugas lebih awal agar belajar sampai larut malam tidak menjadi kebiasaan.</p>
+            </li>
+            <li>
+                <h3>Perhatikan minuman berkafein</h3>
+                <p>Jika kafein membuatmu sulit tidur, hindari kopi atau teh menjelang waktu tidur.</p>
+            </li>
+            <li>
+                <h3>Buat kamar nyaman</h3>
+                <p>Usahakan suasana kamar tenang, cukup gelap, dan nyaman untuk beristirahat.</p>
+            </li>
+        </ol>
+        <p>Kebutuhan tidur berbeda menurut usia dan kondisi. Jika masalah tidur berlangsung terus atau mengganggu kegiatan, bicarakan dengan orang dewasa tepercaya atau tenaga kesehatan.</p>
+        <p class="article-source">Sumber: <a href="https://www.kompasiana.com/rizahanis1904/68df6b07c925c4146a36cf05/hubungan-pola-tidur-dengan-konsentrasi-belajar-mahasiswa" target="_blank" rel="noopener noreferrer">Kompasiana - Hubungan Pola Tidur dengan Konsentrasi Belajar</a></p>
+    </article>
+</template>
+
+<!-- FAQ SECTION -->
+<section class="py-16 sm:py-20 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-10 space-y-2">
+            <h2 class="reveal-wave text-3xl font-extrabold text-slate-900">Pertanyaan yang Sering Ditanyakan</h2>
+            <p class="reveal text-slate-500 text-sm">Masih ragu? Ini beberapa hal yang paling sering ditanyakan pelajar.</p>
+        </div>
+
+        <div class="reveal-group space-y-3">
+            <details class="reveal faq-item bg-slate-50 rounded-2xl border border-slate-200/70 px-5 py-4">
+                <summary class="flex items-center justify-between gap-4 font-bold text-slate-800 text-sm transition-colors cursor-pointer">
+                    <span>Apakah MindCare menyimpan data atau identitasku?</span>
+                    <i class="fa-solid fa-chevron-down faq-chevron text-slate-400 text-xs flex-shrink-0"></i>
+                </summary>
+                <p class="text-xs sm:text-sm text-slate-500 leading-relaxed mt-3 pr-6">Tidak. MindCare dirancang tanpa pendaftaran dan tanpa basis data pengguna, jadi ceritamu tidak pernah ditautkan ke identitas pribadimu.</p>
+            </details>
+            <details class="reveal faq-item bg-slate-50 rounded-2xl border border-slate-200/70 px-5 py-4">
+                <summary class="flex items-center justify-between gap-4 font-bold text-slate-800 text-sm transition-colors cursor-pointer">
+                    <span>Apakah AI bisa menggantikan psikolog?</span>
+                    <i class="fa-solid fa-chevron-down faq-chevron text-slate-400 text-xs flex-shrink-0"></i>
+                </summary>
+                <p class="text-xs sm:text-sm text-slate-500 leading-relaxed mt-3 pr-6">Belum. MindCare berperan sebagai pertolongan pertama psikologis — mendengar dan membantu mengenali emosi — lalu merujukmu ke Guru BK atau tenaga profesional bila kondisimu membutuhkan penanganan lebih lanjut.</p>
+            </details>
+            <details class="reveal faq-item bg-slate-50 rounded-2xl border border-slate-200/70 px-5 py-4">
+                <summary class="flex items-center justify-between gap-4 font-bold text-slate-800 text-sm transition-colors cursor-pointer">
+                    <span>Kapan percakapanku akan dirujuk ke Guru BK?</span>
+                    <i class="fa-solid fa-chevron-down faq-chevron text-slate-400 text-xs flex-shrink-0"></i>
+                </summary>
+                <p class="text-xs sm:text-sm text-slate-500 leading-relaxed mt-3 pr-6">Hanya saat sistem mendeteksi indikator krisis yang serius, dan kamu tetap diberi pilihan sebelum rujukan itu dilakukan.</p>
+            </details>
+            <details class="reveal faq-item bg-slate-50 rounded-2xl border border-slate-200/70 px-5 py-4">
+                <summary class="flex items-center justify-between gap-4 font-bold text-slate-800 text-sm transition-colors cursor-pointer">
+                    <span>Apakah MindCare berbayar?</span>
+                    <i class="fa-solid fa-chevron-down faq-chevron text-slate-400 text-xs flex-shrink-0"></i>
+                </summary>
+                <p class="text-xs sm:text-sm text-slate-500 leading-relaxed mt-3 pr-6">Tidak, MindCare disediakan gratis untuk seluruh pelajar SMP, SMA, dan SMK.</p>
+            </details>
+        </div>
+    </div>
+</section>
         <!-- VIEW 2: CONSULTATION CHAT AI (CLEAN SAFETY CHECK DESIGN) -->
         <div id="view-chat" class="view-section">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -1042,13 +1032,27 @@
 
                     <!-- Hak Cipta Paling Bawah (Ditengah) -->
                     <div class="pt-6 text-center text-sky-100 text-xs font-medium space-y-1.5">
-                        <p>&copy; 2026 MindCare • <strong class="text-white font-bold"> &copy; 2026 MindCare •
-                                Strawberry Coding Club | SMKN 1 Ciamis</strong></p>
+                        <p>&copy; 2026 MindCare • <strong class="text-white font-bold" > Strawberry Coding Club | SMKN 1 Ciamis </strong></p>
                     </div>
 
                 </div>
             </div>
         </footer>
+
+        <!-- CONTAINER POP-UP MODAL ARTIKEL -->
+<div id="article-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs transition-all duration-300">
+    <div class="article-modal-card bg-white rounded-3xl max-w-lg w-full max-h-[85vh] overflow-y-auto p-6 relative shadow-2xl border border-slate-100">
+        
+        <!-- Tombol Silang (Close X) -->
+        <button type="button" onclick="closeArticleModal()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition active:scale-95 cursor-pointer z-10">
+            <i class="fa-solid fa-xmark text-sm"></i>
+        </button>
+
+        <!-- Tempat Isi Artikel Dimuat -->
+        <div id="article-modal-content"></div>
+
+    </div>
+</div>
 
 
         <!-- Custom Script JS -->

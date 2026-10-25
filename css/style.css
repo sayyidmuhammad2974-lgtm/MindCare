@@ -1180,3 +1180,181 @@ html[data-theme="dark"] .hero-preview .float-soft {
         border-radius: 18px;
     }
 }
+/* =========================================================
+   STYLING MODAL & ARTIKEL MODERN (DENGAN ANIMASI MUNCUL)
+   ========================================================= */
+
+/* Keyframe Animasi Kartu Artikel Bermunculan/Membal */
+@keyframes modalPopIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.92) translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Efek Kartu Modal Saat Aktif */
+#article-modal:not(.hidden) .article-modal-card {
+  animation: modalPopIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Base Style Artikel */
+article {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  color: #334155;
+  line-height: 1.6;
+}
+
+/* Tag Kategori Artikel */
+.article-detail-category {
+  display: inline-block;
+  background-color: #E0F2FE;
+  color: #0284C7;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  margin-bottom: 8px;
+  border: 1px solid #BAE6FD;
+}
+
+/* Judul Artikel */
+#article-modal-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0F172A;
+  line-height: 1.35;
+  margin-bottom: 12px;
+}
+
+/* Text Intro / Kotak Highlight Pengantar */
+.article-detail-intro {
+  font-size: 0.85rem;
+  color: #334155;
+  background-color: #F8FAFC;
+  border-left: 4px solid #4FBAEA; /* Biru MindCare */
+  padding: 12px 14px;
+  border-radius: 0 12px 12px 0;
+  margin-bottom: 18px;
+}
+
+/* Sub-judul di dalam Artikel */
+article h3:not(.article-steps h3) {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin-top: 18px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+article h3:not(.article-steps h3)::before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 15px;
+  background-color: #4FBAEA;
+  border-radius: 4px;
+}
+
+/* List Langkah (Pembersihan Nomor Ganda & Efek Badge Angka) */
+.article-steps {
+  list-style: none !important;
+  counter-reset: step-counter;
+  padding-left: 0 !important;
+  margin-top: 12px;
+  margin-bottom: 18px;
+}
+
+.article-steps > li {
+  counter-increment: step-counter;
+  position: relative;
+  padding-left: 42px;
+  margin-bottom: 16px;
+}
+
+.article-steps > li::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 28px;
+  height: 28px;
+  background: #4FBAEA;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 12px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 6px rgba(79, 186, 234, 0.25);
+}
+
+.article-steps h3 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #1E293B;
+  margin: 0 0 2px 0;
+}
+
+.article-steps p {
+  font-size: 0.8rem;
+  color: #64748B;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Kotak Himbauan Guru BK / Penutup */
+article > p:not(.article-detail-category):not(.article-detail-intro):not(.article-source):not(.article-steps p) {
+  background-color: #FFFBEB;
+  border: 1px solid #FDE68A;
+  color: #92400E;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 12px 14px;
+  border-radius: 12px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+/* Sumber Referensi */
+.article-source {
+  font-size: 10.5px;
+  color: #94A3B8;
+  border-top: 1px solid #E2E8F0;
+  padding-top: 10px;
+  margin-top: 18px !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+}
+
+.article-source a {
+  color: #4FBAEA;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.article-source a:hover {
+  text-decoration: underline;
+}
+/* Styling Efek Scroll Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+/* Saat elemen masuk layar (ditambahkan oleh JS) */
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

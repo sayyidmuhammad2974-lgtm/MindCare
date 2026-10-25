@@ -556,3 +556,74 @@ function handleNavClick(event, url) {
     window.location.href = url;
   }, 200);
 }
+
+function openArticleModal(articleName) {
+  const cleanName = articleName.replace('article-', '');
+  const modal = document.getElementById("article-modal");
+  const content = document.getElementById("article-modal-content");
+  const template = document.getElementById(`article-${cleanName}`);
+
+  if (!modal || !content || !template) {
+    console.error("Template artikel atau elemen modal tidak ditemukan:", articleName);
+    return;
+  }
+
+  content.replaceChildren(template.content.cloneNode(true));
+
+  modal.hidden = false;
+  modal.setAttribute("aria-hidden", "false");
+  modal.classList.remove("hidden");
+  modal.classList.add("flex");
+  document.body.style.overflow = "hidden";
+}
+
+function closeArticleModal() {
+  const modal = document.getElementById("article-modal");
+  const content = document.getElementById("article-modal-content");
+
+  if (modal) {
+    modal.hidden = true;
+    modal.setAttribute("aria-hidden", "true");
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+    document.body.style.overflow = "";
+    if (content) content.replaceChildren();
+  }
+}
+// Fungsi Membuka Modal Artikel dengan Animasi
+function openArticleModal(articleName) {
+  const cleanName = articleName.replace('article-', '');
+  const modal = document.getElementById("article-modal");
+  const content = document.getElementById("article-modal-content");
+  const template = document.getElementById(`article-${cleanName}`);
+
+  if (!modal || !content || !template) {
+    console.error("Template artikel atau elemen modal tidak ditemukan:", articleName);
+    return;
+  }
+
+  // Masukkan konten dari template HTML
+  content.replaceChildren(template.content.cloneNode(true));
+
+  // Tampilkan Modal
+  modal.hidden = false;
+  modal.setAttribute("aria-hidden", "false");
+  modal.classList.remove("hidden");
+  modal.classList.add("flex");
+  document.body.style.overflow = "hidden"; // Kunci scroll layar belakang
+}
+
+// Fungsi Menutup Modal Artikel
+function closeArticleModal() {
+  const modal = document.getElementById("article-modal");
+  const content = document.getElementById("article-modal-content");
+
+  if (modal) {
+    modal.hidden = true;
+    modal.setAttribute("aria-hidden", "true");
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+    document.body.style.overflow = ""; // Pulihkan scroll layar belakang
+    if (content) content.replaceChildren();
+  }
+}
