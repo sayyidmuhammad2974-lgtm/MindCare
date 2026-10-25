@@ -412,3 +412,30 @@ document.addEventListener('DOMContentLoaded', () => {
     initQuiz();
     switchView('landing');
 });
+
+function handleNavClick(event, url) {
+    event.preventDefault(); // Tahan dulu perpindahan halaman
+    const btn = event.currentTarget;
+    const iconBox = btn.querySelector('.icon-box');
+    const label = btn.querySelector('.nav-label');
+
+    // 1. Ubah warna latar tombol utama jadi Biru MindCare (#4FBAEA)
+    btn.style.backgroundColor = '#4FBAEA';
+    btn.style.color = '#FFFFFF';
+
+    // 2. Ubah icon box jadi latar putih dengan ikon/teks biru agar kontras & jelas
+    if (iconBox) {
+        iconBox.style.backgroundColor = '#FFFFFF';
+        iconBox.style.color = '#4FBAEA';
+        iconBox.style.borderColor = '#FFFFFF';
+    }
+
+    if (label) {
+        label.style.color = '#FFFFFF';
+    }
+
+    // 3. Jeda 200ms supaya animasi tombol berwarna biru terlihat jelas oleh mata sebelum berpindah
+    setTimeout(() => {
+        window.location.href = url;
+    }, 200);
+}
