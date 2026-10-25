@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,66 +11,81 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts: Plus Jakarta Sans -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body class="bg-white text-slate-800 flex flex-col min-h-screen selection:bg-sky-100 selection:text-sky-800">
 
-  <!-- TOP RUNNING TEXT (CLEAN BLUE BACKGROUND & WHITE TEXT) -->
-<!-- Ganti py-3 menjadi py-5 atau py-6 untuk memperbesar latar belakang biru ke bawah -->
-<div class="top-announcement-bar py-6 px-4 text-white text-xs sm:text-sm font-semibold overflow-hidden relative">
-    <div class="max-w-7xl mx-auto flex items-center">
-        <div class="marquee-track-container flex-1 overflow-hidden relative">
-            <div class="marquee-track whitespace-nowrap" data-single-marquee="true">
-                <span class="inline-block text-white font-medium drop-shadow-sm">
-                    📢 <strong class="font-bold text-white">Selamat Datang di MindCare:</strong> Ruang Bercerita Digital untuk Dukungan Awal Kesehatan Mental Pelajar 100% Anonim.
-                </span>
+    <!-- TOP RUNNING TEXT (CLEAN BLUE BACKGROUND & WHITE TEXT) -->
+    <!-- Ganti py-3 menjadi py-5 atau py-6 untuk memperbesar latar belakang biru ke bawah -->
+    <div class="top-announcement-bar py-6 px-4 text-white text-xs sm:text-sm font-semibold overflow-hidden relative">
+        <div class="max-w-7xl mx-auto flex items-center">
+            <div class="marquee-track-container flex-1 overflow-hidden relative">
+                <div class="marquee-track whitespace-nowrap" data-single-marquee="true">
+                    <span class="inline-block text-white font-medium drop-shadow-sm">
+                        📢 <strong class="font-bold text-white">Selamat Datang di MindCare:</strong> Ruang Bercerita
+                        Digital untuk Dukungan Awal Kesehatan Mental Pelajar 100% Anonim.
+                    </span>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
     <!-- MAIN COMPACT NAVBAR HEADER WITH OFFICIAL LOGO -->
     <header id="main-header" class="sticky top-0 z-40 transition-all duration-300 py-2 sm:py-3">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div id="navbar-box" class="bg-white/80 backdrop-blur-md border border-slate-200/80 rounded-2xl sm:rounded-full px-4 sm:px-6 h-16 sm:h-18 grid grid-cols-[1fr_auto_1fr] items-center transition-all duration-300">
+            <div id="navbar-box"
+                class="bg-white/80 backdrop-blur-md border border-slate-200/80 rounded-2xl sm:rounded-full px-4 sm:px-6 h-16 sm:h-18 grid grid-cols-[1fr_auto_1fr] items-center transition-all duration-300">
 
                 <!-- Brand Logo Image -->
-                <button onclick="switchView('landing')" class="col-start-1 justify-self-start flex items-center gap-2.5 group focus:outline-none">
-                    <img src="assets/Logo MindCare.png" alt="Logo MindCare" class="w-9 h-9 object-contain group-hover:scale-105 transition-transform">
+                <button onclick="switchView('landing')"
+                    class="col-start-1 justify-self-start flex items-center gap-2.5 group focus:outline-none">
+                    <img src="assets/Logo MindCare.png" alt="Logo MindCare"
+                        class="w-9 h-9 object-contain group-hover:scale-105 transition-transform">
                     <div class="flex flex-col text-left">
-                        <span class="text-lg sm:text-xl font-extrabold tracking-tight text-slate-900 group-hover:brand-blue-text transition-colors">
+                        <span
+                            class="text-lg sm:text-xl font-extrabold tracking-tight text-slate-900 group-hover:brand-blue-text transition-colors">
                             Mind<span class="brand-blue-text">Care</span>
                         </span>
                     </div>
                 </button>
 
                 <!-- Desktop Navigation Tabs -->
-                <nav class="hidden lg:flex col-start-2 w-fit max-w-full justify-self-center items-center gap-1 bg-slate-100/80 p-1.5 rounded-full border border-slate-200/80 text-xs font-bold text-slate-600">
-                    <button onclick="switchView('landing')" data-view="landing" id="nav-landing" class="nav-link active px-4 py-2 rounded-full transition-all duration-200 flex items-center gap-1.5">
+                <nav
+                    class="hidden lg:flex col-start-2 w-fit max-w-full justify-self-center items-center gap-1 bg-slate-100/80 p-1.5 rounded-full border border-slate-200/80 text-xs font-bold text-slate-600">
+                    <button onclick="switchView('landing')" data-view="landing" id="nav-landing"
+                        class="nav-link active px-4 py-2 rounded-full transition-all duration-200 flex items-center gap-1.5">
                         <i class="fa-solid fa-house"></i> Beranda
                     </button>
-                    <button onclick="window.location.href='chat.html'" data-view="chat" id="nav-chat" class="nav-link px-4 py-2 rounded-full transition-all duration-200 flex items-center gap-1.5">
+                    <button onclick="window.location.href='chat.html'" data-view="chat" id="nav-chat"
+                        class="nav-link px-4 py-2 rounded-full transition-all duration-200 flex items-center gap-1.5">
                         <i class="fa-solid fa-comments"></i> AI Care Chat
                     </button>
-                    <button onclick="window.location.href='skrining.html'" data-view="skrining" id="nav-skrining" class="nav-link px-4 py-2 rounded-full transition-all duration-200 flex items-center gap-1.5">
+                    <button onclick="window.location.href='skrining.html'" data-view="skrining" id="nav-skrining"
+                        class="nav-link px-4 py-2 rounded-full transition-all duration-200 flex items-center gap-1.5">
                         <i class="fa-solid fa-clipboard-check"></i> Skrining Mental
                     </button>
-                    <button onclick="window.location.href='rujukan.html'" data-view="rujukan" id="nav-rujukan" class="nav-link px-4 py-2 rounded-full transition-all duration-200 flex items-center gap-1.5">
+                    <button onclick="window.location.href='rujukan.html'" data-view="rujukan" id="nav-rujukan"
+                        class="nav-link px-4 py-2 rounded-full transition-all duration-200 flex items-center gap-1.5">
                         <i class="fa-solid fa-school"></i> Rujukan BK
                     </button>
                 </nav>
 
                 <!-- Quick Action Button -->
                 <div class="col-start-3 justify-self-end flex items-center gap-3">
-                    <button id="theme-toggle" type="button" class="theme-toggle" aria-label="Mode tampilan: Perangkat. Klik untuk mengganti." title="Mode tampilan: Perangkat">
+                    <button id="theme-toggle" type="button" class="theme-toggle"
+                        aria-label="Mode tampilan: Perangkat. Klik untuk mengganti." title="Mode tampilan: Perangkat">
                         <i id="theme-icon" class="fa-solid fa-desktop" aria-hidden="true"></i>
                         <span id="theme-label">Perangkat</span>
                     </button>
 
                     <!-- Mobile Menu Button -->
-                    <button id="mobile-menu-toggle" aria-label="Buka menu" aria-expanded="false" aria-controls="mobile-menu" onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-xl bg-slate-100 text-slate-700 hover:brand-blue-text transition border border-slate-200">
+                    <button id="mobile-menu-toggle" aria-label="Buka menu" aria-expanded="false"
+                        aria-controls="mobile-menu" onclick="toggleMobileMenu()"
+                        class="lg:hidden p-2 rounded-xl bg-slate-100 text-slate-700 hover:brand-blue-text transition border border-slate-200">
                         <i class="fa-solid fa-bars text-base"></i>
                     </button>
                 </div>
@@ -78,17 +94,22 @@
 
         <!-- Mobile Navigation Drawer -->
         <div id="mobile-menu" class="hidden lg:hidden max-w-7xl mx-auto px-4 sm:px-6 pt-2 pb-4">
-            <div class="bg-white/95 backdrop-blur-md rounded-2xl p-3 border border-slate-200/80 shadow-xl space-y-1 text-xs font-semibold">
-                <button onclick="switchView('landing'); toggleMobileMenu()" data-view="landing" class="w-full text-left px-3 py-2 rounded-xl text-slate-700 hover:bg-sky-50 hover:brand-blue-text flex items-center gap-2.5">
+            <div
+                class="bg-white/95 backdrop-blur-md rounded-2xl p-3 border border-slate-200/80 shadow-xl space-y-1 text-xs font-semibold">
+                <button onclick="switchView('landing'); toggleMobileMenu()" data-view="landing"
+                    class="w-full text-left px-3 py-2 rounded-xl text-slate-700 hover:bg-sky-50 hover:brand-blue-text flex items-center gap-2.5">
                     <i class="fa-solid fa-house brand-blue-text w-4"></i> Beranda
                 </button>
-                <button onclick="window.location.href='chat.html'" class="w-full text-left px-3 py-2 rounded-xl text-slate-700 hover:bg-sky-50 hover:brand-blue-text flex items-center gap-2.5">
+                <button onclick="window.location.href='chat.html'"
+                    class="w-full text-left px-3 py-2 rounded-xl text-slate-700 hover:bg-sky-50 hover:brand-blue-text flex items-center gap-2.5">
                     <i class="fa-solid fa-comments brand-blue-text w-4"></i> AI Care Chat (Fase Dengar)
                 </button>
-                <button onclick="window.location.href='skrining.html'" data-view="skrining" class="w-full text-left px-3 py-2 rounded-xl text-slate-700 hover:bg-sky-50 hover:brand-blue-text flex items-center gap-2.5">
+                <button onclick="window.location.href='skrining.html'" data-view="skrining"
+                    class="w-full text-left px-3 py-2 rounded-xl text-slate-700 hover:bg-sky-50 hover:brand-blue-text flex items-center gap-2.5">
                     <i class="fa-solid fa-clipboard-check brand-blue-text w-4"></i> Skrining Kesehatan Mental
                 </button>
-                <button onclick="window.location.href='rujukan.html'" data-view="rujukan" class="w-full text-left px-3 py-2 rounded-xl text-slate-700 hover:bg-sky-50 hover:brand-blue-text flex items-center gap-2.5">
+                <button onclick="window.location.href='rujukan.html'" data-view="rujukan"
+                    class="w-full text-left px-3 py-2 rounded-xl text-slate-700 hover:bg-sky-50 hover:brand-blue-text flex items-center gap-2.5">
                     <i class="fa-solid fa-school brand-blue-text w-4"></i> Rujukan & Konseling BK Sekolah
                 </button>
             </div>
@@ -102,96 +123,127 @@
         <div id="view-landing" class="view-section active">
 
             <!-- Hero Section -->
-            <section class="relative bg-gradient-to-b from-sky-50/70 via-white to-white py-16 sm:py-24 border-b border-slate-100 overflow-hidden">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-14 lg:gap-10 items-center relative z-10">
+            <section
+                class="relative bg-gradient-to-b from-sky-50/70 via-white to-white py-16 sm:py-24 border-b border-slate-100 overflow-hidden">
+                <div
+                    class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-14 lg:gap-10 items-center relative z-10">
 
                     <!-- Left: Copy -->
                     <div class="text-center lg:text-left space-y-7">
-                        <div class="reveal inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-sky-200 shadow-sm text-xs font-bold brand-blue-text mx-auto lg:mx-0">
+                        <div
+                            class="reveal inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-sky-200 shadow-sm text-xs font-bold brand-blue-text mx-auto lg:mx-0">
                             <span class="w-2.5 h-2.5 rounded-full brand-blue-bg animate-ping"></span>
                             <span>Platform Pertolongan Pertama Psikologis Pelajar</span>
                         </div>
 
-                        <h1 class="reveal-wave text-4xl sm:text-5xl lg:text-[3.25rem] font-extrabold text-slate-900 tracking-tight leading-[1.08]" data-wave-base="0.1">
+                        <h1 class="reveal-wave text-4xl sm:text-5xl lg:text-[3.25rem] font-extrabold text-slate-900 tracking-tight leading-[1.08]"
+                            data-wave-base="0.1">
                             Ruang Aman Bercerita Digital <span class="brand-blue-text">Berbasis AI</span>
                         </h1>
 
-                        <p class="reveal reveal-d2 text-base sm:text-lg text-slate-600 max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
-                            Bebaskan pikiranmu dari tekanan ujian, konflik pertemanan, dan kecemasan sekolah. MindCare hadir <strong class="text-slate-800 font-semibold">100% Anonim</strong> tanpa pendaftaran, mendengarkan perasaanmu dengan empati kapan saja.
+                        <p
+                            class="reveal reveal-d2 text-base sm:text-lg text-slate-600 max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
+                            Bebaskan pikiranmu dari tekanan ujian, konflik pertemanan, dan kecemasan sekolah. MindCare
+                            hadir <strong class="text-slate-800 font-semibold">100% Anonim</strong> tanpa pendaftaran,
+                            mendengarkan perasaanmu dengan empati kapan saja.
                         </p>
 
-                        <div class="reveal reveal-d3 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center pt-1">
-                            <button onclick="window.location.href='chat.html'" class="w-full sm:w-auto btn-brand text-white font-bold px-8 py-4 rounded-full shadow-lg shadow-sky-400/25 flex items-center justify-center gap-2.5 text-sm">
+                        <div
+                            class="reveal reveal-d3 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center pt-1">
+                            <button onclick="window.location.href='chat.html'"
+                                class="w-full sm:w-auto btn-brand text-white font-bold px-8 py-4 rounded-full shadow-lg shadow-sky-400/25 flex items-center justify-center gap-2.5 text-sm">
                                 <i class="fa-solid fa-comments"></i>
                                 <span>Mulai Curhat Sekarang</span>
                             </button>
-                            <button onclick="window.location.href='skrining.html'" class="w-full sm:w-auto bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 font-bold px-8 py-4 rounded-full shadow-sm flex items-center justify-center gap-2.5 text-sm transition-all hover:border-sky-300">
+                            <button onclick="window.location.href='skrining.html'"
+                                class="w-full sm:w-auto bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 font-bold px-8 py-4 rounded-full shadow-sm flex items-center justify-center gap-2.5 text-sm transition-all hover:border-sky-300">
                                 <i class="fa-solid fa-stethoscope brand-blue-text"></i>
                                 <span>Tes Skrining Mental</span>
                             </button>
                         </div>
 
                         <!-- Stats -->
-                        <div class="reveal reveal-d4 grid grid-cols-3 gap-4 sm:gap-6 pt-8 border-t border-slate-100 max-w-lg mx-auto lg:mx-0">
+                        <div
+                            class="reveal reveal-d4 grid grid-cols-3 gap-4 sm:gap-6 pt-8 border-t border-slate-100 max-w-lg mx-auto lg:mx-0">
                             <div>
                                 <div class="text-lg sm:text-2xl font-extrabold text-slate-800">100%</div>
                                 <div class="text-[11px] sm:text-xs font-medium text-slate-500 mt-1">Privasi Anonim</div>
                             </div>
                             <div>
                                 <div class="text-lg sm:text-2xl font-extrabold brand-blue-text">24 Jam</div>
-                                <div class="text-[11px] sm:text-xs font-medium text-slate-500 mt-1">Respon AI Empatis</div>
+                                <div class="text-[11px] sm:text-xs font-medium text-slate-500 mt-1">Respon AI Empatis
+                                </div>
                             </div>
                             <div>
                                 <div class="text-lg sm:text-2xl font-extrabold text-slate-800">BK School</div>
-                                <div class="text-[11px] sm:text-xs font-medium text-slate-500 mt-1">Rujukan Terintegrasi</div>
+                                <div class="text-[11px] sm:text-xs font-medium text-slate-500 mt-1">Rujukan Terintegrasi
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Right: Chat Mockup Visual -->
-                    <div class="hero-preview reveal reveal-right reveal-d3 relative max-w-sm mx-auto w-full pt-4 lg:pt-0">
-                        <div class="absolute -inset-8 bg-gradient-to-br from-sky-200/50 via-transparent to-red-200/30 rounded-[3rem] blur-2xl -z-10"></div>
+                    <div
+                        class="hero-preview reveal reveal-right reveal-d3 relative max-w-sm mx-auto w-full pt-4 lg:pt-0">
+                        <div
+                            class="absolute -inset-8 bg-gradient-to-br from-sky-200/50 via-transparent to-red-200/30 rounded-[3rem] blur-2xl -z-10">
+                        </div>
 
                         <div class="hero-mock-card rounded-3xl overflow-hidden">
                             <div class="chat-panel-header flex items-center gap-3 p-4 text-white">
-                                <div class="w-10 h-10 rounded-xl bg-white/15 flex items-center justify-center text-base flex-shrink-0">
+                                <div
+                                    class="w-10 h-10 rounded-xl bg-white/15 flex items-center justify-center text-base flex-shrink-0">
                                     <i class="fa-solid fa-robot" aria-hidden="true"></i>
                                 </div>
                                 <div>
                                     <p class="text-sm font-bold">MindCare AI</p>
                                     <p class="text-[11px] text-sky-100 flex items-center gap-1.5">
-                                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-300 inline-block"></span> Teman refleksi yang siap mendengarkan
+                                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-300 inline-block"></span> Teman
+                                        refleksi yang siap mendengarkan
                                     </p>
                                 </div>
                             </div>
                             <div class="hero-chat-body p-4 sm:p-5 space-y-4">
                                 <div class="flex w-full justify-start">
-                                    <div class="chat-bubble chat-bubble-ai max-w-[88%] sm:max-w-[75%] rounded-2xl rounded-bl-md border border-slate-200 bg-white px-4 py-3 text-sm leading-relaxed text-slate-800 shadow-sm whitespace-pre-wrap break-words">Halo, aku di sini buat dengerin ceritamu. Ada yang lagi bikin pikiranmu penuh?</div>
+                                    <div
+                                        class="chat-bubble chat-bubble-ai max-w-[88%] sm:max-w-[75%] rounded-2xl rounded-bl-md border border-slate-200 bg-white px-4 py-3 text-sm leading-relaxed text-slate-800 shadow-sm whitespace-pre-wrap break-words">
+                                        Halo, aku di sini buat dengerin ceritamu. Ada yang lagi bikin pikiranmu penuh?
+                                    </div>
                                 </div>
                                 <div class="flex w-full justify-end">
-                                    <div class="chat-bubble chat-bubble-user max-w-[88%] sm:max-w-[75%] rounded-2xl rounded-br-md border border-sky-700 bg-sky-700 px-4 py-3 text-sm leading-relaxed text-white shadow-sm whitespace-pre-wrap break-words">Aku capek banget mikirin tugas yang numpuk, takut nggak kekejar.</div>
+                                    <div
+                                        class="chat-bubble chat-bubble-user max-w-[88%] sm:max-w-[75%] rounded-2xl rounded-br-md border border-sky-700 bg-sky-700 px-4 py-3 text-sm leading-relaxed text-white shadow-sm whitespace-pre-wrap break-words">
+                                        Aku capek banget mikirin tugas yang numpuk, takut nggak kekejar.</div>
                                 </div>
                                 <div class="flex w-full justify-start">
-                                    <div class="chat-bubble chat-bubble-ai max-w-[88%] sm:max-w-[75%] rounded-2xl rounded-bl-md border border-slate-200 bg-white px-4 py-3 text-sm leading-relaxed text-slate-800 shadow-sm whitespace-pre-wrap break-words">Wajar banget ngerasa gitu. Cerita pelan-pelan ya, aku dengerin tanpa menghakimi.</div>
+                                    <div
+                                        class="chat-bubble chat-bubble-ai max-w-[88%] sm:max-w-[75%] rounded-2xl rounded-bl-md border border-slate-200 bg-white px-4 py-3 text-sm leading-relaxed text-slate-800 shadow-sm whitespace-pre-wrap break-words">
+                                        Wajar banget ngerasa gitu. Cerita pelan-pelan ya, aku dengerin tanpa menghakimi.
+                                    </div>
                                 </div>
                                 <div class="flex w-full justify-start">
-                                    <div class="chat-bubble chat-bubble-ai w-fit rounded-2xl rounded-bl-md border border-slate-200 bg-white px-3 py-2 shadow-sm inline-flex items-center gap-1.5" role="status" aria-label="MindCare AI sedang mengetik">
-                                        <span class="typing-dot"></span><span class="typing-dot"></span><span class="typing-dot"></span>
+                                    <div class="chat-bubble chat-bubble-ai w-fit rounded-2xl rounded-bl-md border border-slate-200 bg-white px-3 py-2 shadow-sm inline-flex items-center gap-1.5"
+                                        role="status" aria-label="MindCare AI sedang mengetik">
+                                        <span class="typing-dot"></span><span class="typing-dot"></span><span
+                                            class="typing-dot"></span>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Floating badge: anonim -->
-                        <div class="float-soft absolute -top-5 -right-3 sm:-right-7 bg-white rounded-2xl shadow-lg border border-slate-100 px-3.5 py-2.5 flex items-center gap-2">
+                        <div
+                            class="float-soft absolute -top-5 -right-3 sm:-right-7 bg-white rounded-2xl shadow-lg border border-slate-100 px-3.5 py-2.5 flex items-center gap-2">
                             <i class="fa-solid fa-lock brand-blue-text text-sm"></i>
                             <span class="text-xs font-bold text-slate-700 whitespace-nowrap">100% Anonim</span>
                         </div>
 
                         <!-- Floating badge: rujukan -->
-                        <div class="float-soft hidden sm:flex absolute -bottom-6 -left-8 bg-white rounded-2xl shadow-lg border border-slate-100 px-3.5 py-2.5 items-center gap-2" style="animation-delay: -2.3s;">
+                        <div class="float-soft hidden sm:flex absolute -bottom-6 -left-8 bg-white rounded-2xl shadow-lg border border-slate-100 px-3.5 py-2.5 items-center gap-2"
+                            style="animation-delay: -2.3s;">
                             <i class="fa-solid fa-hand-holding-heart brand-red-text text-sm"></i>
-                            <span class="text-xs font-bold text-slate-700 whitespace-nowrap">Rujukan BK saat dibutuhkan</span>
+                            <span class="text-xs font-bold text-slate-700 whitespace-nowrap">Rujukan BK saat
+                                dibutuhkan</span>
                         </div>
                     </div>
 
@@ -202,38 +254,48 @@
             <section class="py-16 sm:py-20 bg-white border-b border-slate-100">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="text-center max-w-2xl mx-auto mb-12 space-y-2">
-                        <h2 class="reveal-wave text-3xl font-extrabold text-slate-900">Kenapa Pelajar Bisa Percaya MindCare</h2>
-                        <p class="reveal text-slate-500 text-sm">Dibangun di atas prinsip aman, empatik, dan tidak menghakimi cerita siapa pun.</p>
+                        <h2 class="reveal-wave text-3xl font-extrabold text-slate-900">Kenapa Pelajar Bisa Percaya
+                            MindCare</h2>
+                        <p class="reveal text-slate-500 text-sm">Dibangun di atas prinsip aman, empatik, dan tidak
+                            menghakimi cerita siapa pun.</p>
                     </div>
 
                     <div class="reveal-group grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
                         <div class="reveal feature-card bg-slate-50 rounded-3xl p-6 border border-slate-200/70">
-                            <div class="w-11 h-11 rounded-2xl bg-white shadow-sm border border-slate-200 flex items-center justify-center brand-blue-text text-lg mb-4">
+                            <div
+                                class="w-11 h-11 rounded-2xl bg-white shadow-sm border border-slate-200 flex items-center justify-center brand-blue-text text-lg mb-4">
                                 <i class="fa-solid fa-user-shield"></i>
                             </div>
                             <h3 class="font-bold text-slate-900 mb-1.5 text-sm">100% Anonim</h3>
-                            <p class="text-xs text-slate-500 leading-relaxed">Curhat tanpa nama, tanpa akun, dan tanpa takut diketahui orang lain.</p>
+                            <p class="text-xs text-slate-500 leading-relaxed">Curhat tanpa nama, tanpa akun, dan tanpa
+                                takut diketahui orang lain.</p>
                         </div>
                         <div class="reveal feature-card bg-slate-50 rounded-3xl p-6 border border-slate-200/70">
-                            <div class="w-11 h-11 rounded-2xl bg-white shadow-sm border border-slate-200 flex items-center justify-center brand-teal-text text-lg mb-4">
+                            <div
+                                class="w-11 h-11 rounded-2xl bg-white shadow-sm border border-slate-200 flex items-center justify-center brand-teal-text text-lg mb-4">
                                 <i class="fa-solid fa-brain"></i>
                             </div>
                             <h3 class="font-bold text-slate-900 mb-1.5 text-sm">Direspons dengan Empati</h3>
-                            <p class="text-xs text-slate-500 leading-relaxed">AI merespons dengan bahasa hangat ala teman sebaya, bukan jawaban robot kaku.</p>
+                            <p class="text-xs text-slate-500 leading-relaxed">AI merespons dengan bahasa hangat ala
+                                teman sebaya, bukan jawaban robot kaku.</p>
                         </div>
                         <div class="reveal feature-card bg-slate-50 rounded-3xl p-6 border border-slate-200/70">
-                            <div class="w-11 h-11 rounded-2xl bg-white shadow-sm border border-slate-200 flex items-center justify-center text-slate-700 text-lg mb-4">
+                            <div
+                                class="w-11 h-11 rounded-2xl bg-white shadow-sm border border-slate-200 flex items-center justify-center text-slate-700 text-lg mb-4">
                                 <i class="fa-solid fa-lock"></i>
                             </div>
                             <h3 class="font-bold text-slate-900 mb-1.5 text-sm">Tanpa Simpan Data</h3>
-                            <p class="text-xs text-slate-500 leading-relaxed">Percakapan tidak disimpan ke server, jadi privasimu tetap terjaga.</p>
+                            <p class="text-xs text-slate-500 leading-relaxed">Percakapan tidak disimpan ke server, jadi
+                                privasimu tetap terjaga.</p>
                         </div>
                         <div class="reveal feature-card bg-slate-50 rounded-3xl p-6 border border-slate-200/70">
-                            <div class="w-11 h-11 rounded-2xl bg-white shadow-sm border border-slate-200 flex items-center justify-center brand-red-text text-lg mb-4">
+                            <div
+                                class="w-11 h-11 rounded-2xl bg-white shadow-sm border border-slate-200 flex items-center justify-center brand-red-text text-lg mb-4">
                                 <i class="fa-solid fa-hand-holding-heart"></i>
                             </div>
                             <h3 class="font-bold text-slate-900 mb-1.5 text-sm">Terhubung ke Guru BK</h3>
-                            <p class="text-xs text-slate-500 leading-relaxed">Saat terdeteksi tanda krisis, kamu bisa pilih untuk dirujuk aman ke BK sekolah.</p>
+                            <p class="text-xs text-slate-500 leading-relaxed">Saat terdeteksi tanda krisis, kamu bisa
+                                pilih untuk dirujuk aman ke BK sekolah.</p>
                         </div>
                     </div>
                 </div>
@@ -243,23 +305,31 @@
             <section class="py-16 sm:py-20 section-bg-soft border-b border-slate-100">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="text-center max-w-3xl mx-auto mb-12 space-y-2">
-                        <span class="reveal inline-block text-xs font-bold uppercase tracking-widest brand-blue-text bg-white px-3 py-1 rounded-full border border-sky-100">Alur Utama Aplikasi</span>
-                        <h2 class="reveal-wave text-3xl font-extrabold text-slate-900">Metode Pertolongan Pertama (PFA)</h2>
-                        <p class="reveal text-slate-500 text-sm">Dirancang dengan alur logis Dengar – Kenali – Temukan Bantuan untuk mendukung kesehatan emosional pelajar.</p>
+                        <span
+                            class="reveal inline-block text-xs font-bold uppercase tracking-widest brand-blue-text bg-white px-3 py-1 rounded-full border border-sky-100">Alur
+                            Utama Aplikasi</span>
+                        <h2 class="reveal-wave text-3xl font-extrabold text-slate-900">Metode Pertolongan Pertama (PFA)
+                        </h2>
+                        <p class="reveal text-slate-500 text-sm">Dirancang dengan alur logis Dengar – Kenali – Temukan
+                            Bantuan untuk mendukung kesehatan emosional pelajar.</p>
                     </div>
 
                     <div class="grid md:grid-cols-[1fr_auto_1fr_auto_1fr] gap-5 md:gap-3 items-stretch">
                         <!-- Fase 1 -->
-                        <div class="reveal bg-white p-8 rounded-3xl border border-slate-200/80 hover:border-sky-300 transition-all shadow-sm group">
-                            <div class="w-12 h-12 rounded-2xl brand-blue-bg text-white flex items-center justify-center font-extrabold text-xl mb-6 group-hover:scale-110 transition-transform shadow-md">
+                        <div
+                            class="reveal bg-white p-8 rounded-3xl border border-slate-200/80 hover:border-sky-300 transition-all shadow-sm group">
+                            <div
+                                class="w-12 h-12 rounded-2xl brand-blue-bg text-white flex items-center justify-center font-extrabold text-xl mb-6 group-hover:scale-110 transition-transform shadow-md">
                                 1
                             </div>
                             <span class="text-[11px] font-bold brand-blue-text uppercase tracking-wider">Fase 1</span>
                             <h3 class="text-xl font-bold text-slate-900 mb-2">Dengar (Empathetic Chat)</h3>
                             <p class="text-xs text-slate-600 leading-relaxed mb-6">
-                                Berinteraksi dengan AI spesialis pendengar yang ramah, merespons cerita dengan empati dan bahasa Indonesia sehari-hari.
+                                Berinteraksi dengan AI spesialis pendengar yang ramah, merespons cerita dengan empati
+                                dan bahasa Indonesia sehari-hari.
                             </p>
-                            <button onclick="window.location.href='chat.html'" class="text-xs font-bold brand-blue-text hover:underline flex items-center gap-1">
+                            <button onclick="window.location.href='chat.html'"
+                                class="text-xs font-bold brand-blue-text hover:underline flex items-center gap-1">
                                 Coba AI Chat <i class="fa-solid fa-arrow-right text-[10px]"></i>
                             </button>
                         </div>
@@ -269,14 +339,17 @@
                         </div>
 
                         <!-- Fase 2 -->
-                        <div class="reveal reveal-d1 bg-white p-8 rounded-3xl border border-slate-200/80 hover:border-teal-300 transition-all shadow-sm group">
-                            <div class="w-12 h-12 rounded-2xl brand-teal-bg text-white flex items-center justify-center font-extrabold text-xl mb-6 group-hover:scale-110 transition-transform shadow-md">
+                        <div
+                            class="reveal reveal-d1 bg-white p-8 rounded-3xl border border-slate-200/80 hover:border-teal-300 transition-all shadow-sm group">
+                            <div
+                                class="w-12 h-12 rounded-2xl brand-teal-bg text-white flex items-center justify-center font-extrabold text-xl mb-6 group-hover:scale-110 transition-transform shadow-md">
                                 2
                             </div>
                             <span class="text-[11px] font-bold brand-teal-text uppercase tracking-wider">Fase 2</span>
                             <h3 class="text-xl font-bold text-slate-900 mb-2">Kenali (Mood & Relaksasi)</h3>
                             <p class="text-xs text-slate-600 leading-relaxed">
-                                Siswa diajak mengenali emosi melalui pemantauan mood harian dan teknik latihan pernapasan terpandu 4-7-8 tanpa tekanan.
+                                Siswa diajak mengenali emosi melalui pemantauan mood harian dan teknik latihan
+                                pernapasan terpandu 4-7-8 tanpa tekanan.
                             </p>
                         </div>
 
@@ -285,16 +358,20 @@
                         </div>
 
                         <!-- Fase 3 -->
-                        <div class="reveal reveal-d2 bg-white p-8 rounded-3xl border border-slate-200/80 hover:border-red-300 transition-all shadow-sm group">
-                            <div class="w-12 h-12 rounded-2xl brand-red-bg text-white flex items-center justify-center font-extrabold text-xl mb-6 group-hover:scale-110 transition-transform shadow-md">
+                        <div
+                            class="reveal reveal-d2 bg-white p-8 rounded-3xl border border-slate-200/80 hover:border-red-300 transition-all shadow-sm group">
+                            <div
+                                class="w-12 h-12 rounded-2xl brand-red-bg text-white flex items-center justify-center font-extrabold text-xl mb-6 group-hover:scale-110 transition-transform shadow-md">
                                 3
                             </div>
                             <span class="text-[11px] font-bold brand-red-text uppercase tracking-wider">Fase 3</span>
                             <h3 class="text-xl font-bold text-slate-900 mb-2">Temukan Bantuan (BK Routing)</h3>
                             <p class="text-xs text-slate-600 leading-relaxed mb-6">
-                                Menghubungkan siswa dengan unit Bimbingan Konseling (BK) di sekolah secara rahasia apabila membutuhkan penanganan lebih lanjut.
+                                Menghubungkan siswa dengan unit Bimbingan Konseling (BK) di sekolah secara rahasia
+                                apabila membutuhkan penanganan lebih lanjut.
                             </p>
-                            <button onclick="window.location.href='rujukan.html'" class="text-xs font-bold brand-red-text hover:underline flex items-center gap-1">
+                            <button onclick="window.location.href='rujukan.html'"
+                                class="text-xs font-bold brand-red-text hover:underline flex items-center gap-1">
                                 Akses Layanan BK <i class="fa-solid fa-arrow-right text-[10px]"></i>
                             </button>
                         </div>
@@ -306,96 +383,353 @@
             <section class="py-16 sm:py-20 bg-white border-b border-slate-100">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="text-center max-w-2xl mx-auto mb-12 space-y-2">
-                        <span class="reveal inline-block text-xs font-bold uppercase tracking-widest brand-blue-text bg-sky-50 px-3 py-1 rounded-full">Bacaan Pilihan</span>
-                        <h2 class="reveal-wave text-3xl font-extrabold text-slate-900">Artikel & Edukasi Kesehatan Mental</h2>
-                        <p class="reveal text-slate-500 text-sm">Bacaan singkat seputar kesehatan mental pelajar, biar makin paham cara menjaga diri sendiri.</p>
+                        <span
+                            class="reveal inline-block text-xs font-bold uppercase tracking-widest brand-blue-text bg-sky-50 px-3 py-1 rounded-full">Bacaan
+                            Pilihan</span>
+                        <h2 class="reveal-wave text-3xl font-extrabold text-slate-900">Artikel & Edukasi Kesehatan
+                            Mental</h2>
+                        <p class="reveal text-slate-500 text-sm">Bacaan singkat seputar kesehatan mental pelajar, biar
+                            makin paham cara menjaga diri sendiri.</p>
                     </div>
 
                     <div class="reveal-group grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-                        <div class="reveal feature-card bg-white rounded-3xl border border-slate-200/70 overflow-hidden flex flex-col">
-                            <div class="h-28 bg-gradient-to-br from-sky-100 to-sky-50 flex items-center justify-center brand-blue-text text-3xl">
-                                <i class="fa-solid fa-wind"></i>
+                        <div
+                            class="reveal feature-card bg-white rounded-3xl border border-slate-200/70 overflow-hidden flex flex-col">
+                            <div class="h-28 overflow-hidden bg-sky-50">
+                                <img src="assets/stress.png" alt="Ilustrasi manajemen stres"
+                                    class="w-full h-full object-cover">
                             </div>
                             <div class="p-5 flex flex-col flex-1">
-                                <span class="text-[10px] font-bold uppercase tracking-wider brand-blue-text bg-sky-50 px-2.5 py-1 rounded-full w-fit mb-3">Manajemen Stres</span>
-                                <h3 class="font-bold text-slate-900 text-sm mb-2 leading-snug">5 Cara Sederhana Mengelola Stres Sebelum Ujian</h3>
-                                <p class="text-xs text-slate-500 leading-relaxed mb-4 flex-1">Teknik bernapas, menata waktu belajar, dan tips kecil yang bisa langsung kamu praktikkan malam sebelum ujian.</p>
-                                <span class="text-xs font-bold brand-blue-text flex items-center gap-1">Baca Selengkapnya <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+                                <span
+                                    class="text-[10px] font-bold uppercase tracking-wider brand-blue-text bg-sky-50 px-2.5 py-1 rounded-full w-fit mb-3">Manajemen
+                                    Stres</span>
+                                <h3 class="font-bold text-slate-900 text-sm mb-2 leading-snug">5 Cara Sederhana
+                                    Mengelola Stres Sebelum Ujian</h3>
+                                <p class="text-xs text-slate-500 leading-relaxed mb-4 flex-1">Teknik bernapas, menata
+                                    waktu belajar, dan tips kecil yang bisa langsung kamu praktikkan malam sebelum
+                                    ujian.</p>
+                                <button type="button"
+                                    class="article-open text-xs font-bold brand-blue-text flex items-center gap-1"
+                                    data-article="stres">
+                                    Baca Selengkapnya <i class="fa-solid fa-arrow-right text-[10px]"
+                                        aria-hidden="true"></i>
+                                </button>
                             </div>
                         </div>
-                        <div class="reveal feature-card bg-white rounded-3xl border border-slate-200/70 overflow-hidden flex flex-col">
-                            <div class="h-28 bg-gradient-to-br from-teal-100 to-emerald-50 flex items-center justify-center brand-teal-text text-3xl">
-                                <i class="fa-solid fa-people-arrows"></i>
+                        <div
+                            class="reveal feature-card bg-white rounded-3xl border border-slate-200/70 overflow-hidden flex flex-col">
+                            <div class="h-28 overflow-hidden bg-teal-50">
+                                <img src="assets/relasi_sosial.png" alt="Ilustrasi relasi sosial"
+                                    class="w-full h-full object-cover">
                             </div>
                             <div class="p-5 flex flex-col flex-1">
-                                <span class="text-[10px] font-bold uppercase tracking-wider brand-teal-text bg-teal-50 px-2.5 py-1 rounded-full w-fit mb-3">Relasi Sosial</span>
-                                <h3 class="font-bold text-slate-900 text-sm mb-2 leading-snug">Menghadapi Konflik Pertemanan Tanpa Kehilangan Diri Sendiri</h3>
-                                <p class="text-xs text-slate-500 leading-relaxed mb-4 flex-1">Belajar mengenali batasan sehat dalam pertemanan dan cara menyampaikan perasaan tanpa takut dijauhi.</p>
-                                <span class="text-xs font-bold brand-teal-text flex items-center gap-1">Baca Selengkapnya <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+                                <span
+                                    class="text-[10px] font-bold uppercase tracking-wider brand-teal-text bg-teal-50 px-2.5 py-1 rounded-full w-fit mb-3">Relasi
+                                    Sosial</span>
+                                <h3 class="font-bold text-slate-900 text-sm mb-2 leading-snug">Menghadapi Konflik
+                                    Pertemanan Tanpa Kehilangan Diri Sendiri</h3>
+                                <p class="text-xs text-slate-500 leading-relaxed mb-4 flex-1">Belajar mengenali batasan
+                                    sehat dalam pertemanan dan cara menyampaikan perasaan tanpa takut dijauhi.</p>
+                                <button type="button"
+                                    class="article-open text-xs font-bold brand-teal-text flex items-center gap-1"
+                                    data-article="pertemanan">
+                                    Baca Selengkapnya <i class="fa-solid fa-arrow-right text-[10px]"
+                                        aria-hidden="true"></i>
+                                </button>
                             </div>
                         </div>
-                        <div class="reveal feature-card bg-white rounded-3xl border border-slate-200/70 overflow-hidden flex flex-col">
-                            <div class="h-28 bg-gradient-to-br from-red-100 to-rose-50 flex items-center justify-center brand-red-text text-3xl">
-                                <i class="fa-solid fa-battery-quarter"></i>
+                        <div
+                            class="reveal feature-card bg-white rounded-3xl border border-slate-200/70 overflow-hidden flex flex-col">
+                            <div class="h-28 overflow-hidden bg-rose-50">
+                                <img src="assets/brain_out.png" alt="Ilustrasi kesadaran diri"
+                                    class="w-full h-full object-cover">
                             </div>
                             <div class="p-5 flex flex-col flex-1">
-                                <span class="text-[10px] font-bold uppercase tracking-wider brand-red-text bg-red-50 px-2.5 py-1 rounded-full w-fit mb-3">Kesadaran Diri</span>
-                                <h3 class="font-bold text-slate-900 text-sm mb-2 leading-snug">Mengenali Tanda-Tanda Burnout saat Belajar</h3>
-                                <p class="text-xs text-slate-500 leading-relaxed mb-4 flex-1">Lelah terus-menerus bukan cuma soal fisik — kenali sinyal burnout akademik sejak dini.</p>
-                                <span class="text-xs font-bold brand-red-text flex items-center gap-1">Baca Selengkapnya <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+                                <span
+                                    class="text-[10px] font-bold uppercase tracking-wider brand-red-text bg-red-50 px-2.5 py-1 rounded-full w-fit mb-3">Kesadaran
+                                    Diri</span>
+                                <h3 class="font-bold text-slate-900 text-sm mb-2 leading-snug">Mengenali Tanda-Tanda
+                                    Burnout saat Belajar</h3>
+                                <p class="text-xs text-slate-500 leading-relaxed mb-4 flex-1">Lelah terus-menerus bukan
+                                    cuma soal fisik — kenali sinyal burnout akademik sejak dini.</p>
+                                <button type="button"
+                                    class="article-open text-xs font-bold brand-red-text flex items-center gap-1"
+                                    data-article="burnout">
+                                    Baca Selengkapnya <i class="fa-solid fa-arrow-right text-[10px]"
+                                        aria-hidden="true"></i>
+                                </button>
                             </div>
                         </div>
-                        <div class="reveal feature-card bg-white rounded-3xl border border-slate-200/70 overflow-hidden flex flex-col">
-                            <div class="h-28 bg-gradient-to-br from-slate-100 to-slate-50 flex items-center justify-center text-slate-700 text-3xl">
-                                <i class="fa-solid fa-bed"></i>
+                        <div
+                            class="reveal feature-card bg-white rounded-3xl border border-slate-200/70 overflow-hidden flex flex-col">
+                            <div class="h-28 overflow-hidden bg-slate-50">
+                                <img src="assets/tidur.png" alt="Ilustrasi pola tidur sehat"
+                                    class="w-full h-full object-cover">
                             </div>
                             <div class="p-5 flex flex-col flex-1">
-                                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-600 bg-slate-100 px-2.5 py-1 rounded-full w-fit mb-3">Pola Tidur</span>
-                                <h3 class="font-bold text-slate-900 text-sm mb-2 leading-snug">Kenapa Tidur Cukup Memengaruhi Mood dan Fokus Belajar</h3>
-                                <p class="text-xs text-slate-500 leading-relaxed mb-4 flex-1">Hubungan antara jam tidur, suasana hati, dan kemampuan konsentrasi di kelas.</p>
-                                <span class="text-xs font-bold text-slate-600 flex items-center gap-1">Baca Selengkapnya <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+                                <span
+                                    class="text-[10px] font-bold uppercase tracking-wider text-slate-600 bg-slate-100 px-2.5 py-1 rounded-full w-fit mb-3">Pola
+                                    Tidur</span>
+                                <h3 class="font-bold text-slate-900 text-sm mb-2 leading-snug">Kenapa Tidur Cukup
+                                    Memengaruhi Mood dan Fokus Belajar</h3>
+                                <p class="text-xs text-slate-500 leading-relaxed mb-4 flex-1">Hubungan antara jam tidur,
+                                    suasana hati, dan kemampuan konsentrasi di kelas.</p>
+                                <button type="button"
+                                    class="article-open text-xs font-bold text-slate-600 flex items-center gap-1"
+                                    data-article="tidur">
+                                    Baca Selengkapnya <i class="fa-solid fa-arrow-right text-[10px]"
+                                        aria-hidden="true"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
+            <!-- Satu modal untuk menampilkan detail semua artikel. -->
+            <div id="article-modal" class="article-modal" role="dialog" aria-modal="true"
+                aria-labelledby="article-modal-title" aria-hidden="true" hidden>
+                <div class="article-modal-card">
+                    <button type="button" class="article-close" aria-label="Tutup artikel">&times;</button>
+                    <div id="article-modal-content"></div>
+                </div>
+            </div>
+
+            <!-- Template stres. Ganti nama foto sesuai file di folder assets. -->
+            <template id="article-stres">
+                <article>
+                    <img class="article-detail-image" data-src="assets/artikel-stres.jpg"
+                        alt="Ilustrasi mengelola stres saat belajar" hidden>
+                    <p class="article-detail-category">Manajemen Stres</p>
+                    <h2 id="article-modal-title">5 Cara Sederhana Mengelola Stres Sebelum Ujian</h2>
+                    <p class="article-detail-intro">Masa ujian bisa terasa menegangkan. Beberapa kebiasaan sederhana
+                        berikut dapat membantu kamu menjaga energi dan fokus saat belajar.</p>
+                    <ol class="article-steps">
+                        <li>
+                            <h3>Jaga waktu istirahat</h3>
+                            <p>Buat jadwal belajar yang realistis dan sisihkan waktu untuk tidur serta jeda. Istirahat
+                                adalah bagian dari persiapan, bukan waktu yang terbuang.</p>
+                        </li>
+                        <li>
+                            <h3>Gerakkan tubuh</h3>
+                            <p>Berjalan sebentar atau melakukan peregangan dapat menjadi selingan dari kegiatan belajar
+                                dan membantu tubuh terasa lebih segar.</p>
+                        </li>
+                        <li>
+                            <h3>Ambil jeda dari layar</h3>
+                            <p>Jauhkan perangkat sejenak atau matikan notifikasi ketika sedang fokus agar perhatian
+                                tidak terus teralihkan.</p>
+                        </li>
+                        <li>
+                            <h3>Atur napas perlahan</h3>
+                            <p>Tarik napas dengan nyaman, lalu hembuskan lebih perlahan beberapa kali. Hentikan jika
+                                terasa tidak nyaman.</p>
+                        </li>
+                        <li>
+                            <h3>Fokus pada langkah berikutnya</h3>
+                            <p>Kerjakan satu bagian kecil terlebih dahulu daripada mencoba menyelesaikan semua hal
+                                sekaligus.</p>
+                        </li>
+                    </ol>
+                    <p>Jika stres terus mengganggu kegiatan sehari-hari, ceritakan kepada orang dewasa tepercaya atau
+                        Guru BK.</p>
+                    <p class="article-source">Sumber: <a
+                            href="https://www.sydney.edu.au/study/student-life/student-news/2023/05/31/5-ways-to-manage-stress-during-exams.html"
+                            target="_blank" rel="noopener noreferrer">University of Sydney - 5 Ways to Manage Stress
+                            During Exams</a></p>
+                </article>
+            </template>
+
+            <!-- Template pertemanan. -->
+            <template id="article-pertemanan">
+                <article>
+                    <img class="article-detail-image" data-src="assets/artikel-pertemanan.jpg"
+                        alt="Ilustrasi pertemanan" hidden>
+                    <p class="article-detail-category">Relasi Sosial</p>
+                    <h2 id="article-modal-title">Menghadapi Konflik Pertemanan Tanpa Kehilangan Diri Sendiri</h2>
+                    <p class="article-detail-intro">Konflik dengan teman bisa terasa menyakitkan, tetapi tidak selalu
+                        berarti pertemanan harus berakhir. Beri diri waktu untuk memahami perasaan sebelum merespons.
+                    </p>
+                    <ol class="article-steps">
+                        <li>
+                            <h3>Tenangkan diri lebih dulu</h3>
+                            <p>Beri jeda agar percakapan tidak berlangsung ketika emosi sedang memuncak. Kamu bisa
+                                menarik napas, berjalan sebentar, atau menulis perasaanmu.</p>
+                        </li>
+                        <li>
+                            <h3>Pahami apa yang mengganggu</h3>
+                            <p>Coba bedakan kejadian yang baru terjadi dengan kebutuhan atau batasan yang belum
+                                tersampaikan.</p>
+                        </li>
+                        <li>
+                            <h3>Bicarakan dengan jujur dan sopan</h3>
+                            <p>Jelaskan perasaanmu tanpa menyerang, misalnya, ?Aku merasa sedih ketika ...?. Pilih waktu
+                                ketika kalian berdua siap berbicara.</p>
+                        </li>
+                        <li>
+                            <h3>Dengarkan satu sama lain</h3>
+                            <p>Beri kesempatan kepada teman untuk menjelaskan dan akui bagian yang memang menjadi
+                                tanggung jawabmu.</p>
+                        </li>
+                        <li>
+                            <h3>Tentukan batasan yang sehat</h3>
+                            <p>Pertemanan seharusnya terasa aman dan saling menghormati. Kamu boleh meminta bantuan jika
+                                merasa tertekan atau tidak aman.</p>
+                        </li>
+                    </ol>
+                    <p>Jika konflik melibatkan perundungan atau membuatmu merasa tidak aman, cari bantuan orang dewasa
+                        tepercaya atau Guru BK.</p>
+                    <p class="article-source">Sumber: <a
+                            href="https://jenhatmaker.com/blog/how-to-handle-conflict-in-friendship/" target="_blank"
+                            rel="noopener noreferrer">Jen Hatmaker - How to Handle Conflict in Friendship</a></p>
+                </article>
+            </template>
+
+            <!-- Template kelelahan belajar. -->
+            <template id="article-burnout">
+                <article>
+                    <img class="article-detail-image" data-src="assets/artikel-burnout.jpg"
+                        alt="Ilustrasi kelelahan setelah belajar" hidden>
+                    <p class="article-detail-category">Kesadaran Diri</p>
+                    <h2 id="article-modal-title">Mengenali Tanda-Tanda Kelelahan saat Belajar</h2>
+                    <p class="article-detail-intro">Kelelahan yang berlangsung lama dapat memengaruhi kegiatan belajar
+                        dan keseharian. Mengenali perubahan pada diri sendiri bisa menjadi langkah awal untuk mencari
+                        dukungan.</p>
+                    <h3>Hal yang patut diperhatikan</h3>
+                    <ol class="article-steps">
+                        <li>
+                            <h3>Kelelahan berkepanjangan</h3>
+                            <p>Kamu tetap merasa sangat lelah atau sulit pulih meskipun sudah beristirahat.</p>
+                        </li>
+                        <li>
+                            <h3>Motivasi menurun</h3>
+                            <p>Belajar atau memulai tugas terasa jauh lebih berat daripada biasanya.</p>
+                        </li>
+                        <li>
+                            <h3>Sulit berkonsentrasi</h3>
+                            <p>Kamu kesulitan menjaga perhatian, memahami bacaan, atau menyelesaikan tugas.</p>
+                        </li>
+                        <li>
+                            <h3>Menarik diri atau mudah kesal</h3>
+                            <p>Interaksi sosial terasa melelahkan atau suasana hati lebih mudah berubah.</p>
+                        </li>
+                        <li>
+                            <h3>Perubahan kebiasaan dan kondisi fisik</h3>
+                            <p>Pola tidur, nafsu makan, atau kondisi tubuh berubah dan mulai mengganggu kegiatan.</p>
+                        </li>
+                    </ol>
+                    <h3>Langkah awal untuk menjaga diri</h3>
+                    <ul class="article-advice-list">
+                        <li>Pecah tugas besar menjadi bagian kecil dengan target yang realistis.</li>
+                        <li>Jadwalkan waktu istirahat dan kegiatan yang membantu kamu merasa lebih baik.</li>
+                        <li>Ceritakan keadaanmu kepada orang yang dipercaya, Guru BK, atau tenaga profesional.</li>
+                    </ul>
+                    <p>Daftar ini bukan alat diagnosis. Kelelahan belajar tidak otomatis berarti burnout. Jika keadaan
+                        terasa berat atau berlangsung lama, mintalah bantuan orang dewasa tepercaya atau tenaga
+                        kesehatan.</p>
+                    <p class="article-source">Sumber: <a
+                            href="https://www.umn.ac.id/tanda-tanda-burnout-mahasiswa-yang-sering-diabaikan/"
+                            target="_blank" rel="noopener noreferrer">Universitas Muhammadiyah Malang - Tanda-Tanda
+                            Burnout Mahasiswa</a></p>
+                </article>
+            </template>
+
+            <!-- Template tidur. -->
+            <template id="article-tidur">
+                <article>
+                    <img class="article-detail-image" data-src="assets/artikel-tidur.jpg"
+                        alt="Ilustrasi tidur yang cukup" hidden>
+                    <p class="article-detail-category">Pola Tidur</p>
+                    <h2 id="article-modal-title">Kenapa Tidur Cukup Memengaruhi Mood dan Fokus Belajar</h2>
+                    <p class="article-detail-intro">Tidur membantu tubuh dan pikiran beristirahat. Saat tidur terganggu
+                        atau kurang, kamu mungkin merasa lebih lelah dan lebih sulit menjaga perhatian ketika belajar.
+                    </p>
+                    <h3>Kebiasaan yang dapat membantu</h3>
+                    <ol class="article-steps">
+                        <li>
+                            <h3>Buat jadwal yang teratur</h3>
+                            <p>Usahakan waktu tidur dan bangun yang cukup konsisten, termasuk pada akhir pekan.</p>
+                        </li>
+                        <li>
+                            <h3>Kurangi layar menjelang tidur</h3>
+                            <p>Sisihkan waktu tanpa ponsel atau komputer sebelum tidur dan pilih kegiatan yang
+                                menenangkan.</p>
+                        </li>
+                        <li>
+                            <h3>Atur waktu belajar</h3>
+                            <p>Rencanakan tugas lebih awal agar belajar sampai larut malam tidak menjadi kebiasaan.</p>
+                        </li>
+                        <li>
+                            <h3>Perhatikan minuman berkafein</h3>
+                            <p>Jika kafein membuatmu sulit tidur, hindari kopi atau teh menjelang waktu tidur.</p>
+                        </li>
+                        <li>
+                            <h3>Buat kamar nyaman</h3>
+                            <p>Usahakan suasana kamar tenang, cukup gelap, dan nyaman untuk beristirahat.</p>
+                        </li>
+                    </ol>
+                    <p>Kebutuhan tidur berbeda menurut usia dan kondisi. Jika masalah tidur berlangsung terus atau
+                        mengganggu kegiatan, bicarakan dengan orang dewasa tepercaya atau tenaga kesehatan.</p>
+                    <p class="article-source">Sumber: <a
+                            href="https://www.kompasiana.com/rizahanis1904/68df6b07c925c4146a36cf05/hubungan-pola-tidur-dengan-konsentrasi-belajar-mahasiswa"
+                            target="_blank" rel="noopener noreferrer">Kompasiana - Hubungan Pola Tidur dengan
+                            Konsentrasi Belajar</a></p>
+                </article>
+            </template>
             <!-- FAQ -->
             <section class="py-16 sm:py-20 bg-white">
                 <div class="max-w-3xl mx-auto px-4 sm:px-6">
                     <div class="text-center mb-10 space-y-2">
-                        <h2 class="reveal-wave text-3xl font-extrabold text-slate-900">Pertanyaan yang Sering Ditanyakan</h2>
-                        <p class="reveal text-slate-500 text-sm">Masih ragu? Ini beberapa hal yang paling sering ditanyakan pelajar.</p>
+                        <h2 class="reveal-wave text-3xl font-extrabold text-slate-900">Pertanyaan yang Sering Ditanyakan
+                        </h2>
+                        <p class="reveal text-slate-500 text-sm">Masih ragu? Ini beberapa hal yang paling sering
+                            ditanyakan pelajar.</p>
                     </div>
 
                     <div class="reveal-group space-y-3">
                         <details class="reveal faq-item bg-slate-50 rounded-2xl border border-slate-200/70 px-5 py-4">
-                            <summary class="flex items-center justify-between gap-4 font-bold text-slate-800 text-sm transition-colors">
+                            <summary
+                                class="flex items-center justify-between gap-4 font-bold text-slate-800 text-sm transition-colors">
                                 <span>Apakah MindCare menyimpan data atau identitasku?</span>
-                                <i class="fa-solid fa-chevron-down faq-chevron text-slate-400 text-xs flex-shrink-0"></i>
+                                <i
+                                    class="fa-solid fa-chevron-down faq-chevron text-slate-400 text-xs flex-shrink-0"></i>
                             </summary>
-                            <p class="text-xs sm:text-sm text-slate-500 leading-relaxed mt-3 pr-6">Tidak. MindCare dirancang tanpa pendaftaran dan tanpa basis data pengguna, jadi ceritamu tidak pernah ditautkan ke identitas pribadimu.</p>
+                            <p class="text-xs sm:text-sm text-slate-500 leading-relaxed mt-3 pr-6">Tidak. MindCare
+                                dirancang tanpa pendaftaran dan tanpa basis data pengguna, jadi ceritamu tidak pernah
+                                ditautkan ke identitas pribadimu.</p>
                         </details>
                         <details class="reveal faq-item bg-slate-50 rounded-2xl border border-slate-200/70 px-5 py-4">
-                            <summary class="flex items-center justify-between gap-4 font-bold text-slate-800 text-sm transition-colors">
+                            <summary
+                                class="flex items-center justify-between gap-4 font-bold text-slate-800 text-sm transition-colors">
                                 <span>Apakah AI bisa menggantikan psikolog?</span>
-                                <i class="fa-solid fa-chevron-down faq-chevron text-slate-400 text-xs flex-shrink-0"></i>
+                                <i
+                                    class="fa-solid fa-chevron-down faq-chevron text-slate-400 text-xs flex-shrink-0"></i>
                             </summary>
-                            <p class="text-xs sm:text-sm text-slate-500 leading-relaxed mt-3 pr-6">Belum. MindCare berperan sebagai pertolongan pertama psikologis — mendengar dan membantu mengenali emosi — lalu merujukmu ke Guru BK atau tenaga profesional bila kondisimu membutuhkan penanganan lebih lanjut.</p>
+                            <p class="text-xs sm:text-sm text-slate-500 leading-relaxed mt-3 pr-6">Belum. MindCare
+                                berperan sebagai pertolongan pertama psikologis — mendengar dan membantu mengenali emosi
+                                — lalu merujukmu ke Guru BK atau tenaga profesional bila kondisimu membutuhkan
+                                penanganan lebih lanjut.</p>
                         </details>
                         <details class="reveal faq-item bg-slate-50 rounded-2xl border border-slate-200/70 px-5 py-4">
-                            <summary class="flex items-center justify-between gap-4 font-bold text-slate-800 text-sm transition-colors">
+                            <summary
+                                class="flex items-center justify-between gap-4 font-bold text-slate-800 text-sm transition-colors">
                                 <span>Kapan percakapanku akan dirujuk ke Guru BK?</span>
-                                <i class="fa-solid fa-chevron-down faq-chevron text-slate-400 text-xs flex-shrink-0"></i>
+                                <i
+                                    class="fa-solid fa-chevron-down faq-chevron text-slate-400 text-xs flex-shrink-0"></i>
                             </summary>
-                            <p class="text-xs sm:text-sm text-slate-500 leading-relaxed mt-3 pr-6">Hanya saat sistem mendeteksi indikator krisis yang serius, dan kamu tetap diberi pilihan sebelum rujukan itu dilakukan.</p>
+                            <p class="text-xs sm:text-sm text-slate-500 leading-relaxed mt-3 pr-6">Hanya saat sistem
+                                mendeteksi indikator krisis yang serius, dan kamu tetap diberi pilihan sebelum rujukan
+                                itu dilakukan.</p>
                         </details>
                         <details class="reveal faq-item bg-slate-50 rounded-2xl border border-slate-200/70 px-5 py-4">
-                            <summary class="flex items-center justify-between gap-4 font-bold text-slate-800 text-sm transition-colors">
+                            <summary
+                                class="flex items-center justify-between gap-4 font-bold text-slate-800 text-sm transition-colors">
                                 <span>Apakah MindCare berbayar?</span>
-                                <i class="fa-solid fa-chevron-down faq-chevron text-slate-400 text-xs flex-shrink-0"></i>
+                                <i
+                                    class="fa-solid fa-chevron-down faq-chevron text-slate-400 text-xs flex-shrink-0"></i>
                             </summary>
-                            <p class="text-xs sm:text-sm text-slate-500 leading-relaxed mt-3 pr-6">Tidak, MindCare disediakan gratis untuk seluruh pelajar SMP, SMA, dan SMK.</p>
+                            <p class="text-xs sm:text-sm text-slate-500 leading-relaxed mt-3 pr-6">Tidak, MindCare
+                                disediakan gratis untuk seluruh pelajar SMP, SMA, dan SMK.</p>
                         </details>
                     </div>
                 </div>
@@ -403,156 +737,190 @@
         </div>
 
         <!-- VIEW 2: CONSULTATION CHAT AI (CLEAN SAFETY CHECK DESIGN) -->
-<div id="view-chat" class="view-section">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div id="view-chat" class="view-section">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
 
-        <div class="bg-slate-50/70 border border-slate-200 rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row min-h-[650px] h-[80vh]">
+                <div
+                    class="bg-slate-50/70 border border-slate-200 rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row min-h-[650px] h-[80vh]">
 
-            <!-- LEFT SIDEBAR: QUICK NAVIGATION & TOOLS -->
-            <aside class="w-full md:w-72 bg-white border-b md:border-b-0 md:border-r border-slate-200 p-4 flex flex-col justify-between gap-4">
-                <div class="space-y-4">
-                    <!-- Brand Header -->
-                    <div class="flex items-center gap-2.5 px-2">
-                        <div class="w-8 h-8 rounded-xl brand-blue-bg text-white flex items-center justify-center font-bold text-sm shadow-sm">
-                            <i class="fa-solid fa-sparkles"></i>
-                        </div>
-                        <div>
-                            <h3 class="font-extrabold text-slate-900 text-sm leading-tight">MindCare AI</h3>
-                            <p class="text-[10px] font-semibold brand-blue-text">Ruang Aman Digital</p>
-                        </div>
-                    </div>
+                    <!-- LEFT SIDEBAR: QUICK NAVIGATION & TOOLS -->
+                    <aside
+                        class="w-full md:w-72 bg-white border-b md:border-b-0 md:border-r border-slate-200 p-4 flex flex-col justify-between gap-4">
+                        <div class="space-y-4">
+                            <!-- Brand Header -->
+                            <div class="flex items-center gap-2.5 px-2">
+                                <div
+                                    class="w-8 h-8 rounded-xl brand-blue-bg text-white flex items-center justify-center font-bold text-sm shadow-sm">
+                                    <i class="fa-solid fa-sparkles"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-extrabold text-slate-900 text-sm leading-tight">MindCare AI</h3>
+                                    <p class="text-[10px] font-semibold brand-blue-text">Ruang Aman Digital</p>
+                                </div>
+                            </div>
 
-                    <!-- New Chat Button -->
-                    <button onclick="resetChat()" class="w-full py-2.5 px-4 bg-sky-50 hover:bg-sky-100/80 brand-blue-text font-bold text-xs rounded-xl border border-sky-200/70 transition flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-plus"></i>
-                        <span>Sesi Percakapan Baru</span>
-                    </button>
-
-                    <!-- History / Menu -->
-                    <div class="space-y-1 pt-2">
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 px-2">Sesi Aktif</span>
-                        <div class="w-full p-2.5 rounded-xl bg-sky-50/60 border border-sky-200/50 text-xs font-semibold text-slate-800 flex items-center gap-2">
-                            <span class="w-2 h-2 rounded-full brand-blue-bg"></span>
-                            <span class="truncate">Dukungan Emosional</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Quick Screening Links -->
-                <div class="space-y-2 pt-4 border-t border-slate-100">
-                    <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 px-2">Skrining Cepat</span>
-                    <button onclick="window.location.href='skrining.html'" class="w-full text-left p-2.5 rounded-xl hover:bg-slate-100 text-slate-700 text-xs font-semibold flex items-center gap-2 transition">
-                        <i class="fa-solid fa-fire-flame-curved brand-red-text"></i>
-                        <span>Skrining</span>
-                    </button>
-                    <button onclick="window.location.href='skrining.html'" class="w-full text-left p-2.5 rounded-xl hover:bg-slate-100 text-slate-700 text-xs font-semibold flex items-center gap-2 transition">
-                        <i class="fa-solid fa-notes-medical brand-blue-text"></i>
-                        <span>Evaluasi Kecemasan</span>
-                    </button>
-                </div>
-            </aside>
-
-            <!-- RIGHT MAIN CHAT AREA -->
-            <main class="flex-1 bg-slate-50/30 flex flex-col justify-between relative">
-
-                <!-- TOP UTILITY BAR -->
-                <div class="p-4 bg-white/80 backdrop-blur-md border-b border-slate-200 flex items-center justify-between gap-2">
-                    <div class="flex items-center gap-2">
-                        <span class="px-3 py-1 rounded-full bg-sky-100 text-sky-800 font-extrabold text-[11px] uppercase tracking-wider">
-                            100% Anonim
-                        </span>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <button onclick="resetChat()" class="p-2 text-slate-400 hover:text-slate-600 rounded-lg hover:bg-slate-100 text-xs transition" title="Reset Sesi">
-                            <i class="fa-solid fa-rotate-right"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- CHAT MESSAGES CONTAINER / SAFETY CHECK SCREEN -->
-                <div id="chat-box" class="flex-1 p-6 overflow-y-auto space-y-6 flex flex-col justify-center items-center">
-
-                    <!-- Safety Card Initial View -->
-                    <div class="max-w-md w-full bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm text-center space-y-5">
-
-                        <!-- Icon Alert Badge -->
-                        <div class="w-16 h-16 rounded-2xl brand-red-bg text-white flex items-center justify-center text-2xl mx-auto shadow-md">
-                            <i class="fa-solid fa-shield-heart"></i>
-                        </div>
-
-                        <div class="space-y-2">
-                            <h2 class="text-xl font-extrabold text-slate-900">Pemeriksaan Keselamatan</h2>
-                            <p class="text-xs text-slate-600 leading-relaxed">
-                                Halo! Sebelum kita mengobrol lebih jauh, MindCare ingin memastikan kamu dalam kondisi aman dan nyaman.
-                            </p>
-                        </div>
-
-                        <p class="text-xs font-bold text-slate-800 pt-2">
-                            Apakah saat ini kamu sedang mengalami krisis emosional yang berat atau membutuhkan bantuan darurat?
-                        </p>
-
-                        <!-- Action Buttons -->
-                        <div class="space-y-2.5 pt-2">
-                            <button onclick="window.location.href='rujukan.html'" class="w-full py-3.5 px-4 brand-red-bg hover:bg-red-600 text-white font-bold text-xs rounded-2xl shadow-md transition flex items-center justify-center gap-2">
-                                <i class="fa-solid fa-phone-volume"></i>
-                                <span>Ya, Hubungi Bantuan Darurat / Guru BK</span>
+                            <!-- New Chat Button -->
+                            <button onclick="resetChat()"
+                                class="w-full py-2.5 px-4 bg-sky-50 hover:bg-sky-100/80 brand-blue-text font-bold text-xs rounded-xl border border-sky-200/70 transition flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-plus"></i>
+                                <span>Sesi Percakapan Baru</span>
                             </button>
-                            <button onclick="startChatSession()" class="w-full py-3.5 px-4 bg-white hover:bg-slate-50 text-slate-700 font-bold text-xs rounded-2xl border border-slate-200 shadow-sm transition flex items-center justify-center gap-2">
-                                <i class="fa-solid fa-seedling text-emerald-500"></i>
-                                <span>Tidak, Saya Aman & Ingin Curhat</span>
+
+                            <!-- History / Menu -->
+                            <div class="space-y-1 pt-2">
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 px-2">Sesi
+                                    Aktif</span>
+                                <div
+                                    class="w-full p-2.5 rounded-xl bg-sky-50/60 border border-sky-200/50 text-xs font-semibold text-slate-800 flex items-center gap-2">
+                                    <span class="w-2 h-2 rounded-full brand-blue-bg"></span>
+                                    <span class="truncate">Dukungan Emosional</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quick Screening Links -->
+                        <div class="space-y-2 pt-4 border-t border-slate-100">
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 px-2">Skrining
+                                Cepat</span>
+                            <button onclick="window.location.href='skrining.html'"
+                                class="w-full text-left p-2.5 rounded-xl hover:bg-slate-100 text-slate-700 text-xs font-semibold flex items-center gap-2 transition">
+                                <i class="fa-solid fa-fire-flame-curved brand-red-text"></i>
+                                <span>Skrining</span>
+                            </button>
+                            <button onclick="window.location.href='skrining.html'"
+                                class="w-full text-left p-2.5 rounded-xl hover:bg-slate-100 text-slate-700 text-xs font-semibold flex items-center gap-2 transition">
+                                <i class="fa-solid fa-notes-medical brand-blue-text"></i>
+                                <span>Evaluasi Kecemasan</span>
                             </button>
                         </div>
+                    </aside>
 
-                    </div>
+                    <!-- RIGHT MAIN CHAT AREA -->
+                    <main class="flex-1 bg-slate-50/30 flex flex-col justify-between relative">
+
+                        <!-- TOP UTILITY BAR -->
+                        <div
+                            class="p-4 bg-white/80 backdrop-blur-md border-b border-slate-200 flex items-center justify-between gap-2">
+                            <div class="flex items-center gap-2">
+                                <span
+                                    class="px-3 py-1 rounded-full bg-sky-100 text-sky-800 font-extrabold text-[11px] uppercase tracking-wider">
+                                    100% Anonim
+                                </span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <button onclick="resetChat()"
+                                    class="p-2 text-slate-400 hover:text-slate-600 rounded-lg hover:bg-slate-100 text-xs transition"
+                                    title="Reset Sesi">
+                                    <i class="fa-solid fa-rotate-right"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- CHAT MESSAGES CONTAINER / SAFETY CHECK SCREEN -->
+                        <div id="chat-box"
+                            class="flex-1 p-6 overflow-y-auto space-y-6 flex flex-col justify-center items-center">
+
+                            <!-- Safety Card Initial View -->
+                            <div
+                                class="max-w-md w-full bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm text-center space-y-5">
+
+                                <!-- Icon Alert Badge -->
+                                <div
+                                    class="w-16 h-16 rounded-2xl brand-red-bg text-white flex items-center justify-center text-2xl mx-auto shadow-md">
+                                    <i class="fa-solid fa-shield-heart"></i>
+                                </div>
+
+                                <div class="space-y-2">
+                                    <h2 class="text-xl font-extrabold text-slate-900">Pemeriksaan Keselamatan</h2>
+                                    <p class="text-xs text-slate-600 leading-relaxed">
+                                        Halo! Sebelum kita mengobrol lebih jauh, MindCare ingin memastikan kamu dalam
+                                        kondisi aman dan nyaman.
+                                    </p>
+                                </div>
+
+                                <p class="text-xs font-bold text-slate-800 pt-2">
+                                    Apakah saat ini kamu sedang mengalami krisis emosional yang berat atau membutuhkan
+                                    bantuan darurat?
+                                </p>
+
+                                <!-- Action Buttons -->
+                                <div class="space-y-2.5 pt-2">
+                                    <button onclick="window.location.href='rujukan.html'"
+                                        class="w-full py-3.5 px-4 brand-red-bg hover:bg-red-600 text-white font-bold text-xs rounded-2xl shadow-md transition flex items-center justify-center gap-2">
+                                        <i class="fa-solid fa-phone-volume"></i>
+                                        <span>Ya, Hubungi Bantuan Darurat / Guru BK</span>
+                                    </button>
+                                    <button onclick="startChatSession()"
+                                        class="w-full py-3.5 px-4 bg-white hover:bg-slate-50 text-slate-700 font-bold text-xs rounded-2xl border border-slate-200 shadow-sm transition flex items-center justify-center gap-2">
+                                        <i class="fa-solid fa-seedling text-emerald-500"></i>
+                                        <span>Tidak, Saya Aman & Ingin Curhat</span>
+                                    </button>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- INPUT BOX -->
+                        <div class="p-4 bg-white border-t border-slate-200">
+                            <div
+                                class="max-w-3xl mx-auto flex items-center gap-2 bg-slate-100/80 rounded-2xl p-1.5 border border-slate-200 focus-within:border-sky-400 focus-within:bg-white transition">
+                                <input type="text" id="chat-input" placeholder="Ketik pesan untuk MindCare AI..."
+                                    class="flex-1 bg-transparent px-4 py-2.5 text-xs sm:text-sm text-slate-800 focus:outline-none"
+                                    onkeypress="if(event.key==='Enter') handleSendChat()">
+                                <button onclick="handleSendChat()"
+                                    class="btn-brand text-white w-10 h-10 rounded-xl font-bold flex items-center justify-center flex-shrink-0 shadow-sm">
+                                    <i class="fa-solid fa-paper-plane text-xs"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                    </main>
 
                 </div>
 
-                <!-- INPUT BOX -->
-                <div class="p-4 bg-white border-t border-slate-200">
-                    <div class="max-w-3xl mx-auto flex items-center gap-2 bg-slate-100/80 rounded-2xl p-1.5 border border-slate-200 focus-within:border-sky-400 focus-within:bg-white transition">
-                        <input type="text" id="chat-input" placeholder="Ketik pesan untuk MindCare AI..." class="flex-1 bg-transparent px-4 py-2.5 text-xs sm:text-sm text-slate-800 focus:outline-none" onkeypress="if(event.key==='Enter') handleSendChat()">
-                        <button onclick="handleSendChat()" class="btn-brand text-white w-10 h-10 rounded-xl font-bold flex items-center justify-center flex-shrink-0 shadow-sm">
-                            <i class="fa-solid fa-paper-plane text-xs"></i>
-                        </button>
-                    </div>
-                </div>
-
-            </main>
-
+            </div>
         </div>
-
-    </div>
-</div>
         <!-- VIEW 3: SKRINING KESEHATAN MENTAL -->
         <div id="view-skrining" class="view-section">
             <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
                 <div class="text-center mb-8 space-y-2">
-                    <span class="text-xs font-bold uppercase tracking-widest brand-blue-text bg-sky-50 px-3 py-1 rounded-full">Evaluasi Mandiri</span>
+                    <span
+                        class="text-xs font-bold uppercase tracking-widest brand-blue-text bg-sky-50 px-3 py-1 rounded-full">Evaluasi
+                        Mandiri</span>
                     <h2 class="text-3xl font-extrabold text-slate-900">Skrining Kesehatan Mental Pelajar</h2>
-                    <p class="text-slate-500 text-xs sm:text-sm max-w-md mx-auto">Jawab 5 pertanyaan untuk mengenali beban emosionalmu secara 100% anonim.</p>
+                    <p class="text-slate-500 text-xs sm:text-sm max-w-md mx-auto">Jawab 5 pertanyaan untuk mengenali
+                        beban emosionalmu secara 100% anonim.</p>
                 </div>
 
                 <div class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xl">
                     <div class="w-full bg-slate-100 h-2 rounded-full mb-8 overflow-hidden">
-                        <div id="quiz-progress-bar" class="brand-blue-bg h-full w-[20%] transition-all duration-300"></div>
+                        <div id="quiz-progress-bar" class="brand-blue-bg h-full w-[20%] transition-all duration-300">
+                        </div>
                     </div>
 
                     <form id="quiz-form">
                         <div class="quiz-q" data-q="1">
-                            <span class="text-xs font-bold brand-blue-text uppercase tracking-wider">Pertanyaan 1 dari 5</span>
-                            <h3 class="text-lg sm:text-xl font-bold text-slate-900 mt-1 mb-6">Seberapa sering kamu merasa cemas atau tertekan karena urusan sekolah?</h3>
+                            <span class="text-xs font-bold brand-blue-text uppercase tracking-wider">Pertanyaan 1 dari
+                                5</span>
+                            <h3 class="text-lg sm:text-xl font-bold text-slate-900 mt-1 mb-6">Seberapa sering kamu
+                                merasa cemas atau tertekan karena urusan sekolah?</h3>
                             <div class="space-y-3">
-                                <label class="flex items-center p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50/50 cursor-pointer transition text-xs sm:text-sm">
+                                <label
+                                    class="flex items-center p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50/50 cursor-pointer transition text-xs sm:text-sm">
                                     <input type="radio" name="q1" value="0" class="text-sky-500">
                                     <span class="ml-3 font-medium text-slate-700">Hampir tidak pernah sama sekali</span>
                                 </label>
-                                <label class="flex items-center p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50/50 cursor-pointer transition text-xs sm:text-sm">
+                                <label
+                                    class="flex items-center p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50/50 cursor-pointer transition text-xs sm:text-sm">
                                     <input type="radio" name="q1" value="1" class="text-sky-500">
                                     <span class="ml-3 font-medium text-slate-700">Kadang-kadang dalam seminggu</span>
                                 </label>
-                                <label class="flex items-center p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50/50 cursor-pointer transition text-xs sm:text-sm">
+                                <label
+                                    class="flex items-center p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50/50 cursor-pointer transition text-xs sm:text-sm">
                                     <input type="radio" name="q1" value="2" class="text-sky-500">
-                                    <span class="ml-3 font-medium text-slate-700">Sangat sering / Hampir setiap hari</span>
+                                    <span class="ml-3 font-medium text-slate-700">Sangat sering / Hampir setiap
+                                        hari</span>
                                 </label>
                             </div>
                         </div>
@@ -564,110 +932,127 @@
         <!-- VIEW 4: RUJUKAN BK -->
         <div id="view-rujukan" class="view-section">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 py-12 text-center space-y-6">
-                <span class="brand-red-text font-bold text-xs uppercase tracking-wider bg-red-50 px-3 py-1 rounded-full">Konseling Sekolah</span>
+                <span
+                    class="brand-red-text font-bold text-xs uppercase tracking-wider bg-red-50 px-3 py-1 rounded-full">Konseling
+                    Sekolah</span>
                 <h2 class="text-3xl font-extrabold text-slate-900">Rujukan Konseling BK Sekolah</h2>
-                <p class="text-slate-600 text-sm max-w-md mx-auto">Terhubung secara tertutup dan aman dengan Guru Bimbingan Konseling (BK) di sekolahmu.</p>
+                <p class="text-slate-600 text-sm max-w-md mx-auto">Terhubung secara tertutup dan aman dengan Guru
+                    Bimbingan Konseling (BK) di sekolahmu.</p>
             </div>
         </div>
-<!-- FOOTER (RINGKAS, FULL BIRU, LOGO JELAS) -->
-<footer class="mt-auto w-full">
-    <!-- KONTEN UTAMA FOOTER (Full Biru MindCare) -->
-    <div class="brand-blue-bg text-white text-xs py-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <!-- Grid 3 Kolom Sesuai Struktur CourseLab -->
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 pb-8 border-b border-white/20">
+        <!-- FOOTER (RINGKAS, FULL BIRU, LOGO JELAS) -->
+        <footer class="mt-auto w-full">
+            <!-- KONTEN UTAMA FOOTER (Full Biru MindCare) -->
+            <div class="brand-blue-bg text-white text-xs py-10">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-                <!-- Kolom 1: Brand & Deskripsi (Col 4) -->
-                <div class="md:col-span-4 space-y-4 text-center sm:text-left">
-                    <div class="flex items-center justify-center sm:justify-start gap-3">
-                        <!-- Wadah Putih Agar Logo Terlihat Jelas & Kontras -->
-                        <div class="bg-white p-1.5 rounded-xl shadow-xs flex items-center justify-center">
-                            <img src="assets/Logo MindCare.png" alt="Logo MindCare" class="w-8 h-8 object-contain">
+                    <!-- Grid 3 Kolom Sesuai Struktur CourseLab -->
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 pb-8 border-b border-white/20">
+
+                        <!-- Kolom 1: Brand & Deskripsi (Col 4) -->
+                        <div class="md:col-span-4 space-y-4 text-center sm:text-left">
+                            <div class="flex items-center justify-center sm:justify-start gap-3">
+                                <!-- Wadah Putih Agar Logo Terlihat Jelas & Kontras -->
+                                <div class="bg-white p-1.5 rounded-xl shadow-xs flex items-center justify-center">
+                                    <img src="assets/Logo MindCare.png" alt="Logo MindCare"
+                                        class="w-8 h-8 object-contain">
+                                </div>
+                                <span class="text-xl font-extrabold text-white tracking-tight">
+                                    MindCare
+                                </span>
+                            </div>
+                            <div class="w-12 h-0.5 bg-white rounded-full mx-auto sm:mx-0"></div>
+                            <p class="text-sky-100 text-xs leading-relaxed max-w-sm mx-auto sm:mx-0">
+                                Platform pertolongan pertama psikologis untuk pelajar. Menyediakan ruang bercerita
+                                berbasis AI, evaluasi mandiri, dan rujukan konseling BK secara 100% anonim.
+                            </p>
+                            <div class="flex items-center justify-center sm:justify-start gap-2 pt-1">
+                                <span
+                                    class="inline-flex items-center gap-1.5 bg-white/10 border border-white/20 px-3 py-1.5 rounded-full text-[11px] font-semibold text-white backdrop-blur-xs">
+                                    <i class="fa-solid fa-user-shield text-sky-100"></i> Privasi Terjaga
+                                </span>
+                                <span
+                                    class="inline-flex items-center gap-1.5 bg-white/10 border border-white/20 px-3 py-1.5 rounded-full text-[11px] font-semibold text-white backdrop-blur-xs">
+                                    <i class="fa-solid fa-lock text-sky-100"></i> Tanpa Akun
+                                </span>
+                            </div>
                         </div>
-                        <span class="text-xl font-extrabold text-white tracking-tight">
-                            MindCare
-                        </span>
-                    </div>
-                    <div class="w-12 h-0.5 bg-white rounded-full mx-auto sm:mx-0"></div>
-                    <p class="text-sky-100 text-xs leading-relaxed max-w-sm mx-auto sm:mx-0">
-                        Platform pertolongan pertama psikologis untuk pelajar. Menyediakan ruang bercerita berbasis AI, evaluasi mandiri, dan rujukan konseling BK secara 100% anonim.
-                    </p>
-                    <div class="flex items-center justify-center sm:justify-start gap-2 pt-1">
-                        <span class="inline-flex items-center gap-1.5 bg-white/10 border border-white/20 px-3 py-1.5 rounded-full text-[11px] font-semibold text-white backdrop-blur-xs">
-                            <i class="fa-solid fa-user-shield text-sky-100"></i> Privasi Terjaga
-                        </span>
-                        <span class="inline-flex items-center gap-1.5 bg-white/10 border border-white/20 px-3 py-1.5 rounded-full text-[11px] font-semibold text-white backdrop-blur-xs">
-                            <i class="fa-solid fa-lock text-sky-100"></i> Tanpa Akun
-                        </span>
-                    </div>
-                </div>
 
-                <!-- Kolom 2: Navigasi Utama (Col 3) -->
-                <div class="md:col-span-3 space-y-3 text-center sm:text-left">
-                    <h4 class="text-sm font-bold text-white tracking-tight">Navigasi Utama</h4>
-                    <div class="w-10 h-0.5 bg-white rounded-full mx-auto sm:mx-0"></div>
-                    <ul class="space-y-2.5 text-xs font-semibold text-sky-100 pt-1">
-                        <li>
-                            <a href="index.html" onclick="handleNavClick(event, 'index.html')" class="nav-footer-btn hover:text-white transition inline-flex items-center gap-2">
-                                <i class="fa-solid fa-house text-[10px] text-white"></i>
-                                <span class="nav-label">Beranda</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="chat.html" onclick="handleNavClick(event, 'chat.html')" class="nav-footer-btn hover:text-white transition inline-flex items-center gap-2">
-                                <i class="fa-solid fa-comments text-[10px] text-white"></i>
-                                <span class="nav-label">AI Care Chat</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="skrining.html" onclick="handleNavClick(event, 'skrining.html')" class="nav-footer-btn hover:text-white transition inline-flex items-center gap-2">
-                                <i class="fa-solid fa-clipboard-check text-[10px] text-white"></i>
-                                <span class="nav-label">Skrining Mental</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="rujukan.html" onclick="handleNavClick(event, 'rujukan.html')" class="nav-footer-btn hover:text-white transition inline-flex items-center gap-2">
-                                <i class="fa-solid fa-school text-[10px] text-white"></i>
-                                <span class="nav-label">Rujukan & Konseling BK</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Kolom 3: Kartu Bantuan BK Sekolah (Col 5) -->
-                <div class="md:col-span-5 space-y-3 text-center sm:text-left">
-                    <h4 class="text-sm font-bold text-white tracking-tight">Layanan Konseling</h4>
-                    <div class="w-10 h-0.5 bg-white rounded-full mx-auto sm:mx-0"></div>
-                    <div class="bg-white text-slate-800 rounded-2xl p-5 space-y-3 shadow-md border border-white/80 text-left">
-                        <div>
-                            <h5 class="text-xs font-extrabold uppercase tracking-wider brand-red-text">
-                                BANTUAN KONSELING SEKOLAH
-                            </h5>
+                        <!-- Kolom 2: Navigasi Utama (Col 3) -->
+                        <div class="md:col-span-3 space-y-3 text-center sm:text-left">
+                            <h4 class="text-sm font-bold text-white tracking-tight">Navigasi Utama</h4>
+                            <div class="w-10 h-0.5 bg-white rounded-full mx-auto sm:mx-0"></div>
+                            <ul class="space-y-2.5 text-xs font-semibold text-sky-100 pt-1">
+                                <li>
+                                    <a href="index.html" onclick="handleNavClick(event, 'index.html')"
+                                        class="nav-footer-btn hover:text-white transition inline-flex items-center gap-2">
+                                        <i class="fa-solid fa-house text-[10px] text-white"></i>
+                                        <span class="nav-label">Beranda</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="chat.html" onclick="handleNavClick(event, 'chat.html')"
+                                        class="nav-footer-btn hover:text-white transition inline-flex items-center gap-2">
+                                        <i class="fa-solid fa-comments text-[10px] text-white"></i>
+                                        <span class="nav-label">AI Care Chat</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="skrining.html" onclick="handleNavClick(event, 'skrining.html')"
+                                        class="nav-footer-btn hover:text-white transition inline-flex items-center gap-2">
+                                        <i class="fa-solid fa-clipboard-check text-[10px] text-white"></i>
+                                        <span class="nav-label">Skrining Mental</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="rujukan.html" onclick="handleNavClick(event, 'rujukan.html')"
+                                        class="nav-footer-btn hover:text-white transition inline-flex items-center gap-2">
+                                        <i class="fa-solid fa-school text-[10px] text-white"></i>
+                                        <span class="nav-label">Rujukan & Konseling BK</span>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
-                        <p class="text-[11px] text-slate-600 leading-relaxed">
-                            Jika kamu membutuhkan dukungan lebih lanjut, jangan ragu untuk menghubungi Guru Bimbingan dan Konseling (BK)
-                        </p>
-                        <a href="rujukan.html" onclick="handleNavClick(event, 'rujukan.html')" class="nav-footer-btn brand-red-bg hover:bg-red-600 w-full py-2.5 px-4 text-white font-bold text-xs rounded-xl transition-all duration-200 flex items-center justify-between shadow-sm group active:scale-95">
-                            <span class="nav-label">Akses Ruang BK Sekolah</span>
-                            <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
-                        </a>
+
+                        <!-- Kolom 3: Kartu Bantuan BK Sekolah (Col 5) -->
+                        <div class="md:col-span-5 space-y-3 text-center sm:text-left">
+                            <h4 class="text-sm font-bold text-white tracking-tight">Layanan Konseling</h4>
+                            <div class="w-10 h-0.5 bg-white rounded-full mx-auto sm:mx-0"></div>
+                            <div
+                                class="bg-white text-slate-800 rounded-2xl p-5 space-y-3 shadow-md border border-white/80 text-left">
+                                <div>
+                                    <h5 class="text-xs font-extrabold uppercase tracking-wider brand-red-text">
+                                        BANTUAN KONSELING SEKOLAH
+                                    </h5>
+                                </div>
+                                <p class="text-[11px] text-slate-600 leading-relaxed">
+                                    Jika kamu membutuhkan dukungan lebih lanjut, jangan ragu untuk menghubungi Guru
+                                    Bimbingan dan Konseling (BK)
+                                </p>
+                                <a href="rujukan.html" onclick="handleNavClick(event, 'rujukan.html')"
+                                    class="nav-footer-btn brand-red-bg hover:bg-red-600 w-full py-2.5 px-4 text-white font-bold text-xs rounded-xl transition-all duration-200 flex items-center justify-between shadow-sm group active:scale-95">
+                                    <span class="nav-label">Akses Ruang BK Sekolah</span>
+                                    <i
+                                        class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
+                                </a>
+                            </div>
+                        </div>
+
                     </div>
+
+                    <!-- Hak Cipta Paling Bawah (Ditengah) -->
+                    <div class="pt-6 text-center text-sky-100 text-xs font-medium space-y-1.5">
+                        <p>&copy; 2026 MindCare • <strong class="text-white font-bold"> &copy; 2026 MindCare •
+                                Strawberry Coding Club | SMKN 1 Ciamis</strong></p>
+                    </div>
+
                 </div>
-
             </div>
+        </footer>
 
-            <!-- Hak Cipta Paling Bawah (Ditengah) -->
-            <div class="pt-6 text-center text-sky-100 text-xs font-medium space-y-1.5">
-                <p>&copy; 2026 MindCare • <strong class="text-white font-bold"> &copy; 2026 MindCare • Strawberry Coding Club | SMKN 1 Ciamis</strong></p>
-            </div>
 
-        </div>
-    </div>
-</footer>
-
-   
-    <!-- Custom Script JS -->
-    <script src="javascript/script.js"></script>
+        <!-- Custom Script JS -->
+        <script src="javascript/script.js"></script>
 </body>
+
 </html>
