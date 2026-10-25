@@ -58,3 +58,6 @@ node_modules/
 /backend/node_modules/
 /backend/.cache/
 npm-debug.log*
+
+# Local reference materials; keep out of GitHub
+/apalah/

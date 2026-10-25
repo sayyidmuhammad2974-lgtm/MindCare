@@ -16,29 +16,23 @@
 </head>
 <body class="bg-white text-slate-800 flex flex-col min-h-screen selection:bg-sky-100 selection:text-sky-800">
 
-    <!-- TOP RUNNING TEXT (INFORMASI BERJALAN LEBIH LEBAR) -->
-    <div class="brand-blue-bg text-white text-xs sm:text-sm font-semibold py-2.5 overflow-hidden border-b border-sky-300/40 shadow-inner">
-        <div class="marquee" aria-label="Informasi MindCare">
-    <div class="marquee-track">
-        <div class="marquee-group">
-            <span>📢 Selamat datang di MindCare · Ruang refleksi pelajar tanpa pendaftaran akun.</span>
-            <span>🤝 Temukan dukungan dari guru BK, wali kelas, dan orang dewasa tepercaya.</span>
-            <span>💡 Luapkan beban pikiranmu dan lakukan refleksi kapan saja.</span>
-            <span>🌟 Strawberry Coding Club — Karya Inovasi Pelajar SMKN 1 Ciamis.</span>
-        </div>
-        <div class="marquee-group" aria-hidden="true">
-            <span>📢 Selamat datang di MindCare · Ruang refleksi pelajar tanpa pendaftaran akun.</span>
-            <span>🤝 Temukan dukungan dari guru BK, wali kelas, dan orang dewasa tepercaya.</span>
-            <span>💡 Luapkan beban pikiranmu dan lakukan refleksi kapan saja.</span>
-            <span>🌟 Strawberry Coding Club — Karya Inovasi Pelajar SMKN 1 Ciamis.</span>
+  <!-- TOP RUNNING TEXT (CLEAN BLUE BACKGROUND & WHITE TEXT) -->
+<!-- Ganti py-3 menjadi py-5 atau py-6 untuk memperbesar latar belakang biru ke bawah -->
+<div class="top-announcement-bar py-6 px-4 text-white text-xs sm:text-sm font-semibold overflow-hidden relative">
+    <div class="max-w-7xl mx-auto flex items-center">
+        <div class="marquee-track-container flex-1 overflow-hidden relative">
+            <div class="marquee-track whitespace-nowrap" data-single-marquee="true">
+                <span class="inline-block text-white font-medium drop-shadow-sm">
+                    📢 <strong class="font-bold text-white">Selamat Datang di MindCare:</strong> Ruang Bercerita Digital untuk Dukungan Awal Kesehatan Mental Pelajar 100% Anonim.
+                </span>
+            </div>
         </div>
     </div>
 </div>
-    </div>
 
     <!-- MAIN COMPACT NAVBAR HEADER WITH OFFICIAL LOGO -->
-    <header class="site-header sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-18 flex items-center justify-between">
+    <header id="main-header" class="site-header sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm">
+        <div id="navbar-box" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-18 flex items-center justify-between">
 
             <!-- Brand logo image -->
             <a href="index.html" class="flex items-center gap-3 group focus:outline-none">
@@ -102,8 +96,8 @@
     <main class="flex-grow" data-page="rujukan">
 
             <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-                <section class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-lg">
-                    <span class="text-xs font-bold uppercase tracking-widest brand-blue-text">Temukan Bantuan</span>
+                <section class="referral-card bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-lg">
+                    <span class="page-kicker"><i class="fa-solid fa-hand-holding-heart"></i> Temukan bantuan</span>
                     <h2 class="text-3xl font-extrabold mt-2 mb-4">Kamu tidak harus menghadapi ini sendirian</h2>
                     <p class="text-slate-600 leading-relaxed">Coba hubungi guru BK, wali kelas, orang tua, atau orang dewasa yang kamu percaya. Ceritakan apa yang kamu butuhkan dan pilih tempat bicara yang terasa aman.</p>
                     <div class="mt-6 rounded-2xl bg-sky-50 p-5">
