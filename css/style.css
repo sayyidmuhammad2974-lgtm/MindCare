@@ -237,6 +237,15 @@ html[data-theme="dark"] .chat-bubble-user {
     background-color: #123047;
 }
 
+.hero-preview .chat-bubble {
+    text-align: left;
+}
+.hero-preview .chat-preview-message {
+    margin: 0;
+    text-align: left;
+    text-indent: 0;
+}
+
 .chat-typing-dots {
     display: inline-flex;
     align-items: center;
