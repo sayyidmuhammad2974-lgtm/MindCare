@@ -158,70 +158,96 @@
             </div>
         
     </main>
-    <!-- FOOTER MENEMPEL DI BAWAH (NO MORE WHITE GAP) -->
-<footer class="w-full mt-auto">
-    <div class="brand-blue-bg text-white text-xs py-8 sm:py-10 w-full">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <!-- FOOTER 
+        <footer class="mt-auto w-full">
+            <!-- KONTEN UTAMA FOOTER (Full Biru MindCare) -->
+            <div class="brand-blue-bg text-white text-xs py-10">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 pb-6 border-b border-white/20">
+                    <!-- Navigasi utama dan layanan konseling -->
+                    <div class="grid grid-cols-2 md:grid-cols-12 gap-4 sm:gap-8 lg:gap-12 pb-8 border-b border-white/20">
 
-                <!-- Identitas Brand -->
-                <div class="md:col-span-4 space-y-3 text-left">
-                    <div class="flex items-center gap-2.5">
-                        <div class="bg-white p-1.5 rounded-xl shadow-xs flex items-center justify-center">
-                            <img src="assets/Logo MindCare.png" alt="Logo MindCare" class="w-7 h-7 object-contain">
+                        <!-- Identitas footer untuk desktop; versi mobile tetap ringkas. -->
+                        <div class="hidden md:block md:col-span-4 space-y-4 text-left">
+                            <div class="flex items-center gap-3">
+                                <div class="bg-white p-1.5 rounded-xl shadow-xs flex items-center justify-center">
+                                    <img src="assets/Logo MindCare.png" alt="Logo MindCare" class="w-8 h-8 object-contain">
+                                </div>
+                                <span class="text-xl font-extrabold text-white tracking-tight">MindCare</span>
+                            </div>
+                            <div class="w-12 h-0.5 bg-white rounded-full"></div>
+                            <p class="text-sky-100 text-xs leading-relaxed max-w-sm">Platform pertolongan pertama psikologis untuk pelajar. Menyediakan ruang bercerita berbasis AI, evaluasi mandiri, dan rujukan konseling BK secara 100% anonim.</p>
+                            <div class="flex items-center gap-2 pt-1">
+                                <span class="inline-flex items-center gap-1.5 bg-white/10 border border-white/20 px-3 py-1.5 rounded-full text-[11px] font-semibold text-white"><i class="fa-solid fa-user-shield text-sky-100"></i> Privasi Terjaga</span>
+                                <span class="inline-flex items-center gap-1.5 bg-white/10 border border-white/20 px-3 py-1.5 rounded-full text-[11px] font-semibold text-white"><i class="fa-solid fa-lock text-sky-100"></i> Tanpa Akun</span>
+                            </div>
                         </div>
-                        <span class="text-lg font-extrabold text-white tracking-tight">MindCare</span>
-                    </div>
-                    <p class="text-sky-100 text-xs leading-relaxed max-w-sm">
-                        Platform pertolongan pertama psikologis untuk pelajar. Menyediakan ruang bercerita berbasis AI, evaluasi mandiri, dan rujukan konseling BK secara 100% anonim.
-                    </p>
-                    <div class="flex items-center gap-2 pt-1">
-                        <span class="inline-flex items-center gap-1 bg-white/10 border border-white/20 px-2.5 py-1 rounded-full text-[10px] font-semibold text-white">
-                            <i class="fa-solid fa-user-shield text-sky-100"></i> Privasi Terjaga
-                        </span>
-                        <span class="inline-flex items-center gap-1 bg-white/10 border border-white/20 px-2.5 py-1 rounded-full text-[10px] font-semibold text-white">
-                            <i class="fa-solid fa-lock text-sky-100"></i> Tanpa Akun
-                        </span>
-                    </div>
-                </div>
 
-                <!-- Navigasi Utama -->
-                <div class="md:col-span-3 space-y-2.5 text-left">
-                    <h4 class="text-xs sm:text-sm font-bold text-white tracking-tight">Navigasi Utama</h4>
-                    <div class="w-8 h-0.5 bg-white/60 rounded-full mb-2"></div>
-                    <ul class="space-y-2 text-xs font-semibold text-sky-100">
-                        <li><a href="index.html" class="hover:text-white transition inline-flex items-center gap-2"><i class="fa-solid fa-house text-[10px]"></i><span>Beranda</span></a></li>
-                        <li><a href="chat.html" class="hover:text-white transition inline-flex items-center gap-2"><i class="fa-solid fa-comments text-[10px]"></i><span>AI Care Chat</span></a></li>
-                        <li><a href="skrining.html" class="hover:text-white transition inline-flex items-center gap-2"><i class="fa-solid fa-clipboard-check text-[10px]"></i><span>Skrining Mental</span></a></li>
-                        <li><a href="rujukan.html" class="hover:text-white transition inline-flex items-center gap-2"><i class="fa-solid fa-school text-[10px]"></i><span>Rujukan & Konseling BK</span></a></li>
-                    </ul>
-                </div>
+                        <!-- Navigasi Utama -->
+                        <div class="md:col-span-3 space-y-3 text-left">
+                            <h4 class="text-sm font-bold text-white tracking-tight">Navigasi Utama</h4>
+                            <div class="w-10 h-0.5 bg-white rounded-full"></div>
+                            <ul class="space-y-2.5 text-xs font-semibold text-sky-100 pt-1">
+                                <li>
+                                    <a href="index.html" onclick="handleNavClick(event, 'index.html')"
+                                        class="nav-footer-btn hover:text-white transition inline-flex items-center gap-2">
+                                        <i class="fa-solid fa-house text-[10px] text-white"></i>
+                                        <span class="nav-label">Beranda</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="chat.html" onclick="handleNavClick(event, 'chat.html')"
+                                        class="nav-footer-btn hover:text-white transition inline-flex items-center gap-2">
+                                        <i class="fa-solid fa-comments text-[10px] text-white"></i>
+                                        <span class="nav-label">AI Care Chat</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="skrining.html" onclick="handleNavClick(event, 'skrining.html')"
+                                        class="nav-footer-btn hover:text-white transition inline-flex items-center gap-2">
+                                        <i class="fa-solid fa-clipboard-check text-[10px] text-white"></i>
+                                        <span class="nav-label">Skrining Mental</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="rujukan.html" onclick="handleNavClick(event, 'rujukan.html')"
+                                        class="nav-footer-btn hover:text-white transition inline-flex items-center gap-2">
+                                        <i class="fa-solid fa-school text-[10px] text-white"></i>
+                                        <span class="nav-label">Rujukan & Konseling BK</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
 
-                <!-- Bantuan BK Card -->
-                <div class="md:col-span-5 space-y-2.5 text-left">
-                    <h4 class="text-xs sm:text-sm font-bold text-white tracking-tight">Layanan Konseling</h4>
-                    <div class="w-8 h-0.5 bg-white/60 rounded-full mb-2"></div>
-                    <div class="bg-white text-slate-800 rounded-2xl p-4 space-y-2.5 shadow-md border border-white/80">
-                        <h5 class="text-xs font-extrabold brand-red-text uppercase tracking-wider">BANTUAN KONSELING SEKOLAH</h5>
-                        <p class="text-[11px] text-slate-600 leading-relaxed">Jika kamu membutuhkan dukungan lebih lanjut, jangan ragu untuk menghubungi Guru Bimbingan dan Konseling (BK).</p>
-                        <a href="rujukan.html" class="brand-red-bg hover:bg-red-600 w-full py-2.5 px-3 text-white font-bold text-xs rounded-xl transition-all flex items-center justify-between gap-2 shadow-xs">
-                            <span>Akses Ruang BK Sekolah</span>
-                            <i class="fa-solid fa-arrow-right text-xs"></i>
-                        </a>
+                        <!-- Kartu Bantuan BK Sekolah -->
+                        <div class="min-w-0 md:col-span-5 space-y-3 text-left">
+                            <h4 class="text-sm font-bold text-white tracking-tight"><span class="md:hidden">Bantuan BK</span><span class="hidden md:inline">Layanan Konseling</span></h4>
+                            <div class="w-10 h-0.5 bg-white rounded-full"></div>
+                            <div
+                                class="bg-white text-slate-800 rounded-2xl p-3 sm:p-5 space-y-3 shadow-md border border-white/80 text-left">
+                                <div>
+                                    <h5 class="text-xs font-extrabold brand-red-text"><span class="md:hidden">Butuh dukungan?</span><span class="hidden md:inline uppercase tracking-wider">Bantuan Konseling Sekolah</span></h5>
+                                </div>
+                                <p class="text-[11px] text-slate-600 leading-relaxed"><span class="md:hidden">Hubungi guru BK atau orang dewasa tepercaya.</span><span class="hidden md:inline">Jika kamu membutuhkan dukungan lebih lanjut, jangan ragu untuk menghubungi Guru Bimbingan dan Konseling (BK)</span></p>
+                                <a href="rujukan.html" onclick="handleNavClick(event, 'rujukan.html')"
+                                    class="nav-footer-btn brand-red-bg hover:bg-red-600 w-full py-2.5 px-3 md:px-4 text-white font-bold text-[11px] md:text-xs rounded-xl transition-all duration-200 flex items-center justify-center md:justify-between gap-2 shadow-sm group active:scale-95">
+                                    <span class="nav-label"><span class="md:hidden">Lihat info BK</span><span class="hidden md:inline">Akses Ruang BK Sekolah</span></span>
+                                    <i
+                                        class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
+                                </a>
+                            </div>
+                        </div>
+
                     </div>
-                </div>
 
+                    <!-- Hak Cipta Paling Bawah (Ditengah) -->
+                    <div class="pt-6 text-center text-sky-100 text-xs font-medium space-y-1.5">
+                        <p>&copy; <span class="hidden md:inline">2026 </span>MindCare • <strong class="text-white font-bold">Strawberry Coding Club | SMKN 1 Ciamis</strong></p>
+                    </div>
+
+                </div>
             </div>
-
-            <!-- Copyright -->
-            <div class="pt-4 text-center text-sky-100 text-[11px] font-medium">
-                <p>© 2026 MindCare • <strong class="text-white font-bold">Strawberry Coding Club | SMKN 1 Ciamis</strong></p>
-            </div>
-
-        </div>
-    </div>
-</footer>
+        </footer>
     <script src="javascript/chat-api.js" defer></script><script src="javascript/chat.js" defer></script><script src="javascript/script.js" defer></script>
 </body>
 </html>
