@@ -673,3 +673,31 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+    
+    // Mapping nama & icon yang konsisten
+    const navItems = [
+        { href: "index.html", text: "Beranda", icon: "fa-house" },
+        { href: "chat.html", text: "AI Care Chat", icon: "fa-comments" },
+        { href: "skrining.html", text: "Skrining Mental", icon: "fa-clipboard-check" },
+        { href: "rujukan.html", text: "Rujukan BK", icon: "fa-school" }
+    ];
+
+    const navContainer = document.querySelector("nav");
+    if (navContainer) {
+        navContainer.innerHTML = navItems.map(item => {
+            const isActive = (currentPage === item.href);
+            const activeClass = isActive 
+                ? "brand-blue-bg text-white shadow-xs" 
+                : "text-slate-600 hover:text-slate-900 transition";
+            
+            return `
+                <a href="${item.href}" class="px-4 py-2 rounded-full ${activeClass} flex items-center gap-1.5">
+                    <i class="fa-solid ${item.icon} text-[12px]"></i>
+                    <span>${item.text}</span>
+                </a>
+            `;
+        }).join("");
+    }
+});

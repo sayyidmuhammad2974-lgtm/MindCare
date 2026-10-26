@@ -46,21 +46,29 @@
                 </div>
             </a>
 
-            <!-- Desktop Navigation Tabs -->
-            <nav class="hidden lg:flex items-center gap-1 bg-slate-50 p-1.5 rounded-full border border-slate-200/80 text-xs font-bold text-slate-600">
-                <a href="index.html" data-nav="landing" class="nav-link active px-4 py-1.5 rounded-full transition flex items-center gap-1.5">
-                    <i class="fa-solid fa-house"></i> Beranda
-                </a>
-                <a href="chat.html" data-nav="chat" class="nav-link px-4 py-1.5 rounded-full transition flex items-center gap-1.5">
-                    <i class="fa-solid fa-comments brand-blue-text"></i> Chat Pendamping
-                </a>
-                <a href="skrining.html" data-nav="skrining" class="nav-link px-4 py-1.5 rounded-full transition flex items-center gap-1.5">
-                    <i class="fa-solid fa-clipboard-check brand-blue-text"></i> Skrining Mental
-                </a>
-                <a href="rujukan.html" data-nav="rujukan" class="nav-link px-4 py-1.5 rounded-full transition flex items-center gap-1.5">
-                    <i class="fa-solid fa-school brand-blue-text"></i> Rujukan BK
-                </a>
-            </nav>
+            <!-- NAVBAR UNTUK HALAMAN CHAT.HTML -->
+<nav class="hidden md:flex items-center gap-1.5 bg-slate-100/80 p-1.5 rounded-full border border-slate-200/60 text-xs font-semibold">
+    <a href="index.html" class="px-4 py-2 rounded-full text-slate-600 hover:text-slate-900 transition flex items-center gap-1.5">
+        <i class="fa-solid fa-house text-[12px]"></i>
+        <span>Beranda</span>
+    </a>
+    
+    <!-- MENU AKTIF CHAT (LENGKAP DENGAN ICON & TEKS TERSTANDAR) -->
+    <a href="chat.html" class="px-4 py-2 rounded-full brand-blue-bg text-white shadow-xs flex items-center gap-1.5">
+        <i class="fa-solid fa-comments text-[12px] text-white"></i>
+        <span>AI Care Chat</span>
+    </a>
+    
+    <a href="skrining.html" class="px-4 py-2 rounded-full text-slate-600 hover:text-slate-900 transition flex items-center gap-1.5">
+        <i class="fa-solid fa-clipboard-check text-[12px]"></i>
+        <span>Skrining Mental</span>
+    </a>
+    
+    <a href="rujukan.html" class="px-4 py-2 rounded-full text-slate-600 hover:text-slate-900 transition flex items-center gap-1.5">
+        <i class="fa-solid fa-school text-[12px]"></i>
+        <span>Rujukan BK</span>
+    </a>
+</nav>
 
             <!-- Display Theme -->
             <button id="theme-toggle" type="button" class="theme-toggle" aria-label="Mode tampilan: Perangkat. Klik untuk mengganti." title="Mode tampilan: Perangkat">
