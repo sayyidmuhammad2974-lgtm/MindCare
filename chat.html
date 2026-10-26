@@ -14,7 +14,7 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="feature-page chat-page bg-white text-slate-800 flex flex-col min-h-screen selection:bg-sky-100 selection:text-sky-800">
+<body class="bg-white text-slate-800 flex flex-col min-h-screen selection:bg-sky-100 selection:text-sky-800">
 
   <!-- TOP RUNNING TEXT (CLEAN BLUE BACKGROUND & WHITE TEXT) -->
 <!-- Ganti py-3 menjadi py-5 atau py-6 untuk memperbesar latar belakang biru ke bawah -->
@@ -93,47 +93,40 @@
 
 
     <main class="flex-grow" data-page="chat">
-        <section class="page-intro chat-page-intro max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <span class="page-kicker">Fase dengar</span>
+        <section class="page-intro max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <span class="page-kicker"></i> Fase dengar</span>
             <h1 class="reveal-wave">Ruang aman untuk bercerita</h1>
             <p class="reveal">Ceritakan apa yang sedang terasa berat. Kamu bisa mulai dari topik di bawah atau menulis dengan kata-katamu sendiri.</p>
         </section>
-            <div class="chat-layout-shell max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-                <div class="chat-layout relative">
 
-                    <button id="chat-history-backdrop" type="button" class="chat-history-backdrop hidden" aria-label="Tutup riwayat chat"></button>
-                    <aside id="chat-history-panel" aria-label="Riwayat chat" class="chat-history-panel hidden flex flex-col rounded-3xl border border-slate-200/80 bg-white shadow-lg overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div class="grid grid-cols-1 lg:grid-cols-[280px_minmax(0,1fr)] gap-4 lg:gap-6">
+
+                    <aside aria-label="Riwayat chat" class="order-2 lg:order-1 flex flex-col rounded-3xl border border-slate-200/80 bg-white shadow-lg overflow-hidden lg:h-[75vh] lg:max-h-[700px]">
                         <div class="p-4 border-b border-slate-200">
-                            <div class="flex items-start justify-between gap-3">
-                                <div>
-                                    <h2 class="text-sm font-bold text-slate-800">Riwayat chat</h2>
-                                    <p class="mt-1 text-[11px] text-slate-500">Tersimpan lokal di browser ini.</p>
-                                </div>
-                                <button id="chat-history-close" type="button" class="w-8 h-8 shrink-0 rounded-lg text-slate-500 hover:bg-slate-100" aria-label="Tutup riwayat chat">
-                                    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-                                </button>
-                            </div>
+                            <h2 class="text-sm font-bold text-slate-800">Riwayat chat</h2>
+                            <p class="mt-1 text-[11px] text-slate-500">Tersimpan lokal di browser ini.</p>
                             <button id="chat-reset" type="button" class="mt-4 w-full px-4 py-2.5 rounded-xl brand-blue-bg text-white text-sm font-semibold shadow-sm transition hover:opacity-90 flex items-center justify-center gap-2">
                                 <i class="fa-solid fa-plus" aria-hidden="true"></i> Chat Baru
                             </button>
                         </div>
-                        <div id="chat-history-list" class="flex-1 min-h-0 overflow-y-auto p-3 space-y-2"></div>
+                        <div id="chat-history-list" class="max-h-72 lg:max-h-none lg:flex-1 overflow-y-auto p-3 space-y-2"></div>
                         <p id="chat-history-empty" class="hidden px-4 py-6 text-center text-xs text-slate-500">Belum ada percakapan tersimpan.</p>
                         <p class="px-4 py-3 border-t border-slate-100 text-[11px] leading-relaxed text-slate-500">Riwayat hanya ada di browser ini. Hindari menyimpan nama lengkap atau informasi pribadi sensitif.</p>
                     </aside>
 
-                    <div class="chat-workspace bg-white rounded-3xl border border-slate-200/80 shadow-xl overflow-hidden flex flex-col h-[75vh] max-h-[700px]">
+                    <div class="order-1 lg:order-2 chat-workspace bg-white rounded-3xl border border-slate-200/80 shadow-xl overflow-hidden flex flex-col h-[75vh] max-h-[700px]">
 
                     <div class="chat-panel-header text-white p-4 flex items-center justify-between border-b">
                         <div class="flex items-center gap-3">
-                            <button id="chat-history-toggle" type="button" aria-controls="chat-history-panel" aria-expanded="false" aria-label="Buka riwayat chat" title="Buka riwayat chat" class="w-10 h-10 shrink-0 rounded-xl bg-white/15 hover:bg-white/25 text-white flex items-center justify-center text-lg transition focus:outline-none focus:ring-2 focus:ring-white/70">
-                                <i id="chat-history-icon" class="fa-solid fa-robot" aria-hidden="true"></i>
-                            </button>
+                            <div class="w-10 h-10 rounded-xl brand-blue-bg text-white flex items-center justify-center font-bold text-lg shadow-sm">
+                                <i class="fa-solid fa-robot"></i>
+                            </div>
                             <div>
                                 <h2 class="font-bold text-sm flex items-center gap-2">
                                     MindCare AI
                                 </h2>
-                                <p id="chat-history-hint" class="text-[11px] text-sky-100 mt-1">Teman refleksi yang siap mendengarkan</p>
+                                <p class="text-[11px] text-sky-100 mt-1">Teman refleksi yang siap mendengarkan</p>
                             </div>
                         </div>
 
@@ -141,11 +134,17 @@
 
                     <div id="chat-box" class="flex-1 p-4 sm:p-6 overflow-y-auto space-y-4 bg-white" aria-live="polite"></div>
 
-                    <div class="chat-topic-prompts px-4 py-2.5 bg-white border-t border-slate-100 flex gap-2 overflow-x-auto text-xs">
+                    <div class="px-4 py-2.5 bg-white border-t border-slate-100 flex gap-2 overflow-x-auto text-xs">
                         <span class="text-[11px] font-bold text-slate-400 self-center mr-1">Topik:</span>
-                        <button type="button" data-chat-prompt="Aku merasa stres banget sama ujian dan tugas sekolah." class="bg-slate-100 hover:bg-sky-50 hover:text-sky-700 text-slate-600 px-3 py-1.5 rounded-full whitespace-nowrap transition border border-slate-200">📚 Stres Belajar</button>
-                        <button type="button" data-chat-prompt="Aku merasa dijauhi teman-teman di kelas dan bingung harus gimana." class="bg-slate-100 hover:bg-sky-50 hover:text-sky-700 text-slate-600 px-3 py-1.5 rounded-full whitespace-nowrap transition border border-slate-200">👥 Konflik Pertemanan</button>
-                        <button type="button" data-chat-prompt="Ada orang di sekolah yang bikin aku ngga nyaman dan melalukan perundungan." class="bg-slate-100 hover:bg-sky-50 hover:text-sky-700 text-slate-600 px-3 py-1.5 rounded-full whitespace-nowrap transition border border-slate-200">🛑 Perundungan / Bullying</button>
+                        <button type="button" data-chat-prompt="Aku merasa stres banget sama ujian dan tugas sekolah." class="bg-slate-100 hover:bg-sky-50 hover:text-sky-700 text-slate-600 px-3 py-1.5 rounded-full whitespace-nowrap transition border border-slate-200">
+                            📚 Stres Belajar
+                        </button>
+                        <button type="button" data-chat-prompt="Aku merasa dijauhi teman-teman di kelas dan bingung harus gimana." class="bg-slate-100 hover:bg-sky-50 hover:text-sky-700 text-slate-600 px-3 py-1.5 rounded-full whitespace-nowrap transition border border-slate-200">
+                            👥 Konflik Pertemanan
+                        </button>
+                        <button type="button" data-chat-prompt="Ada orang di sekolah yang bikin aku ngga nyaman dan melalukan perundungan." class="bg-slate-100 hover:bg-sky-50 hover:text-sky-700 text-slate-600 px-3 py-1.5 rounded-full whitespace-nowrap transition border border-slate-200">
+                            🛑 Perundungan / Bullying
+                        </button>
                     </div>
 
                     <form id="chat-form" autocomplete="off" class="p-3 bg-white border-t border-slate-200 flex items-center gap-2">
@@ -159,7 +158,70 @@
             </div>
         
     </main>
-    <footer class="brand-blue-bg text-white py-6 text-center text-xs">MindCare · Ruang refleksi dan dukungan pelajar</footer>
+    <!-- FOOTER MENEMPEL DI BAWAH (NO MORE WHITE GAP) -->
+<footer class="w-full mt-auto">
+    <div class="brand-blue-bg text-white text-xs py-8 sm:py-10 w-full">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 pb-6 border-b border-white/20">
+
+                <!-- Identitas Brand -->
+                <div class="md:col-span-4 space-y-3 text-left">
+                    <div class="flex items-center gap-2.5">
+                        <div class="bg-white p-1.5 rounded-xl shadow-xs flex items-center justify-center">
+                            <img src="assets/Logo MindCare.png" alt="Logo MindCare" class="w-7 h-7 object-contain">
+                        </div>
+                        <span class="text-lg font-extrabold text-white tracking-tight">MindCare</span>
+                    </div>
+                    <p class="text-sky-100 text-xs leading-relaxed max-w-sm">
+                        Platform pertolongan pertama psikologis untuk pelajar. Menyediakan ruang bercerita berbasis AI, evaluasi mandiri, dan rujukan konseling BK secara 100% anonim.
+                    </p>
+                    <div class="flex items-center gap-2 pt-1">
+                        <span class="inline-flex items-center gap-1 bg-white/10 border border-white/20 px-2.5 py-1 rounded-full text-[10px] font-semibold text-white">
+                            <i class="fa-solid fa-user-shield text-sky-100"></i> Privasi Terjaga
+                        </span>
+                        <span class="inline-flex items-center gap-1 bg-white/10 border border-white/20 px-2.5 py-1 rounded-full text-[10px] font-semibold text-white">
+                            <i class="fa-solid fa-lock text-sky-100"></i> Tanpa Akun
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Navigasi Utama -->
+                <div class="md:col-span-3 space-y-2.5 text-left">
+                    <h4 class="text-xs sm:text-sm font-bold text-white tracking-tight">Navigasi Utama</h4>
+                    <div class="w-8 h-0.5 bg-white/60 rounded-full mb-2"></div>
+                    <ul class="space-y-2 text-xs font-semibold text-sky-100">
+                        <li><a href="index.html" class="hover:text-white transition inline-flex items-center gap-2"><i class="fa-solid fa-house text-[10px]"></i><span>Beranda</span></a></li>
+                        <li><a href="chat.html" class="hover:text-white transition inline-flex items-center gap-2"><i class="fa-solid fa-comments text-[10px]"></i><span>AI Care Chat</span></a></li>
+                        <li><a href="skrining.html" class="hover:text-white transition inline-flex items-center gap-2"><i class="fa-solid fa-clipboard-check text-[10px]"></i><span>Skrining Mental</span></a></li>
+                        <li><a href="rujukan.html" class="hover:text-white transition inline-flex items-center gap-2"><i class="fa-solid fa-school text-[10px]"></i><span>Rujukan & Konseling BK</span></a></li>
+                    </ul>
+                </div>
+
+                <!-- Bantuan BK Card -->
+                <div class="md:col-span-5 space-y-2.5 text-left">
+                    <h4 class="text-xs sm:text-sm font-bold text-white tracking-tight">Layanan Konseling</h4>
+                    <div class="w-8 h-0.5 bg-white/60 rounded-full mb-2"></div>
+                    <div class="bg-white text-slate-800 rounded-2xl p-4 space-y-2.5 shadow-md border border-white/80">
+                        <h5 class="text-xs font-extrabold brand-red-text uppercase tracking-wider">BANTUAN KONSELING SEKOLAH</h5>
+                        <p class="text-[11px] text-slate-600 leading-relaxed">Jika kamu membutuhkan dukungan lebih lanjut, jangan ragu untuk menghubungi Guru Bimbingan dan Konseling (BK).</p>
+                        <a href="rujukan.html" class="brand-red-bg hover:bg-red-600 w-full py-2.5 px-3 text-white font-bold text-xs rounded-xl transition-all flex items-center justify-between gap-2 shadow-xs">
+                            <span>Akses Ruang BK Sekolah</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Copyright -->
+            <div class="pt-4 text-center text-sky-100 text-[11px] font-medium">
+                <p>© 2026 MindCare • <strong class="text-white font-bold">Strawberry Coding Club | SMKN 1 Ciamis</strong></p>
+            </div>
+
+        </div>
+    </div>
+</footer>
     <script src="javascript/chat-api.js" defer></script><script src="javascript/chat.js" defer></script><script src="javascript/script.js" defer></script>
 </body>
 </html>

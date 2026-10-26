@@ -1039,11 +1039,14 @@ html[data-theme="dark"] .home-page #view-landing > section {
 
 @media (max-width: 767.98px) {
     .home-page .top-announcement-bar,
+    .feature-page .top-announcement-bar,
     .home-page .hero-preview {
         display: none !important;
     }
 
-    .home-page #main-header {
+    .home-page #main-header,
+    .feature-page #main-header,
+    .feature-page header.site-header {
         top: 0;
         width: 100%;
         margin: 0;
@@ -1707,4 +1710,34 @@ html[data-theme="dark"] #article-modal .article-source {
     background-color: #F0F9FF !important;
     border-color: #BAE6FD !important;
     color: #334155 !important;
+}
+/* PENYESUAIAN UKURAN FOOTER AGAR RINGKAS DI MOBILE */
+@media (max-width: 767.98px) {
+    footer .brand-blue-bg {
+        padding-top: 1.5rem !important;
+        padding-bottom: 1.5rem !important;
+    }
+
+    footer h4 {
+        font-size: 0.8rem !important;
+    }
+
+    footer .bg-white.text-slate-800 {
+        padding: 0.75rem !important;
+    }
+
+    footer .bg-white.text-slate-800 h5 {
+        font-size: 0.7rem !important;
+    }
+
+    footer .bg-white.text-slate-800 p {
+        font-size: 0.65rem !important;
+    }
+
+    footer .bg-white.text-slate-800 a,
+    footer .bg-white.text-slate-800 button {
+        padding-top: 0.5rem !important;
+        padding-bottom: 0.5rem !important;
+        font-size: 0.65rem !important;
+    }
 }
