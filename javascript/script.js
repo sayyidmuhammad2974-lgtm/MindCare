@@ -701,3 +701,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }).join("");
     }
 });
+module.exports = {
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Nunito', 'sans-serif'],    // Menjadi font default body
+        poppins: ['Poppins', 'sans-serif'] // Dipakai via class font-poppins
+      }
+    }
+  }
+}

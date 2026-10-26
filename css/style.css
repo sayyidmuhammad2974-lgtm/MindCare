@@ -1741,3 +1741,12 @@ html[data-theme="dark"] #article-modal .article-source {
         font-size: 0.65rem !important;
     }
 }
+/* Font bawaan untuk seluruh body (Nunito) */
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+/* Font khusus untuk semua judul & title (Poppins) */
+h1, h2, h3, h4, h5, h6, .font-title {
+    font-family: 'Poppins', sans-serif;
+}

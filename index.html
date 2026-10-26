@@ -10,11 +10,15 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts: Plus Jakarta Sans -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <!-- GOOGLE FONTS (Poppins & Nunito) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- AOS CSS (Animate On Scroll) -->
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body class="home-page bg-white text-slate-800 flex flex-col min-h-screen selection:bg-sky-100 selection:text-sky-800">
@@ -1049,6 +1053,15 @@
 
         <!-- Custom Script JS -->
         <script src="javascript/script.js"></script>
+        <!-- AOS JS -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 600, // Durasi animasi (ms)
+    once: true,    // Animasi hanya berjalan sekali saat di-scroll
+    easing: 'ease-out-cubic'
+  });
+</script>
 </body>
 
 </html>
