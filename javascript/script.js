@@ -661,3 +661,15 @@ function closeArticleModal() {
     if (content) content.replaceChildren();
   }
 }
+document.addEventListener("DOMContentLoaded", () => {
+    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+    
+    document.querySelectorAll("nav a").forEach(link => {
+        const href = link.getAttribute("href");
+        if (href === currentPage) {
+            link.className = "px-4 py-2 rounded-full brand-blue-bg text-white shadow-xs flex items-center gap-1.5";
+        } else {
+            link.className = "px-4 py-2 rounded-full text-slate-600 hover:text-slate-900 transition flex items-center gap-1.5";
+        }
+    });
+});
