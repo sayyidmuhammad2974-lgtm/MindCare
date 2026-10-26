@@ -86,6 +86,7 @@ function initThemePicker() {
 }
 
 function initInfiniteMarquee() {
+  const allTracks = [...document.querySelectorAll(".marquee-track")];
   const tracks = [
     ...document.querySelectorAll(".marquee-track:not([data-single-marquee])"),
   ];
@@ -108,6 +109,39 @@ function initInfiniteMarquee() {
   setMarqueeSpeed();
   window.addEventListener("resize", setMarqueeSpeed, { passive: true });
   document.fonts?.ready.then(setMarqueeSpeed);
+
+  // Continue the ticker at the same animation phase after a page navigation.
+  const progressKey = "mindcare-marquee-progress";
+  const readAnimation = (track) =>
+    track.getAnimations().find((animation) => animation.playState !== "idle");
+  const persistProgress = () => {
+    const animation = allTracks.map(readAnimation).find(Boolean);
+    const duration = animation?.effect?.getTiming().duration;
+    const currentTime = Number(animation?.currentTime);
+    if (typeof duration !== "number" || !Number.isFinite(currentTime)) return;
+    try {
+      sessionStorage.setItem(
+        progressKey,
+        String(((currentTime % duration) + duration) % duration / duration),
+      );
+    } catch {
+      // Keep the marquee running if session storage is unavailable.
+    }
+  };
+  window.addEventListener("pagehide", persistProgress);
+
+  requestAnimationFrame(() => {
+    let progress;
+    try {
+      progress = Number(sessionStorage.getItem(progressKey));
+    } catch {
+      return;
+    }
+    if (!Number.isFinite(progress) || progress < 0 || progress >= 1) return;
+    const animation = allTracks.map(readAnimation).find(Boolean);
+    const duration = animation?.effect?.getTiming().duration;
+    if (typeof duration === "number") animation.currentTime = progress * duration;
+  });
 }
 
 let textRevealObserver;

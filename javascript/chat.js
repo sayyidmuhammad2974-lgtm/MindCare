@@ -6,6 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const reset = document.getElementById('chat-reset');
     const historyList = document.getElementById('chat-history-list');
     const historyEmpty = document.getElementById('chat-history-empty');
+    const historyPanel = document.getElementById('chat-history-panel');
+    const historyToggle = document.getElementById('chat-history-toggle');
+    const historyIcon = document.getElementById('chat-history-icon');
+    const historyHint = document.getElementById('chat-history-hint');
+    const historyClose = document.getElementById('chat-history-close');
+    const historyBackdrop = document.getElementById('chat-history-backdrop');
     if (!form || !input || !box || !submit) return;
 
     const storageKey = 'mindcare-chat-history-v1';
@@ -57,6 +63,15 @@ document.addEventListener('DOMContentLoaded', () => {
             // Keep the active chat working if browser storage is unavailable or full.
         }
         renderHistory();
+    }
+
+    function setHistoryOpen(open) {
+        if (!historyPanel) return;
+        historyPanel.classList.toggle('hidden', !open);
+        historyBackdrop?.classList.toggle('hidden', !open);
+        historyToggle?.setAttribute('aria-expanded', String(open));
+        historyToggle?.setAttribute('aria-label', open ? 'Tutup riwayat chat' : 'Buka riwayat chat');
+        historyToggle?.setAttribute('title', open ? 'Tutup riwayat chat' : 'Buka riwayat chat');
     }
 
     function appendReferralLink(bubble) {
@@ -121,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
         row.className = 'chat-message flex w-full justify-start';
 
         const card = document.createElement('div');
-        card.className = 'max-w-[88%] sm:max-w-[75%] rounded-2xl border border-amber-300 bg-amber-50 px-4 py-3 text-sm text-amber-950 shadow-sm';
+        card.className = 'chat-error-bubble max-w-[88%] sm:max-w-[75%] rounded-2xl border border-amber-300 bg-amber-50 px-4 py-3 text-sm text-amber-950 shadow-sm';
         const message = document.createElement('p');
         message.className = 'leading-relaxed';
         message.textContent = 'Layanan chat belum memberi balasan. Layanan AI mungkin sedang sibuk; coba lagi beberapa saat.';
@@ -304,6 +319,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     reset?.addEventListener('click', startNewConversation);
+
+    historyToggle?.addEventListener('click', () => {
+        setHistoryOpen(historyPanel?.classList.contains('hidden'));
+    });
+    historyClose?.addEventListener('click', () => setHistoryOpen(false));
+    historyBackdrop?.addEventListener('click', () => setHistoryOpen(false));
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && historyPanel && !historyPanel.classList.contains('hidden')) {
+            setHistoryOpen(false);
+        }
+    });
+
+    if (historyIcon && historyHint) {
+        let showHistoryCue = false;
+        window.setInterval(() => {
+            showHistoryCue = !showHistoryCue;
+            historyIcon.className = `fa-solid ${showHistoryCue ? 'fa-clock' : 'fa-robot'}`;
+            historyHint.textContent = showHistoryCue
+                ? 'Tekan logo di kiri untuk melihat riwayat'
+                : 'Teman refleksi yang siap mendengarkan';
+            historyToggle?.setAttribute('aria-label', 'Buka riwayat chat');
+            historyToggle?.setAttribute('title', 'Buka riwayat chat');
+        }, 6000);
+    }
 
     document.querySelectorAll('[data-chat-prompt]').forEach((button) => {
         button.addEventListener('click', () => {

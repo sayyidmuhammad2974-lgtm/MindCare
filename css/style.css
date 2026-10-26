@@ -408,10 +408,6 @@ body {
     animation: marquee-single-scroll 35s linear infinite;
 }
 
-.marquee-track:hover {
-    animation-play-state: paused;
-}
-
 @keyframes marquee-single-scroll {
     0% {
         transform: translateX(100%);
@@ -988,10 +984,9 @@ html[data-theme="dark"] main[data-page] {
     background: linear-gradient(180deg, #111c2e 0, #0f172a 25rem);
 }
 
-/* Keep the floating capsule intact after the sticky header enters scrolled state. */
+/* Keep the navbar's current shape while it enters scrolled state. */
 header.site-header.scrolled>div:first-child,
 header.site-header.scrolled #navbar-box {
-    border-radius: 9999px !important;
     background: rgba(255, 255, 255, .98) !important;
     border: 1px solid rgba(79, 186, 234, .4) !important;
     box-shadow: 0 12px 30px -5px rgba(79, 186, 234, .25), 0 4px 12px -2px rgba(15, 23, 42, .08) !important;
@@ -1028,6 +1023,252 @@ html[data-theme="dark"] .hero-preview .float-soft {
     background: #1e293b !important;
     border-color: #334155 !important;
     color: #e2e8f0 !important;
+}
+html[data-theme="dark"] body * {
+    color: #ffffff !important;
+}
+html[data-theme="dark"] body input::placeholder,
+html[data-theme="dark"] body textarea::placeholder {
+    color: #ffffff !important;
+    opacity: .75;
+}
+html[data-theme="dark"] .home-page #view-landing > section {
+    background: #111c2e !important;
+    border-color: #334155 !important;
+}
+
+@media (max-width: 767.98px) {
+    .home-page .top-announcement-bar,
+    .home-page .hero-preview {
+        display: none !important;
+    }
+
+    .home-page #main-header {
+        top: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0 !important;
+        background: rgba(255, 255, 255, .96);
+        border-bottom: 1px solid #e2e8f0;
+        box-shadow: 0 6px 20px rgba(15, 23, 42, .06);
+        backdrop-filter: blur(14px);
+    }
+
+    .home-page #main-header > .max-w-7xl {
+        width: 100%;
+        max-width: none;
+        padding: 0;
+    }
+
+    .home-page #navbar-box {
+        width: 100%;
+        height: 4rem;
+        padding-inline: 1rem;
+        border: 0 !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+    }
+
+    .home-page #theme-toggle {
+        width: 2.5rem;
+        height: 2.5rem;
+        justify-content: center;
+        gap: 0;
+        padding: 0;
+    }
+
+    .home-page #theme-label { display: none; }
+
+    .home-page .article-cards {
+        display: flex;
+        gap: 1rem;
+        margin-right: -1rem;
+        padding: .25rem 1rem 1rem .25rem;
+        overflow-x: auto;
+        overscroll-behavior-x: contain;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: thin;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .home-page .article-cards > * {
+        flex: 0 0 min(82%, 21rem);
+        scroll-snap-align: start;
+    }
+
+    html[data-theme="dark"] .home-page #main-header {
+        background: rgba(15, 23, 42, .97);
+        border-bottom-color: #334155;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, .2);
+    }
+
+    .feature-page .top-announcement-bar { display: none !important; }
+
+    .feature-page header.site-header {
+        top: 0;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 0;
+        border: 0 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+
+    .feature-page .site-header > div:first-child {
+        width: 100%;
+        max-width: none;
+        height: 4rem;
+        padding-inline: 1rem;
+        border: 0;
+        border-bottom: 1px solid #e2e8f0;
+        border-radius: 0;
+        background: rgba(255, 255, 255, .97);
+        box-shadow: none;
+    }
+
+    .feature-page #theme-toggle {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-left: auto;
+        margin-right: .5rem;
+        justify-content: center;
+        gap: 0;
+        padding: 0;
+    }
+
+    .feature-page #theme-label { display: none; }
+
+    html[data-theme="dark"] .feature-page .site-header > div:first-child {
+        border-bottom-color: #334155;
+        background: rgba(30, 41, 59, .98);
+    }
+}
+
+@media (max-width: 1023.98px) {
+    #main-header,
+    header.site-header {
+        z-index: 1000;
+    }
+
+    #main-header #mobile-menu,
+    header.site-header #mobile-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        margin-top: .5rem;
+    }
+}
+
+/* Mobile chat: conversation fills the screen and the composer stays reachable. */
+
+@media (min-width: 768px) {
+    .chat-page .chat-layout {
+        display: grid;
+        grid-template-columns: 280px minmax(0, 1fr);
+        gap: 1.5rem;
+        align-items: stretch;
+    }
+    .chat-page #chat-history-panel {
+        display: flex !important;
+        position: static;
+        width: auto;
+        height: 75vh;
+        max-height: 700px;
+    }
+    .chat-page .chat-history-backdrop { display: none !important; }
+    .chat-page .chat-history-toggle { pointer-events: none; }
+}
+
+/* Skrining: answer capsules remain visible; remove only the question area frame. */
+[data-page="skrining"] fieldset.quiz-q {
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+}
+[data-page="skrining"] #quiz-form > div:has(#quiz-next) {
+    justify-content: flex-end;
+}
+[data-page="skrining"] #quiz-prev {
+    margin-right: auto;
+}
+
+@media (max-width: 767.98px) {
+    .chat-page .top-announcement-bar,
+    .chat-page > footer { display: none !important; }
+    .chat-page .chat-page-intro,
+    .chat-page .chat-topic-prompts { display: none !important; }
+    .chat-page main[data-page="chat"] {
+        display: flex;
+        flex: 1 1 auto;
+        flex-direction: column;
+        min-height: 0;
+        padding-bottom: 0;
+    }
+    .chat-page .chat-layout-shell {
+        display: flex;
+        flex: 1 1 auto;
+        width: 100%;
+        max-width: none;
+        min-height: 0;
+        padding: 0;
+    }
+    .chat-page .chat-layout {
+        display: flex;
+        flex: 1 1 auto;
+        min-height: 0;
+        isolation: isolate;
+    }
+    .chat-page .chat-workspace {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        max-height: none;
+        flex: 1 1 auto;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .chat-page #chat-box {
+        flex: 1 1 auto;
+        min-height: 0;
+        padding-bottom: 7rem;
+        background: #ffffff;
+    }
+    .chat-page #chat-form {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 900;
+        flex: 0 0 auto;
+        padding-bottom: calc(.75rem + env(safe-area-inset-bottom));
+        box-shadow: 0 -8px 24px rgba(15, 23, 42, .08);
+    }
+    html[data-theme="dark"] .chat-page #chat-box {
+        background: #0f172a !important;
+    }
+    html[data-theme="dark"] .chat-page #chat-form {
+        background: #1e293b !important;
+        border-color: #334155 !important;
+        box-shadow: 0 -8px 24px rgba(0, 0, 0, .24);
+    }
+    .chat-page #chat-history-panel {
+        position: absolute;
+        inset: 0 auto 0 0;
+        z-index: 950;
+        width: min(19rem, calc(100vw - 1.25rem));
+    }
+    .chat-page .chat-history-backdrop {
+        position: absolute;
+        inset: 0;
+        z-index: 940;
+        border: 0;
+        background: rgba(15, 23, 42, .42);
+        cursor: pointer;
+    }
 }
 
 /* Tampilan tombol dan modal detail artikel. */
@@ -1353,6 +1594,87 @@ article > p:not(.article-detail-category):not(.article-detail-intro):not(.articl
 
 .article-source a:hover {
   text-decoration: underline;
+}
+
+html[data-theme="dark"] .chat-page .chat-workspace {
+    background: #111c2e !important;
+    border-color: #334155 !important;
+}
+html[data-theme="dark"] .chat-page #chat-box {
+    background: #0f172a !important;
+}
+html[data-theme="dark"] .chat-page #chat-form,
+html[data-theme="dark"] .chat-page .chat-topic-prompts {
+    background: #1e293b !important;
+    border-color: #334155 !important;
+}
+html[data-theme="dark"] .chat-page #chat-input {
+    background: #0f172a !important;
+    border-color: #475569 !important;
+    color: #ffffff !important;
+}
+html[data-theme="dark"] .chat-page #chat-input::placeholder {
+    color: #cbd5e1 !important;
+}
+html[data-theme="dark"] .chat-page .chat-topic-prompts button {
+    background: #334155 !important;
+    border-color: #475569 !important;
+}
+html[data-theme="dark"] .chat-page #chat-history-panel {
+    background: #111c2e !important;
+    border-color: #334155 !important;
+}
+html[data-theme="dark"] .chat-page #chat-history-panel > div,
+html[data-theme="dark"] .chat-page #chat-history-panel > p {
+    border-color: #334155 !important;
+}
+html[data-theme="dark"] .chat-page #chat-history-list button:first-child {
+    background: #1e293b !important;
+    border-color: #475569 !important;
+}
+html[data-theme="dark"] .chat-page .chat-bubble {
+    background: #1e293b !important;
+    border-color: #475569 !important;
+    color: #ffffff !important;
+}
+html[data-theme="dark"] .chat-page .chat-bubble-user {
+    background: #075985 !important;
+    border-color: #0284c7 !important;
+}
+html[data-theme="dark"] .chat-page #chat-typing-indicator .chat-bubble {
+    background: #1e293b !important;
+}
+html[data-theme="dark"] .chat-page .chat-error-bubble {
+    background: #332b1b !important;
+    border-color: #854d0e !important;
+}
+html[data-theme="dark"] .home-page footer .bg-white.text-slate-800 {
+    background: #111c2e !important;
+    border-color: #334155 !important;
+}
+
+/* Article details opened from the home page: keep surfaces readable in dark mode. */
+html[data-theme="dark"] #article-modal .article-modal-card {
+    background: #111c2e !important;
+    border-color: #334155 !important;
+}
+html[data-theme="dark"] #article-modal .article-modal-card > button {
+    background: #334155 !important;
+}
+html[data-theme="dark"] #article-modal .article-detail-category {
+    background: #123047 !important;
+    border-color: #075985 !important;
+}
+html[data-theme="dark"] #article-modal .article-detail-intro {
+    background: #1e293b !important;
+    border-left-color: #4fbaea !important;
+}
+html[data-theme="dark"] #article-modal article > p:not(.article-detail-category):not(.article-detail-intro):not(.article-source):not(.article-steps p) {
+    background: #332b1b !important;
+    border-color: #854d0e !important;
+}
+html[data-theme="dark"] #article-modal .article-source {
+    border-top-color: #334155 !important;
 }
 /* Styling Efek Scroll Reveal */
 .reveal {
