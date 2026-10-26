@@ -91,69 +91,97 @@
     </header>
 
 
-    <main class="flex-grow" data-page="skrining">
+    <main class="flex-grow py-8 sm:py-12 px-4 max-w-3xl mx-auto w-full">
+    
+    <div class="space-y-6">
+        
+        <!-- Header Judul -->
+        <div class="text-center space-y-2">
+            <span class="inline-flex items-center gap-1.5 text-xs font-bold brand-blue-text bg-sky-50 px-3 py-1 rounded-full border border-sky-100">
+                <i class="fa-solid fa-clipboard-check"></i> EVALUASI MANDIRI
+            </span>
+            <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                Refleksi Perasaan Pelajar
+            </h1>
+            <p class="text-xs sm:text-sm text-slate-500 max-w-md mx-auto">
+                Jawab 5 pertanyaan untuk mengenali apa yang sedang kamu rasakan.
+            </p>
+        </div>
 
-            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-                <div class="page-intro mb-8">
-                    <span class="page-kicker"> Evaluasi mandiri</span>
-                    <h2 class="text-3xl font-extrabold text-slate-900">Refleksi Perasaan Pelajar</h2>
-                    <p class="text-slate-500 text-xs sm:text-sm max-w-md mx-auto">Jawab 5 pertanyaan untuk mengenali apa yang sedang kamu rasakan.</p>
+        <!-- Card Pertanyaan Utama -->
+        <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-xl border border-slate-100 relative overflow-hidden space-y-6">
+            
+            <!-- Top Accent Bar -->
+            <div class="absolute top-0 left-0 right-0 h-2 brand-blue-bg"></div>
+
+            <!-- Header Progress Bar -->
+            <div class="space-y-2 pt-1">
+                <div class="flex items-center justify-between text-xs font-bold text-slate-600">
+                    <span class="brand-blue-text">Pertanyaan 1 <span class="text-slate-400 font-normal">dari 5</span></span>
+                    <span class="text-slate-400 font-medium">20% Selesai</span>
                 </div>
-
-                <div class="quiz-card bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xl">
-                    <div class="w-full bg-slate-100 h-2 rounded-full mb-8 overflow-hidden">
-                        <div id="quiz-progress-bar" class="brand-blue-bg h-full w-[20%] transition-all duration-300" role="progressbar" aria-label="Kemajuan kuis" aria-valuemin="1" aria-valuemax="5" aria-valuenow="1"></div>
-                    </div>
-
-                    <form id="quiz-form" class="space-y-6">
-                        <fieldset class="quiz-q space-y-4" data-q="1">
-                            <legend class="font-bold text-slate-800">Dalam dua minggu terakhir, seberapa sering kamu merasa cemas atau gelisah?</legend>
-                            <label class="block"><input type="radio" name="q1" value="0" required> Tidak pernah</label>
-                            <label class="block"><input type="radio" name="q1" value="1"> Beberapa hari</label>
-                            <label class="block"><input type="radio" name="q1" value="2"> Lebih dari separuh waktu</label>
-                            <label class="block"><input type="radio" name="q1" value="3"> Hampir setiap hari</label>
-                        </fieldset>
-                        <fieldset class="quiz-q hidden space-y-4" data-q="2">
-                            <legend class="font-bold text-slate-800">Dalam dua minggu terakhir, seberapa sering kamu merasa sulit tidur atau beristirahat?</legend>
-                            <label class="block"><input type="radio" name="q2" value="0" required> Tidak pernah</label>
-                            <label class="block"><input type="radio" name="q2" value="1"> Beberapa hari</label>
-                            <label class="block"><input type="radio" name="q2" value="2"> Lebih dari separuh waktu</label>
-                            <label class="block"><input type="radio" name="q2" value="3"> Hampir setiap hari</label>
-                        </fieldset>
-                        <fieldset class="quiz-q hidden space-y-4" data-q="3">
-                            <legend class="font-bold text-slate-800">Dalam dua minggu terakhir, seberapa sering kamu kehilangan minat pada hal-hal yang biasanya kamu sukai?</legend>
-                            <label class="block"><input type="radio" name="q3" value="0" required> Tidak pernah</label>
-                            <label class="block"><input type="radio" name="q3" value="1"> Beberapa hari</label>
-                            <label class="block"><input type="radio" name="q3" value="2"> Lebih dari separuh waktu</label>
-                            <label class="block"><input type="radio" name="q3" value="3"> Hampir setiap hari</label>
-                        </fieldset>
-                        <fieldset class="quiz-q hidden space-y-4" data-q="4">
-                            <legend class="font-bold text-slate-800">Dalam dua minggu terakhir, seberapa sering tekanan sekolah atau pertemanan terasa sulit dihadapi?</legend>
-                            <label class="block"><input type="radio" name="q4" value="0" required> Tidak pernah</label>
-                            <label class="block"><input type="radio" name="q4" value="1"> Beberapa hari</label>
-                            <label class="block"><input type="radio" name="q4" value="2"> Lebih dari separuh waktu</label>
-                            <label class="block"><input type="radio" name="q4" value="3"> Hampir setiap hari</label>
-                        </fieldset>
-                        <fieldset class="quiz-q hidden space-y-4" data-q="5">
-                            <legend class="font-bold text-slate-800">Dalam dua minggu terakhir, seberapa sering kamu merasa tidak punya orang yang bisa diajak bicara?</legend>
-                            <label class="block"><input type="radio" name="q5" value="0" required> Tidak pernah</label>
-                            <label class="block"><input type="radio" name="q5" value="1"> Beberapa hari</label>
-                            <label class="block"><input type="radio" name="q5" value="2"> Lebih dari separuh waktu</label>
-                            <label class="block"><input type="radio" name="q5" value="3"> Hampir setiap hari</label>
-                        </fieldset>
-                        <p id="quiz-error" class="hidden text-sm text-red-700" role="alert">Pilih satu jawaban untuk melanjutkan.</p>
-                        <div class="flex justify-between gap-3">
-                            <button id="quiz-prev" type="button" class="hidden px-5 py-3 rounded-xl border">Sebelumnya</button>
-                            <button id="quiz-next" type="button" class="btn-brand text-white px-5 py-3 rounded-xl font-bold">Lanjut</button>
-                            <button id="quiz-submit" type="submit" class="hidden btn-brand text-white px-5 py-3 rounded-xl font-bold">Lihat refleksi</button>
-                        </div>
-                    </form>
-                    <div id="quiz-result" class="hidden mt-6 rounded-2xl bg-sky-50 p-5" aria-live="polite"></div>
-                    <p class="mt-6 text-xs text-slate-500">Ini refleksi mandiri, bukan diagnosis atau pengganti bantuan profesional. Jawaban tidak disimpan.</p>
+                <!-- Progress Bar Track -->
+                <div class="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden">
+                    <div class="h-full brand-blue-bg rounded-full transition-all duration-300" style="width: 20%;"></div>
                 </div>
             </div>
-        
-    </main>
+
+            <!-- Teks Pertanyaan -->
+            <div class="pt-2">
+                <h2 class="text-base sm:text-lg font-bold text-slate-800 leading-snug">
+                    Dalam dua minggu terakhir, seberapa sering kamu merasa cemas atau gelisah?
+                </h2>
+            </div>
+
+            <!-- Opsi Jawaban -->
+            <div class="space-y-3">
+                
+                <label class="flex items-center gap-3.5 p-3.5 sm:p-4 rounded-2xl border-2 border-sky-400 bg-sky-50/50 cursor-pointer transition-all">
+                    <input type="radio" name="q1" value="0" checked class="w-4 h-4 text-sky-500 focus:ring-sky-400">
+                    <span class="text-xs sm:text-sm font-semibold text-slate-800">Tidak pernah</span>
+                </label>
+
+                <label class="flex items-center gap-3.5 p-3.5 sm:p-4 rounded-2xl border border-slate-200 bg-white hover:border-sky-200 hover:bg-slate-50 cursor-pointer transition-all">
+                    <input type="radio" name="q1" value="1" class="w-4 h-4 text-sky-500 focus:ring-sky-400">
+                    <span class="text-xs sm:text-sm font-medium text-slate-700">Beberapa hari</span>
+                </label>
+
+                <label class="flex items-center gap-3.5 p-3.5 sm:p-4 rounded-2xl border border-slate-200 bg-white hover:border-sky-200 hover:bg-slate-50 cursor-pointer transition-all">
+                    <input type="radio" name="q1" value="2" class="w-4 h-4 text-sky-500 focus:ring-sky-400">
+                    <span class="text-xs sm:text-sm font-medium text-slate-700">Lebih dari separuh waktu</span>
+                </label>
+
+                <label class="flex items-center gap-3.5 p-3.5 sm:p-4 rounded-2xl border border-slate-200 bg-white hover:border-sky-200 hover:bg-slate-50 cursor-pointer transition-all">
+                    <input type="radio" name="q1" value="3" class="w-4 h-4 text-sky-500 focus:ring-sky-400">
+                    <span class="text-xs sm:text-sm font-medium text-slate-700">Hampir setiap hari</span>
+                </label>
+
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="flex items-center justify-between pt-4 border-t border-slate-100">
+                <button disabled class="px-4 py-2 bg-slate-100 text-slate-400 text-xs font-bold rounded-xl cursor-not-allowed flex items-center gap-1.5">
+                    <i class="fa-solid fa-arrow-left text-[10px]"></i>
+                    <span>Kembali</span>
+                </button>
+
+                <button class="px-6 py-2.5 brand-blue-bg hover:opacity-95 text-white text-xs font-bold rounded-xl shadow-md transition-all flex items-center gap-2">
+                    <span>Lanjut</span>
+                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Disclaimer Footer Ringkas -->
+        <p class="text-[11px] text-slate-400 text-center max-w-md mx-auto leading-relaxed">
+            <i class="fa-solid fa-shield-cat mr-1 brand-blue-text"></i>
+            Ini refleksi mandiri, bukan diagnosis medis atau pengganti bantuan profesional. Jawabanmu tidak disimpan.
+        </p>
+
+    </div>
+
+</main>
     <!-- FOOTER 
         <footer class="mt-auto w-full">
             <!-- KONTEN UTAMA FOOTER (Full Biru MindCare) -->
