@@ -332,16 +332,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     if (historyIcon && historyHint) {
-        let showHistoryCue = false;
-        window.setInterval(() => {
-            showHistoryCue = !showHistoryCue;
-            historyIcon.className = `fa-solid ${showHistoryCue ? 'fa-clock' : 'fa-robot'}`;
-            historyHint.textContent = showHistoryCue
-                ? 'Tekan logo di kiri untuk melihat riwayat'
-                : 'Teman refleksi yang siap mendengarkan';
-            historyToggle?.setAttribute('aria-label', 'Buka riwayat chat');
-            historyToggle?.setAttribute('title', 'Buka riwayat chat');
-        }, 6000);
+        const isMobile = window.matchMedia('(max-width: 767.98px)').matches;
+        if (isMobile) {
+            historyIcon.className = 'fa-solid fa-grip-lines';
+            historyHint.textContent = 'Riwayat chat';
+        } else {
+            historyIcon.className = 'fa-solid fa-robot';
+            historyHint.textContent = 'Teman refleksi yang siap mendengarkan';
+        }
     }
 
     document.querySelectorAll('[data-chat-prompt]').forEach((button) => {
