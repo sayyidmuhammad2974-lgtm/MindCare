@@ -337,7 +337,7 @@ document.addEventListener('DOMContentLoaded', () => {
             showHistoryCue = !showHistoryCue;
             historyIcon.className = `fa-solid ${showHistoryCue ? 'fa-clock' : 'fa-robot'}`;
             historyHint.textContent = showHistoryCue
-                ? 'tekan logo di kiri untuk melihat riwayat'
+                ? 'Tekan logo di kiri untuk melihat riwayat'
                 : 'Teman refleksi yang siap mendengarkan';
             historyToggle?.setAttribute('aria-label', 'Buka riwayat chat');
             historyToggle?.setAttribute('title', 'Buka riwayat chat');
