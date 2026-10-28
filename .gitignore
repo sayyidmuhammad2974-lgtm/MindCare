@@ -1,63 +1,34 @@
-# Local environment variables and secrets
+# Dependencies
+node_modules/
+backend/node_modules/
+
+# Environment files
 .env
-.env.*
-*.env
-!.env.example
-!*.env.example
-.envrc
-.envrc.local
-*.envrc
-secrets/
-credentials/
-service-account*.json
-credentials*.json
-*.credentials
-*.credentials.*
-*.secret
-*.secret.*
-*.token
-.netrc
+.env.local
+.env.*.local
+backend/.env
+backend/.env.local
 
-# API keys saved in ad-hoc local files
-*api-key*.txt
-*api_key*.txt
-*api-key*.json
-*api_key*.json
-
-# SSH private keys
-id_rsa
-id_rsa_*
-id_ed25519
-id_ed25519_*
-id_ecdsa
-id_ecdsa_*
-
-# Private keys and certificates
-*.pem
-*.key
-*.p12
-*.pfx
-*.jks
-*.keystore
-
-# Local databases, logs, and backups
-*.sqlite
-*.sqlite3
-*.db
+# Build outputs
+dist/
+build/
 *.log
-*.bak
-*.old
-*.tmp
 
-# Operating system files
+# IDE/Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
 .DS_Store
 Thumbs.db
-desktop.ini
 
-node_modules/
-/backend/node_modules/
-/backend/.cache/
-npm-debug.log*
+# Temporary files
+*.tmp
+*.temp
+temp_mobile.css
 
-# Local reference materials; keep out of GitHub
-/apalah/
+# Deployment
+wrangler.toml.bak
