@@ -216,6 +216,19 @@ html[data-theme="dark"] #main-header.scrolled #navbar-box {
     background-color: rgba(30, 41, 59, .98) !important;
 }
 
+html[data-theme="dark"] .home-page #navbar-box nav {
+    background: rgba(15, 23, 42, .85) !important;
+    border-color: #334155 !important;
+}
+html[data-theme="dark"] .home-page #navbar-box nav .nav-link.active {
+    background: #123047 !important;
+    color: #ffffff !important;
+    box-shadow: none !important;
+}
+html[data-theme="dark"] .home-page #navbar-box nav .nav-link.active i {
+    color: #ffffff !important;
+}
+
 html[data-theme="dark"] #mobile-menu {
     background-color: #1e293b !important;
     border-color: #334155 !important;
@@ -801,7 +814,7 @@ main[data-page] .quiz-card,
 }
 
 .chat-panel-header {
-    background: linear-gradient(125deg, #0b3550 0%, #11699a 55%, #4fbaea 100%);
+    background: #4FBAEA !important;
 }
 
 #chat-box {
@@ -900,6 +913,18 @@ main[data-page] .quiz-card,
 
 [data-theme="dark"] .site-header nav {
     background: rgba(15, 23, 42, .85);
+}
+
+html[data-theme="dark"] .site-header nav a.brand-blue-bg,
+html[data-theme="dark"] .site-header nav a.nav-link.active {
+    background: #123047 !important;
+    background-color: #123047 !important;
+    color: #ffffff !important;
+    box-shadow: none !important;
+}
+html[data-theme="dark"] .site-header nav a.brand-blue-bg i,
+html[data-theme="dark"] .site-header nav a.nav-link.active i {
+    color: #ffffff !important;
 }
 
 html[data-theme="dark"] header.site-header {
@@ -1039,11 +1064,14 @@ html[data-theme="dark"] .home-page #view-landing > section {
 
 @media (max-width: 767.98px) {
     .home-page .top-announcement-bar,
+    .feature-page .top-announcement-bar,
     .home-page .hero-preview {
         display: none !important;
     }
 
-    .home-page #main-header {
+    .home-page #main-header,
+    .feature-page #main-header,
+    .feature-page header.site-header {
         top: 0;
         width: 100%;
         margin: 0;
@@ -1163,24 +1191,6 @@ html[data-theme="dark"] .home-page #view-landing > section {
 }
 
 /* Mobile chat: conversation fills the screen and the composer stays reachable. */
-
-@media (min-width: 768px) {
-    .chat-page .chat-layout {
-        display: grid;
-        grid-template-columns: 280px minmax(0, 1fr);
-        gap: 1.5rem;
-        align-items: stretch;
-    }
-    .chat-page #chat-history-panel {
-        display: flex !important;
-        position: static;
-        width: auto;
-        height: 75vh;
-        max-height: 700px;
-    }
-    .chat-page .chat-history-backdrop { display: none !important; }
-    .chat-page .chat-history-toggle { pointer-events: none; }
-}
 
 /* Skrining: answer capsules remain visible; remove only the question area frame. */
 [data-page="skrining"] fieldset.quiz-q {
@@ -1688,4 +1698,162 @@ html[data-theme="dark"] #article-modal .article-source {
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+/* PAKSA WARNA HEADER & CHAT MOCKUP MENJADI SKY BLUE */
+.hero-mock-card .chat-panel-header,
+.chat-panel-header.brand-blue-bg {
+    background: #4FBAEA !important;
+    background-color: #4FBAEA !important;
+}
+
+.hero-mock-card .chat-bubble-user,
+.chat-bubble-user.brand-blue-bg {
+    background: #4FBAEA !important;
+    background-color: #4FBAEA !important;
+    color: #ffffff !important;
+}
+
+.hero-mock-card .chat-bubble-ai {
+    background-color: #F0F9FF !important;
+    border-color: #BAE6FD !important;
+    color: #334155 !important;
+}
+html[data-theme="dark"] .hero-mock-card .chat-bubble-ai,
+html[data-theme="dark"] .hero-mock-card .chat-bubble-ai * {
+    color: #ffffff !important;
+}
+html[data-theme="dark"] .hero-mock-card .chat-bubble-ai {
+    background: #1e293b !important;
+    border-color: #475569 !important;
+}
+html[data-theme="dark"] .hero-mock-card .chat-bubble-user,
+html[data-theme="dark"] .hero-mock-card .chat-bubble-user * {
+    color: #ffffff !important;
+}
+html[data-theme="dark"] .hero-mock-card .chat-bubble-ai[role="status"] {
+    background: #1e293b !important;
+    border-color: #475569 !important;
+}
+html[data-theme="dark"] .hero-mock-card .chat-bubble-ai[role="status"] .typing-dot {
+    background: #7dd3fc !important;
+}
+/* PENYESUAIAN UKURAN FOOTER AGAR RINGKAS DI MOBILE */
+@media (max-width: 767.98px) {
+    footer .brand-blue-bg {
+        padding-top: 1.5rem !important;
+        padding-bottom: 1.5rem !important;
+    }
+
+    footer h4 {
+        font-size: 0.8rem !important;
+    }
+
+    footer .bg-white.text-slate-800 {
+        padding: 0.75rem !important;
+    }
+
+    footer .bg-white.text-slate-800 h5 {
+        font-size: 0.7rem !important;
+    }
+
+    footer .bg-white.text-slate-800 p {
+        font-size: 0.65rem !important;
+    }
+
+    footer .bg-white.text-slate-800 a,
+    footer .bg-white.text-slate-800 button {
+        padding-top: 0.5rem !important;
+        padding-bottom: 0.5rem !important;
+        font-size: 0.65rem !important;
+    }
+}
+
+/* Font bawaan untuk seluruh body (Nunito) */
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+/* Font khusus untuk semua judul & title (Poppins) */
+h1, h2, h3, h4, h5, h6, .font-title {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Restore the focused, full-screen chat layout on every screen size. */
+.chat-page .top-announcement-bar,
+.chat-page > footer,
+.chat-page .chat-page-intro,
+.chat-page .chat-topic-prompts {
+    display: none !important;
+}
+.chat-page main[data-page="chat"] {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-height: 0;
+    padding-bottom: 0;
+}
+.chat-page .chat-layout-shell {
+    display: flex;
+    flex: 1 1 auto;
+    width: 100%;
+    max-width: none;
+    min-height: 0;
+    padding: 0;
+}
+.chat-page .chat-layout {
+    display: flex;
+    flex: 1 1 auto;
+    min-height: 0;
+    isolation: isolate;
+}
+.chat-page .chat-workspace {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    flex: 1 1 auto;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+.chat-page #chat-box {
+    flex: 1 1 auto;
+    min-height: 0;
+    padding-bottom: 7rem;
+}
+.chat-page #chat-form {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 900;
+    flex: 0 0 auto;
+    padding-bottom: calc(.75rem + env(safe-area-inset-bottom));
+    box-shadow: 0 -8px 24px rgba(15, 23, 42, .08);
+}
+.chat-page #chat-history-panel {
+    position: absolute;
+    inset: 0 auto 0 0;
+    z-index: 950;
+    width: min(19rem, calc(100vw - 2rem));
+}
+.chat-page #chat-history-panel.hidden {
+    display: none !important;
+}
+.chat-page #chat-history-panel:not(.hidden) {
+    display: flex !important;
+}
+.chat-page .chat-history-backdrop {
+    position: absolute;
+    inset: 0;
+    z-index: 940;
+    border: 0;
+    background: rgba(15, 23, 42, .42);
+    cursor: pointer;
+}
+.chat-page .chat-history-backdrop.hidden {
+    display: none !important;
+}
+.chat-page .chat-history-backdrop:not(.hidden) {
+    display: block !important;
 }
