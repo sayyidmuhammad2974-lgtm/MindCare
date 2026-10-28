@@ -10,11 +10,15 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts: Plus Jakarta Sans -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <!-- GOOGLE FONTS (Poppins & Nunito) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- AOS CSS (Animate On Scroll) -->
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body class="home-page bg-white text-slate-800 flex flex-col min-h-screen selection:bg-sky-100 selection:text-sky-800">
@@ -182,47 +186,57 @@
                         </div>
                     </div>
 
-                    <!-- Right: Chat Mockup Visual -->
+                    <!-- Right: Chat Mockup Visual (Layout Gambar 1 + Warna Sky Blue Gambar 2) -->
                     <div
                         class="hero-preview reveal reveal-right reveal-d3 relative max-w-sm mx-auto w-full pt-4 lg:pt-0">
                         <div
                             class="absolute -inset-8 bg-gradient-to-br from-sky-200/50 via-transparent to-red-200/30 rounded-[3rem] blur-2xl -z-10">
                         </div>
 
-                        <div class="hero-mock-card rounded-3xl overflow-hidden">
-                            <div class="chat-panel-header flex items-center gap-3 p-4 text-white">
+                        <div class="hero-mock-card rounded-3xl overflow-hidden bg-white shadow-xl border border-slate-100">
+                            <!-- HEADER BALOK BIRU SKY BLUE (#4FBAEA) -->
+                            <div class="chat-panel-header brand-blue-bg flex items-center gap-3 p-4 text-white">
                                 <div
-                                    class="w-10 h-10 rounded-xl bg-white/15 flex items-center justify-center text-base flex-shrink-0">
-                                    <i class="fa-solid fa-robot" aria-hidden="true"></i>
+                                    class="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center text-base flex-shrink-0">
+                                    <i class="fa-solid fa-robot text-white" aria-hidden="true"></i>
                                 </div>
                                 <div>
-                                    <p class="text-sm font-bold">MindCare AI</p>
-                                    <p class="text-[11px] text-sky-100 flex items-center gap-1.5">
+                                    <p class="text-sm font-bold text-white">MindCare AI</p>
+                                    <p class="text-[11px] text-white/90 flex items-center gap-1.5 mt-0.5">
                                         <span class="w-1.5 h-1.5 rounded-full bg-emerald-300 inline-block"></span> Teman
                                         refleksi yang siap mendengarkan
                                     </p>
                                 </div>
                             </div>
-                            <div class="hero-chat-body p-4 sm:p-5 space-y-4">
+
+                            <!-- BODY CHAT -->
+                            <div class="hero-chat-body p-4 sm:p-5 space-y-4 bg-white">
+                                <!-- BUBBLE AI (BIRU MUDA PASTEL LEMBUT) -->
                                 <div class="flex w-full justify-start">
                                     <div
-                                        class="chat-bubble chat-bubble-ai max-w-[88%] sm:max-w-[75%] rounded-2xl rounded-bl-md border border-slate-200 bg-white px-4 py-3 text-sm leading-relaxed text-slate-800 shadow-sm whitespace-normal break-words">
+                                        class="chat-bubble chat-bubble-ai max-w-[88%] sm:max-w-[75%] rounded-2xl rounded-bl-md border border-sky-100/80 bg-sky-50/70 px-4 py-3 text-sm leading-relaxed text-slate-700 shadow-2xs whitespace-normal break-words">
                                         <p class="chat-preview-message">Halo, aku di sini buat dengerin ceritamu. Ada yang lagi bikin pikiranmu penuh?</p>
                                     </div>
                                 </div>
+
+                                <!-- BUBBLE USER (SKY BLUE #4FBAEA) -->
                                 <div class="flex w-full justify-end">
                                     <div
-                                        class="chat-bubble chat-bubble-user max-w-[88%] sm:max-w-[75%] rounded-2xl rounded-br-md border border-sky-700 bg-sky-700 px-4 py-3 text-sm leading-relaxed text-white shadow-sm whitespace-normal break-words">
+                                        class="chat-bubble chat-bubble-user brand-blue-bg max-w-[88%] sm:max-w-[75%] rounded-2xl rounded-br-md border-transparent px-4 py-3 text-sm leading-relaxed text-white shadow-2xs whitespace-normal break-words">
                                         <p class="chat-preview-message">Aku capek banget mikirin tugas yang numpuk, takut nggak kekejar.</p></div>
                                 </div>
+
+                                <!-- BUBBLE AI (BIRU MUDA PASTEL LEMBUT) -->
                                 <div class="flex w-full justify-start">
                                     <div
-                                        class="chat-bubble chat-bubble-ai max-w-[88%] sm:max-w-[75%] rounded-2xl rounded-bl-md border border-slate-200 bg-white px-4 py-3 text-sm leading-relaxed text-slate-800 shadow-sm whitespace-normal break-words">
+                                        class="chat-bubble chat-bubble-ai max-w-[88%] sm:max-w-[75%] rounded-2xl rounded-bl-md border border-sky-100/80 bg-sky-50/70 px-4 py-3 text-sm leading-relaxed text-slate-700 shadow-2xs whitespace-normal break-words">
                                         <p class="chat-preview-message">Wajar banget ngerasa gitu. Cerita pelan-pelan ya, aku dengerin tanpa menghakimi.</p>
                                     </div>
                                 </div>
+
+                                <!-- TYPING DOTS -->
                                 <div class="flex w-full justify-start">
-                                    <div class="chat-bubble chat-bubble-ai w-fit rounded-2xl rounded-bl-md border border-slate-200 bg-white px-3 py-2 shadow-sm inline-flex items-center gap-1.5"
+                                    <div class="chat-bubble chat-bubble-ai w-fit rounded-2xl rounded-bl-md border border-slate-100 bg-slate-100/80 px-3 py-2 shadow-2xs inline-flex items-center gap-1.5"
                                         role="status" aria-label="MindCare AI sedang mengetik">
                                         <span class="typing-dot"></span><span class="typing-dot"></span><span
                                             class="typing-dot"></span>
@@ -1020,7 +1034,7 @@
                 </div>
             </div>
         </footer>
-
+        
         <!-- CONTAINER POP-UP MODAL ARTIKEL -->
 <div id="article-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs transition-all duration-300">
     <div class="article-modal-card bg-white rounded-3xl max-w-lg w-full max-h-[85vh] overflow-y-auto p-6 relative shadow-2xl border border-slate-100">
@@ -1039,6 +1053,15 @@
 
         <!-- Custom Script JS -->
         <script src="javascript/script.js"></script>
+        <!-- AOS JS -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 600, // Durasi animasi (ms)
+    once: true,    // Animasi hanya berjalan sekali saat di-scroll
+    easing: 'ease-out-cubic'
+  });
+</script>
 </body>
 
 </html>
