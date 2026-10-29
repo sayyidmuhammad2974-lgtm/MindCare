@@ -331,8 +331,13 @@ function initQuiz() {
     questions.forEach((question, index) =>
       question.classList.toggle("hidden", index !== current),
     );
+    const percent = Math.round(((current + 1) / questions.length) * 100);
     progress.style.width = `${((current + 1) / questions.length) * 100}%`;
     progress.setAttribute("aria-valuenow", String(current + 1));
+    const progressLabel = document.getElementById("quiz-progress-label");
+    if (progressLabel) progressLabel.textContent = `Pertanyaan ${current + 1} dari ${questions.length}`;
+    const progressPercent = document.getElementById("quiz-progress-percent");
+    if (progressPercent) progressPercent.textContent = `${percent}% selesai`;
     previous.classList.toggle("hidden", current === 0);
     next.classList.toggle("hidden", current === questions.length - 1);
     submit.classList.toggle("hidden", current !== questions.length - 1);
@@ -368,6 +373,8 @@ function initQuiz() {
       ? `Kamu menandai ${oftenCount} dari ${questions.length} pengalaman sebagai hal yang cukup sering terjadi. Jika ini terasa berat, berbagi dengan orang yang kamu percaya bisa membantu. Ini refleksi pribadi, bukan penilaian klinis atau diagnosis.`
       : "Dari jawabanmu, tidak ada pengalaman yang kamu tandai sering terjadi. Kamu tetap boleh mencari dukungan kapan pun membutuhkannya. Ini refleksi pribadi, bukan penilaian klinis atau diagnosis.";
     result.classList.remove("hidden");
+    const resultCta = document.getElementById("quiz-result-cta");
+    if (resultCta) resultCta.classList.remove("hidden");
     submit.disabled = true;
     result.scrollIntoView({ behavior: "smooth", block: "nearest" });
   });

@@ -898,37 +898,196 @@
                 </div>
 
                 <div class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xl">
+                    <div class="flex items-center justify-between text-xs font-bold text-slate-600 mb-2">
+                        <span class="brand-blue-text" id="quiz-progress-label">Pertanyaan 1 dari 5</span>
+                        <span class="text-slate-400 font-medium" id="quiz-progress-percent">20% selesai</span>
+                    </div>
                     <div class="w-full bg-slate-100 h-2 rounded-full mb-8 overflow-hidden">
-                        <div id="quiz-progress-bar" class="brand-blue-bg h-full w-[20%] transition-all duration-300">
+                        <div id="quiz-progress-bar" class="brand-blue-bg h-full w-[20%] transition-all duration-300"
+                            role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="20">
                         </div>
                     </div>
 
-                    <form id="quiz-form">
+                    <form id="quiz-form" novalidate>
                         <div class="quiz-q" data-q="1">
-                            <span class="text-xs font-bold brand-blue-text uppercase tracking-wider">Pertanyaan 1 dari
-                                5</span>
-                            <h3 class="text-lg sm:text-xl font-bold text-slate-900 mt-1 mb-6">Seberapa sering kamu
-                                merasa cemas atau tertekan karena urusan sekolah?</h3>
+                            <h3 class="text-lg sm:text-xl font-bold text-slate-900 mb-6">Dalam dua minggu terakhir,
+                                seberapa sering kamu merasa cemas atau gelisah?</h3>
                             <div class="space-y-3">
                                 <label
-                                    class="flex items-center p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50/50 cursor-pointer transition text-xs sm:text-sm">
-                                    <input type="radio" name="q1" value="0" class="text-sky-500">
-                                    <span class="ml-3 font-medium text-slate-700">Hampir tidak pernah sama sekali</span>
+                                    class="flex items-center p-4 rounded-2xl border-2 border-sky-400 bg-sky-50/50 cursor-pointer transition text-xs sm:text-sm">
+                                    <input type="radio" name="q1" value="0" checked class="text-sky-500 w-4 h-4">
+                                    <span class="ml-3 font-semibold text-slate-800">Tidak pernah</span>
                                 </label>
                                 <label
                                     class="flex items-center p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50/50 cursor-pointer transition text-xs sm:text-sm">
-                                    <input type="radio" name="q1" value="1" class="text-sky-500">
-                                    <span class="ml-3 font-medium text-slate-700">Kadang-kadang dalam seminggu</span>
+                                    <input type="radio" name="q1" value="1" class="text-sky-500 w-4 h-4">
+                                    <span class="ml-3 font-medium text-slate-700">Beberapa hari</span>
                                 </label>
                                 <label
                                     class="flex items-center p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50/50 cursor-pointer transition text-xs sm:text-sm">
-                                    <input type="radio" name="q1" value="2" class="text-sky-500">
-                                    <span class="ml-3 font-medium text-slate-700">Sangat sering / Hampir setiap
-                                        hari</span>
+                                    <input type="radio" name="q1" value="2" class="text-sky-500 w-4 h-4">
+                                    <span class="ml-3 font-medium text-slate-700">Lebih dari separuh waktu</span>
+                                </label>
+                                <label
+                                    class="flex items-center p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50/50 cursor-pointer transition text-xs sm:text-sm">
+                                    <input type="radio" name="q1" value="3" class="text-sky-500 w-4 h-4">
+                                    <span class="ml-3 font-medium text-slate-700">Hampir setiap hari</span>
                                 </label>
                             </div>
                         </div>
+
+                        <div class="quiz-q hidden" data-q="2">
+                            <h3 class="text-lg sm:text-xl font-bold text-slate-900 mb-6">Dalam dua minggu terakhir,
+                                seberapa sering kamu sulit tidur atau bangun dengan tubuh yang masih lelah?</h3>
+                            <div class="space-y-3">
+                                <label
+                                    class="flex items-center p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50/50 cursor-pointer transition text-xs sm:text-sm">
+                                    <input type="radio" name="q2" value="0" class="text-sky-500 w-4 h-4">
+                                    <span class="ml-3 font-medium text-slate-700">Tidak pernah</span>
+                                </label>
+                                <label
+                                    class="flex items-center p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50/50 cursor-pointer transition text-xs sm:text-sm">
+                                    <input type="radio" name="q2" value="1" class="text-sky-500 w-4 h-4">
+                                    <span class="ml-3 font-medium text-slate-700">Beberapa hari</span>
+                                </label>
+                                <label
+                                    class="flex items-center p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50/50 cursor-pointer transition text-xs sm:text-sm">
+                                    <input type="radio" name="q2" value="2" class="text-sky-500 w-4 h-4">
+                                    <span class="ml-3 font-medium text-slate-700">Lebih dari separuh waktu</span>
+                                </label>
+                                <label
+                                    class="flex items-center p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50/50 cursor-pointer transition text-xs sm:text-sm">
+                                    <input type="radio" name="q2" value="3" class="text-sky-500 w-4 h-4">
+                                    <span class="ml-3 font-medium text-slate-700">Hampir setiap hari</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-q hidden" data-q="3">
+                            <h3 class="text-lg sm:text-xl font-bold text-slate-900 mb-6">Dalam dua minggu terakhir,
+                                seberapa sering kamu kehilangan minat pada hal yang biasanya menyenangkan bagimu?</h3>
+                            <div class="space-y-3">
+                                <label
+                                    class="flex items-center p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50/50 cursor-pointer transition text-xs sm:text-sm">
+                                    <input type="radio" name="q3" value="0" class="text-sky-500 w-4 h-4">
+                                    <span class="ml-3 font-medium text-slate-700">Tidak pernah</span>
+                                </label>
+                                <label
+                                    class="flex items-center p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50/50 cursor-pointer transition text-xs sm:text-sm">
+                                    <input type="radio" name="q3" value="1" class="text-sky-500 w-4 h-4">
+                                    <span class="ml-3 font-medium text-slate-700">Beberapa hari</span>
+                                </label>
+                                <label
+                                    class="flex items-center p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50/50 cursor-pointer transition text-xs sm:text-sm">
+                                    <input type="radio" name="q3" value="2" class="text-sky-500 w-4 h-4">
+                                    <span class="ml-3 font-medium text-slate-700">Lebih dari separuh waktu</span>
+                                </label>
+                                <label
+                                    class="flex items-center p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50/50 cursor-pointer transition text-xs sm:text-sm">
+                                    <input type="radio" name="q3" value="3" class="text-sky-500 w-4 h-4">
+                                    <span class="ml-3 font-medium text-slate-700">Hampir setiap hari</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-q hidden" data-q="4">
+                            <h3 class="text-lg sm:text-xl font-bold text-slate-900 mb-6">Dalam dua minggu terakhir,
+                                seberapa sering kamu merasa kewalahan dengan tugas atau ritme sekolah?</h3>
+                            <div class="space-y-3">
+                                <label
+                                    class="flex items-center p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50/50 cursor-pointer transition text-xs sm:text-sm">
+                                    <input type="radio" name="q4" value="0" class="text-sky-500 w-4 h-4">
+                                    <span class="ml-3 font-medium text-slate-700">Tidak pernah</span>
+                                </label>
+                                <label
+                                    class="flex items-center p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50/50 cursor-pointer transition text-xs sm:text-sm">
+                                    <input type="radio" name="q4" value="1" class="text-sky-500 w-4 h-4">
+                                    <span class="ml-3 font-medium text-slate-700">Beberapa hari</span>
+                                </label>
+                                <label
+                                    class="flex items-center p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50/50 cursor-pointer transition text-xs sm:text-sm">
+                                    <input type="radio" name="q4" value="2" class="text-sky-500 w-4 h-4">
+                                    <span class="ml-3 font-medium text-slate-700">Lebih dari separuh waktu</span>
+                                </label>
+                                <label
+                                    class="flex items-center p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50/50 cursor-pointer transition text-xs sm:text-sm">
+                                    <input type="radio" name="q4" value="3" class="text-sky-500 w-4 h-4">
+                                    <span class="ml-3 font-medium text-slate-700">Hampir setiap hari</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-q hidden" data-q="5">
+                            <h3 class="text-lg sm:text-xl font-bold text-slate-900 mb-6">Dalam dua minggu terakhir,
+                                seberapa sering kamu merasa tidak punya tempat yang aman untuk bercerita?</h3>
+                            <div class="space-y-3">
+                                <label
+                                    class="flex items-center p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50/50 cursor-pointer transition text-xs sm:text-sm">
+                                    <input type="radio" name="q5" value="0" class="text-sky-500 w-4 h-4">
+                                    <span class="ml-3 font-medium text-slate-700">Tidak pernah</span>
+                                </label>
+                                <label
+                                    class="flex items-center p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50/50 cursor-pointer transition text-xs sm:text-sm">
+                                    <input type="radio" name="q5" value="1" class="text-sky-500 w-4 h-4">
+                                    <span class="ml-3 font-medium text-slate-700">Beberapa hari</span>
+                                </label>
+                                <label
+                                    class="flex items-center p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50/50 cursor-pointer transition text-xs sm:text-sm">
+                                    <input type="radio" name="q5" value="2" class="text-sky-500 w-4 h-4">
+                                    <span class="ml-3 font-medium text-slate-700">Lebih dari separuh waktu</span>
+                                </label>
+                                <label
+                                    class="flex items-center p-4 rounded-2xl border border-slate-200 hover:border-sky-400 hover:bg-sky-50/50 cursor-pointer transition text-xs sm:text-sm">
+                                    <input type="radio" name="q5" value="3" class="text-sky-500 w-4 h-4">
+                                    <span class="ml-3 font-medium text-slate-700">Hampir setiap hari</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between pt-6 border-t border-slate-100">
+                            <div>
+                                <button id="quiz-prev" type="button"
+                                    class="hidden px-4 py-2 bg-slate-100 text-slate-600 hover:bg-slate-200 text-xs font-bold rounded-xl flex items-center gap-1.5 transition-all">
+                                    <i class="fa-solid fa-arrow-left text-[10px]"></i>
+                                    <span>Kembali</span>
+                                </button>
+                            </div>
+
+                            <div class="flex items-center gap-2">
+                                <button id="quiz-next" type="button"
+                                    class="px-6 py-2.5 brand-blue-bg hover:opacity-95 text-white text-xs font-bold rounded-xl shadow-md transition-all flex items-center gap-2">
+                                    <span>Lanjut</span>
+                                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                                </button>
+                                <button id="quiz-submit" type="submit"
+                                    class="hidden px-6 py-2.5 brand-blue-bg hover:opacity-95 text-white text-xs font-bold rounded-xl shadow-md transition-all flex items-center gap-2">
+                                    <span>Lihat Hasil</span>
+                                    <i class="fa-solid fa-flag-checkered text-[10px]"></i>
+                                </button>
+                            </div>
+                        </div>
                     </form>
+
+                    <p id="quiz-error" class="hidden text-xs font-medium text-red-500 mt-3">Pilih jawaban dulu ya.</p>
+
+                    <div id="quiz-result"
+                        class="hidden text-xs sm:text-sm text-slate-700 bg-slate-50 border border-slate-200 rounded-2xl p-4 leading-relaxed">
+                    </div>
+
+                    <div id="quiz-result-cta" class="hidden pt-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <a href="chat.html"
+                                class="flex items-center justify-center gap-2 px-4 py-3 rounded-2xl brand-blue-bg text-white text-xs font-bold shadow-md hover:opacity-95 transition-all">
+                                <i class="fa-solid fa-comments text-[11px]"></i>
+                                <span>Cerita ke AI Care Chat</span>
+                            </a>
+                            <a href="rujukan.html"
+                                class="flex items-center justify-center gap-2 px-4 py-3 rounded-2xl border border-slate-200 text-slate-700 text-xs font-bold hover:bg-slate-50 transition-all">
+                                <i class="fa-solid fa-hand-holding-heart text-[11px] brand-blue-text"></i>
+                                <span>Lihat Rujukan BK</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
