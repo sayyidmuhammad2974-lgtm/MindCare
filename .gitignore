@@ -34,6 +34,9 @@ temp_mobile.css
 # Deployment
 wrangler.toml.bak
 
+# Wrangler local cache (isinya hanya account info, tidak diperlukan di repo)
+.wrangler/
+
 # =====================================================
 # Excluded from deployment (Vercel / Cloudflare Pages):
 # tetap ada di laptop, tidak ikut ter-push ke GitHub
