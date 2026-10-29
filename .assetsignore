@@ -1,0 +1,15 @@
+# Hindari upload ke publik (tetap aman di laptop)
+backend/
+apalah/
+backup/
+.env
+
+# Dokumentasi internal & konfigurasi
+README.md
+DEPLOY.md
+CHAT_API_SETUP.md
+wrangler.toml
+package-lock.json
+
+# Git
+.git/

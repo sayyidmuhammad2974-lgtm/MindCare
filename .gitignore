@@ -41,3 +41,6 @@ wrangler.toml.bak
 chat.html.mobile.bak
 backup/
 apalah/
+
+# Folder siap-deploy (hasil copy otomatis via deploy-cf.ps1)
+public/
