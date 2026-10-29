@@ -2,7 +2,7 @@
 node_modules/
 backend/node_modules/
 
-# Environment files
+# Environment files (secret backend - jangan pernah push!)
 .env
 .env.local
 .env.*.local
@@ -24,6 +24,7 @@ build/
 # OS
 .DS_Store
 Thumbs.db
+desktop.ini
 
 # Temporary files
 *.tmp
@@ -32,3 +33,11 @@ temp_mobile.css
 
 # Deployment
 wrangler.toml.bak
+
+# =====================================================
+# Excluded from deployment (Vercel / Cloudflare Pages):
+# tetap ada di laptop, tidak ikut ter-push ke GitHub
+# =====================================================
+chat.html.mobile.bak
+backup/
+apalah/
