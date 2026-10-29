@@ -4,7 +4,7 @@
  * in backend/.env; never put provider secrets in browser code.
  */
 window.MINDCARE_CHAT_CONFIG = Object.freeze({
-    endpoint: 'http://127.0.0.1:8000/api/chat'
+    endpoint: 'https://mindcare-chat-api.mikael-putra001.workers.dev/api/chat'
 });
 
 window.MindCareChatApi = {

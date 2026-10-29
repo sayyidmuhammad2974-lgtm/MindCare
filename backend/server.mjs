@@ -312,7 +312,7 @@ async function requestNvidia(messages) {
             headers,
             body: JSON.stringify(buildNvidiaPayload(messages, false)),
         }, config.timeoutMs));
-        ({ response, data } = await resolvePendingResponse(response, data, apiKey, deadline));
+        ({ response, data } = await resolvePendingResponse(response, data, config.apiKey, deadline));
     } catch (error) {
         if (error instanceof HttpError) throw error;
         if (error.name === 'TimeoutError' || error.name === 'AbortError') {

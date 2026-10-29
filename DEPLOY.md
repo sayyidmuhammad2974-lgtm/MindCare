@@ -1,5 +1,12 @@
 # Deployment Guide: MindCare to Cloudflare Pages + Railway
 
+> **⚠️ STATUS 29 OKT 2026 — BACA DULU SEBELUM MENGIKUTI PANDUAN**
+> - **Frontend live:** Cloudflare Worker `mindcare-frontend` → https://mindcare-frontend.mikael-putra001.workers.dev — deploy via `.\deploy-cf.ps1`.
+> - **Backend live:** Cloudflare Worker `mindcare-chat-api` → https://mindcare-chat-api.mikael-putra001.workers.dev — kode di `chat-worker/` (port dari `backend/server.mjs`, logika & filter keselamatan identik). Deploy backend: masuk folder `chat-worker/` lalu `npx wrangler deploy`. Secret `NVIDIA_API_KEY` via `npx wrangler secret put` (nilai lokal di `backend/.env`, tidak pernah di-commit).
+> - **Railway tidak dipakai untuk produksi:** pendaftaran akun baru Railway ditangguhkan pasca-kejadian keamanan 21 Okt 2026 (status.railway.com). Panduan Railway di bawah dipertahankan sebagai referensi lama + untuk pengembangan lokal (server.mjs tetap jalan via `npm run dev`).
+> - **`chat-api.js` menunjuk ke endpoint Worker backend** di atas (bukan lagi `127.0.0.1:8000`).
+
+
 ## Prerequisites
 - GitHub repo connected to both Cloudflare Pages and Railway
 - NVIDIA API key ready
