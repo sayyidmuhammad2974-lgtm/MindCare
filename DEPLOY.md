@@ -136,7 +136,7 @@ MindCare/
 │   ├── chat-api.js        # Frontend API client (update endpoint)
 │   ├── chat.js            # Chat UI logic
 │   └── script.js          # Shared utilities
-├── css/style.css          # Styles
+├── style.css              # Styles (root level)
 ├── *.html                 # Pages
 └── assets/                # Images
 ```

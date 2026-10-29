@@ -25,9 +25,10 @@ destination = "."
     cache-control = "public, max-age=31536000, immutable"
 
 [[headers]]
-  for = "/css/*"
+  for = "/style.css"
   [headers.values]
     cache-control = "public, max-age=31536000, immutable"
+    content-type = "text/css; charset=utf-8"
 
 [[headers]]
   for = "/javascript/*"
